@@ -36,3 +36,9 @@ E se questi appunti li trasformassi in pagine sul [mio Github](https://github.co
 ```
 - posso avere più cartelle dedicate singolarmente a repo Github
 - Github non interpreta le sezioni YAML
+
+
+
+## riferimenti
+
+- https://www.youtube.com/watch?v=ImrLbomFYA0&ab_channel=TomPeppercorn
