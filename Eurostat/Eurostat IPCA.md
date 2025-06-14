@@ -210,6 +210,24 @@ _(Banca d'Italia, 2025, p. 2) Proiezioni macroeconomiche per l’economia italia
 - **Uso tipico**: panoramiche economiche rapide, confronti cross-country a colpo d'occhio.
 
 
+- 📦 Chiavi: dict_keys(['version', 'class', 'label', 'source', 'updated', 'value', 'status', 'id', 'size', 'dimension', 'extension']) 
+- 📐 Dimensioni disponibili: dict_keys(['freq', 'coicop', 'unit', 'geo', 'time']) 
+- 🔢 Numero di valori: 1851
+
+
+| freq_code | freq_label | unit_code | unit_label                            | coicop_code | coicop_label   | geo_code | geo_label                                                                                                        | time    |  value |
+| :-------- | :--------- | :-------- | :------------------------------------ | :---------- | :------------- | :------- | :--------------------------------------------------------------------------------------------------------------- | :------ | -----: |
+| M         | Monthly    | I15       | Index, 2015=100                       | CP00        | All-items HICP | CZ       | Czechia                                                                                                          | 2024-08 |  152.9 |
+| M         | Monthly    | I15       | Index, 2015=100                       | CP00        | All-items HICP | CZ       | Czechia                                                                                                          | 2025-01 |  154.5 |
+| M         | Monthly    | PCH_MV12  | Percentage change - 12-months average | CP00        | All-items HICP | EA20     | Euro area – 20 countries (from 2023)                                                                             | 2024-08 |    2.7 |
+| M         | Monthly    | PCH_MV12  | Percentage change - 12-months average | CP00        | All-items HICP | MK       | North Macedonia                                                                                                  | 2024-07 |    4.4 |
+| M         | Monthly    | PCH_MV12  | Percentage change - 12-months average | CP00        | All-items HICP | US       | United States                                                                                                    | 2024-09 |      2 |
+| M         | Monthly    | PCH_M1    | Percentage change m/m-1               | CP00        | All-items HICP | EU       | European Union (EU6-1958, EU9-1973, EU10-1981, EU12-1986, EU15-1995, EU25-2004, EU27-2007, EU28-2013, EU27-2020) | 2024-08 |    0.1 |
+| M         | Monthly    | PCH_M1    | Percentage change m/m-1               | CP00        | All-items HICP | CH       | Switzerland                                                                                                      | 2025-01 |   -0.1 |
+| M         | Monthly    | I15       | Index, 2015=100                       | CP00        | All-items HICP | PT       | Portugal                                                                                                         | 2024-10 | 123.84 |
+| M         | Monthly    | PCH_MV12  | Percentage change - 12-months average | CP00        | All-items HICP | ME       | Montenegro                                                                                                       | 2025-03 |    3.1 |
+| M         | Monthly    | PCH_MV12  | Percentage change - 12-months average | CP00        | All-items HICP | NL       | Netherlands                                                                                                      | 2024-11 |      3 |
+
 ### Quando usare `teicp000`
 
 - Per **grafici semplici** che confrontano paesi su base **annua**;
@@ -219,7 +237,7 @@ _(Banca d'Italia, 2025, p. 2) Proiezioni macroeconomiche per l’economia italia
 
 ## Dataset analitici
 
-La tabella appresso rappresenta le principali **serie Eurostat sull'HICP**, ciascuna con un focus diverso sulla dinamica dei prezzi:
+La tabella appresso rappresenta le  **serie Eurostat sull'HICP**, ciascuna con un focus diverso sulla dinamica dei prezzi:
 
 | **Sigla**        | **Descrizione**                                                                       | **Uso tipico**                                                    |
 | ---------------- | ------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
@@ -228,8 +246,6 @@ La tabella appresso rappresenta le principali **serie Eurostat sull'HICP**, cias
 | `prc_hicp_mmor`  | HICP – **monthly data**, **monthly rate of change** (var. % sul mese precedente)      | Per valutare shock di breve periodo (es. rincari energetici)      |
 | `prc_hicp_mv12r` | HICP – **monthly data**, **12-month moving average** (media mobile dei tassi annui)   | Indicatore smussato, usato per monitoraggio macro più stabile     |
 
-
-
 | Dataset          | Contiene valori assoluti in €? | Contiene un indice? | Contiene variazioni %? |
 | ---------------- | ------------------------------ | ------------------- | ---------------------- |
 | `prc_hicp_midx`  | ❌ No                           | ✅ Sì                | ❌ No                   |
@@ -237,6 +253,89 @@ La tabella appresso rappresenta le principali **serie Eurostat sull'HICP**, cias
 | `prc_hicp_mmor`  | ❌ No                           | ❌ No                | ✅ Sì (mensile)         |
 | `prc_hicp_mv12r` | ❌ No                           | ❌ No                | ✅ Sì (media 12 mesi)   |
 
+### prc_hicp_manr
+
+- 📦 Chiavi: dict_keys(['version', 'class', 'label', 'source', 'updated', 'value', 'status', 'id', 'size', 'dimension', 'extension']) 
+- 📐 Dimensioni disponibili: dict_keys(['freq', 'unit', 'coicop', 'geo', 'time']) 
+- 🔢 Numero di valori: 3381206
+- freq (1):   M: Monthly
+- unit (1):  RCH_A: Annual rate of change
+- coicop (467):  AP: Administered prices | APF: Fully administered prices | APM: Mainly administered prices | AP_NNRG: Administered prices, non-energy | AP_NRG: Administered prices, energy | CP00: All-items HICP | CP01: Food and non-alcoholic beverages | CP011: Food | CP0111: Bread and cereals | CP01111: Rice | CP01112: Flours and other cereals | CP01113: Bread | CP01114: Other bakery products | CP01115: Pizza and quiche | CP01116: Pasta products and couscous | CP01117: Breakfast cereals | ......
+  AL: Albania | AT: Austria | BE: Belgium | BG: Bulgaria | CH: Switzerland |...
+- time (341): mensilmente, dal  1997-01 al 2025-05
+
+per l'elenco completo di **geo** e **coicop** vedi csv 
+
+| freq_code | freq_label | unit_code | unit_label            | coicop_code | coicop_label                                         | geo_code  | geo_label                                                                                                        | time    | value |
+| :-------- | :--------- | :-------- | :-------------------- | :---------- | :--------------------------------------------------- | :-------- | :--------------------------------------------------------------------------------------------------------------- | :------ | ----: |
+| M         | Monthly    | RCH_A     | Annual rate of change | CP031       | Clothing                                             | PT        | Portugal                                                                                                         | 1997-12 |   0.3 |
+| M         | Monthly    | RCH_A     | Annual rate of change | CP05323     | Irons                                                | MK        | North Macedonia                                                                                                  | 2020-08 |   2.1 |
+| M         | Monthly    | RCH_A     | Annual rate of change | FOOD_S      | Seasonal food                                        | RS        | Serbia                                                                                                           | 2009-02 |  -6.2 |
+| M         | Monthly    | RCH_A     | Annual rate of change | CP126       | Financial services n.e.c.                            | NL        | Netherlands                                                                                                      | 2002-02 |  50.9 |
+| M         | Monthly    | RCH_A     | Annual rate of change | CP055       | Tools and equipment for house and garden             | DK        | Denmark                                                                                                          | 2013-01 |   1.2 |
+| M         | Monthly    | RCH_A     | Annual rate of change | CP12121     | Electric appliances for personal care                | FR        | France                                                                                                           | 2016-01 |  -4.8 |
+| M         | Monthly    | RCH_A     | Annual rate of change | CP073       | Transport services                                   | EU        | European Union (EU6-1958, EU9-1973, EU10-1981, EU12-1986, EU15-1995, EU25-2004, EU27-2007, EU28-2013, EU27-2020) | 2005-10 |   5.2 |
+| M         | Monthly    | RCH_A     | Annual rate of change | CP056       | Goods and services for routine household maintenance | EU27_2020 | European Union - 27 countries (from 2020)                                                                        | 2002-01 |   3.3 |
+| M         | Monthly    | RCH_A     | Annual rate of change | CP04        | Housing, water, electricity, gas and other fuels     | BE        | Belgium                                                                                                          | 2009-10 |  -7.1 |
+| M         | Monthly    | RCH_A     | Annual rate of change | CP104       | Tertiary education                                   | CH        | Switzerland                                                                                                      | 2016-12 |   0.3 |
+
+
+### prc_hicp_midx
+
+- 📦 Chiavi: dict_keys(['version', 'class', 'label', 'source', 'updated', 'value', 'status', 'id', 'size', 'dimension', 'extension']) 
+- 📐 Dimensioni disponibili: dict_keys(['freq', 'unit', 'coicop', 'geo', 'time']) 
+- 🔢 Numero di valori: 7480674
+
+
+| freq_code   | freq_label   | unit_code   | unit_label      | coicop_code   | coicop_label                                           | geo_code   | geo_label                                                                                                        | time    |   value |
+|-------------|--------------|-------------|-----------------|---------------|--------------------------------------------------------|------------|------------------------------------------------------------------------------------------------------------------|---------|---------|
+| M           | Monthly      | I15         | Index, 2015=100 | CP112         | Accommodation services                                 | RS         | Serbia                                                                                                           | 2016-07 |   98.8  |
+| M           | Monthly      | I15         | Index, 2015=100 | CP03132       | Clothing accessories                                   | SK         | Slovakia                                                                                                         | 2020-01 |  110.65 |
+| M           | Monthly      | I05         | Index, 2005=100 | CP0723        | Maintenance and repair of personal transport equipment | NL         | Netherlands                                                                                                      | 2005-04 |  100.29 |
+| M           | Monthly      | I15         | Index, 2015=100 | CP0211        | Spirits                                                | CH         | Switzerland                                                                                                      | 2025-01 |  110.1  |
+| M           | Monthly      | I05         | Index, 2005=100 | CP0933        | Gardens, plants and flowers                            | FI         | Finland                                                                                                          | 2016-07 |   99.52 |
+| M           | Monthly      | I05         | Index, 2005=100 | CP0212        | Wine                                                   | EU         | European Union (EU6-1958, EU9-1973, EU10-1981, EU12-1986, EU15-1995, EU25-2004, EU27-2007, EU28-2013, EU27-2020) | 2006-07 |  100.6  |
+| M           | Monthly      | I96         | Index, 1996=100 | CP111         | Catering services                                      | LV         | Latvia                                                                                                           | 2015-11 |  260.2  |
+| M           | Monthly      | I96         | Index, 1996=100 | CP082_083     | Telephone and telefax equipment and services           | PT         | Portugal                                                                                                         | 2016-10 |   90.2  |
+| M           | Monthly      | I15         | Index, 2015=100 | CP05401       | Glassware, crystal-ware, ceramic ware and chinaware    | CZ         | Czechia                                                                                                          | 2017-04 |  100.6  |
+| M           | Monthly      | I15         | Index, 2015=100 | CP125         | Insurance                                              | BG         | Bulgaria                                                                                                         | 2017-08 |   90.95 |
+### prc_hicp_mmor
+
+- 📦 Chiavi: dict_keys(['version', 'class', 'label', 'source', 'updated', 'value', 'status', 'id', 'size', 'dimension', 'extension']) 
+- 📐 Dimensioni disponibili: dict_keys(['freq', 'unit', 'coicop', 'geo', 'time']) 
+- 🔢 Numero di valori: 3576459
+
+| freq_code   | freq_label   | unit_code   | unit_label             | coicop_code   | coicop_label                         | geo_code   | geo_label                                                                                                     | time    |   value |
+|-------------|--------------|-------------|------------------------|---------------|--------------------------------------|------------|---------------------------------------------------------------------------------------------------------------|---------|---------|
+| M           | Monthly      | RCH_M       | Monthly rate of change | CP111         | Catering services                    | HU         | Hungary                                                                                                       | 2019-02 |     1   |
+| M           | Monthly      | RCH_M       | Monthly rate of change | CP1254        | Insurance connected with transport   | IE         | Ireland                                                                                                       | 2010-05 |    -0.1 |
+| M           | Monthly      | RCH_M       | Monthly rate of change | CP07321       | Passenger transport by bus and coach | DK         | Denmark                                                                                                       | 2011-11 |     0   |
+| M           | Monthly      | RCH_M       | Monthly rate of change | CP05521       | Non-motorised small tools            | BE         | Belgium                                                                                                       | 2018-06 |     0.1 |
+| M           | Monthly      | RCH_M       | Monthly rate of change | CP12          | Miscellaneous goods and services     | SE         | Sweden                                                                                                        | 1997-04 |     0.1 |
+| M           | Monthly      | RCH_M       | Monthly rate of change | CP1231        | Jewellery, clocks and watches        | DE         | Germany                                                                                                       | 2009-11 |    -3.5 |
+| M           | Monthly      | RCH_M       | Monthly rate of change | CP05402       | Cutlery, flatware and silverware     | MK         | North Macedonia                                                                                               | 2025-01 |     0.8 |
+| M           | Monthly      | RCH_M       | Monthly rate of change | FOOD_NP       | Unprocessed food                     | IE         | Ireland                                                                                                       | 2002-04 |     0.5 |
+| M           | Monthly      | RCH_M       | Monthly rate of change | CP01          | Food and non-alcoholic beverages     | EL         | Greece                                                                                                        | 2000-12 |     1.1 |
+| M           | Monthly      | RCH_M       | Monthly rate of change | CP09522       | Magazines and periodicals            | EA         | Euro area (EA11-1999, EA12-2001, EA13-2007, EA15-2008, EA16-2009, EA17-2011, EA18-2014, EA19-2015, EA20-2023) | 2019-02 |     0.5 |
+
+### prc_hicp_mv12r
+
+- 📦 Chiavi: dict_keys(['version', 'class', 'label', 'source', 'updated', 'value', 'status', 'id', 'size', 'dimension', 'extension'])
+- 📐 Dimensioni disponibili: dict_keys(['freq', 'unit', 'coicop', 'geo', 'time'])
+- 🔢 Numero di valori: 3186181
+
+| freq_code | freq_label | unit_code    | unit_label                              | coicop_code | coicop_label                                                                               | geo_code | geo_label                                                                                                        | time    | value |
+| --------- | ---------- | ------------ | --------------------------------------- | ----------- | ------------------------------------------------------------------------------------------ | -------- | ---------------------------------------------------------------------------------------------------------------- | ------- | ----- |
+| M         | Monthly    | RCH_MV12MAVR | Moving 12 months average rate of change | ELC_GAS     | Electricity, gas, solid fuels and heat energy                                              | CY       | Cyprus                                                                                                           | 2006-01 | 14.1  |
+| M         | Monthly    | RCH_MV12MAVR | Moving 12 months average rate of change | CP0531_0532 | Major household appliances whether electric or not and small electric household appliances | LU       | Luxembourg                                                                                                       | 2017-09 | -0.9  |
+| M         | Monthly    | RCH_MV12MAVR | Moving 12 months average rate of change | FOOD_P      | Processed food including alcohol and tobacco                                               | EU       | European Union (EU6-1958, EU9-1973, EU10-1981, EU12-1986, EU15-1995, EU25-2004, EU27-2007, EU28-2013, EU27-2020) | 2016-11 | 0.4   |
+| M         | Monthly    | RCH_MV12MAVR | Moving 12 months average rate of change | CP09213     | Boats, outboard motors and fitting out of boats                                            | DK       | Denmark                                                                                                          | 2014-08 | 1.7   |
+| M         | Monthly    | RCH_MV12MAVR | Moving 12 months average rate of change | CP126       | Financial services n.e.c.                                                                  | SK       | Slovakia                                                                                                         | 2019-02 | 1.5   |
+| M         | Monthly    | RCH_MV12MAVR | Moving 12 months average rate of change | CP05329     | Other small electric household appliances                                                  | DE       | Germany                                                                                                          | 2023-08 | 11.7  |
+| M         | Monthly    | RCH_MV12MAVR | Moving 12 months average rate of change | CP11201     | Hotels, motels, inns and similar accommodation services                                    | IE       | Ireland                                                                                                          | 2023-10 | 11.6  |
+| M         | Monthly    | RCH_MV12MAVR | Moving 12 months average rate of change | CP0213      | Beer                                                                                       | BG       | Bulgaria                                                                                                         | 2024-04 | 10.9  |
+| M         | Monthly    | RCH_MV12MAVR | Moving 12 months average rate of change | CP07213     | Accessories for personal transport equipment                                               | SE       | Sweden                                                                                                           | 2023-12 | 2.3   |
+| M         | Monthly    | RCH_MV12MAVR | Moving 12 months average rate of change | CP09131     | Personal computers                                                                         | PL       | Poland                                                                                                           | 2019-12 | -6.8  |
 
 ### Quale scegliere
 
@@ -277,32 +376,10 @@ ma ognuno **trasforma il dato base** (l’indice dei prezzi) in una **vista dive
 |URL API|`/data/teicp000`|`/data/prc_hicp_manr`|
 
 
-### Analisi prc_hicp_manr
-- Chiavi: dict_keys(['version', 'class', 'label', 'source', 'updated', 'value', 'status', 'id', 'size', 'dimension', 'extension']) 
-- Dimensioni disponibili: dict_keys(['freq', 'unit', 'coicop', 'geo', 'time'])
-- Numero di valori: 3.381.206
-- freq (1):   M: Monthly
-- unit (1):  RCH_A: Annual rate of change
-- coicop (467):  AP: Administered prices | APF: Fully administered prices | APM: Mainly administered prices | AP_NNRG: Administered prices, non-energy | AP_NRG: Administered prices, energy | CP00: All-items HICP | CP01: Food and non-alcoholic beverages | CP011: Food | CP0111: Bread and cereals | CP01111: Rice | CP01112: Flours and other cereals | CP01113: Bread | CP01114: Other bakery products | CP01115: Pizza and quiche | CP01116: Pasta products and couscous | CP01117: Breakfast cereals | ......
-  AL: Albania | AT: Austria | BE: Belgium | BG: Bulgaria | CH: Switzerland |...
-- time (341): mensilmente, dal  1997-01 al 2025-05
-
-per l'elenco completo di **geo** e **coicop** vedi csv 
 
 
-### Analisi prc_hicp_midx
 
-- freq: 1 items 
-- unit: 3 items 
-- coicop: 468 items 
-- geo: 45 items
-- time: 353 items
-- I05: Index, 2005=100
-- I15: Index, 2015=100
-- I96: Index, 1996=100
-
-#### esempio
-
+---
 
 
 ## [DB Nomics - Prices](https://db.nomics.world/Eurostat)
