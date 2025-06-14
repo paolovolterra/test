@@ -13,10 +13,10 @@
     - Include la spesa di **tutte le famiglie** e **turisti stranieri** in Italia.
         
 - **Fonte:** Istat, con standard Eurostat.
-    
+
+
 
 ## definizioni e del confronto tra **IPCA**, **NIC**, **FOI**, e **FOB**
----
 
 ### NIC – Indice dei Prezzi al Consumo per l'intera collettività
 
@@ -60,7 +60,7 @@
 - **Differenza chiave:** Si riferisce ai **prezzi all’esportazione**, **non all’inflazione interna**.
     
 
----
+
 
 ### CONFRONTO SINTETICO
 
@@ -71,7 +71,6 @@
 |FOI|Famiglie operai/impiegati|Italia (subset NIC)|Rivalutazioni monetarie|Esclude tabacchi, include solo alcune famiglie|
 |FOB|Free On Board (export)|Internazionale|Prezzo export alla frontiera|Non è un indice dei prezzi al consumo|
 
----
 
 ### In breve:
 
@@ -109,6 +108,7 @@ https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/prc_hicp_man
 ```
 
 
+
 ### livello dell'indice dei prezzi
 (es. HICP = 105,3, base 2015=100): sono nel dataset `prc_hicp_midx` (HICP - monthly data, index).
 
@@ -124,18 +124,21 @@ Date       | HICP (midx, CP00, IT)
 
 Questi sono **indici sintetici**: se HICP = 104,3 nel 2020-01, significa che i prezzi sono cresciuti del 4,3% rispetto al valore medio del **2015** (che vale 100, perché è l'anno base dell’indice).
 
+
 ## Definizioni
 
 - IPCA: indice armonizzato dei prezzi al consumo per i Paesi dell’Unione europea. 
 - IPCA-AS: indici armonizzati dei prezzi al consumo per aggregati speciali sono indicatori costruiti secondo uno schema classificatorio diverso dalla ECOICOP-IPCA e da quello utilizzato per gli indici NIC per tipologia di prodotto. La struttura di classificazione e le procedure di calcolo sono comuni a quelle utilizzate da Eurostat e ne condividono le innovazioni di carattere metodologico. In particolare, dalla diffusione degli indici definitivi di gennaio 2019 cambia il metodo di calcolo degli aggregati speciali dell’IPCA che sono ottenuti aggregando gli indici delle sottoclassi della ECOICOP (in precedenza, per il computo di questi indicatori erano utilizzati gli indici delle classi). Per una migliore fruibilità dei nuovi indicatori, le serie degli aggregati speciali, secondo il nuovo schema, sono state ricostruite per il periodo gennaio 2017 - dicembre 2018 e sostituiscono, per l’intervallo temporale in questione, quelle precedentemente diffuse, basate sulla vecchia metodologia di calcolo. 
 - IPCA-TC: indice armonizzato dei prezzi al consumo a tassazione costante per i Paesi dell’Unione europea
 
+
 ### prezzi assoluti (in euro)
 
 - **OCSE** (solo alcune voci)
 - **istat.it** → microdati IPCA su prodotti singoli,
 - **Scanner data / database Nielsen / GfK** (a pagamento).
-   
+
+
 ## IPCA e Istat
 
 ### Prezzi al consumo armonizzati per i paesi dell'Unione europea (Ipca)
@@ -164,6 +167,7 @@ Questi sono **indici sintetici**: se HICP = 104,3 nel 2020-01, significa che i p
 
 ![Pasted image 20250613120406](media/Pasted%20image%2020250613120406.png)
 
+
 ## ICPA e Banca d'Italia
 
 ### [Banca d’Italia. (2025). _EIB-L’economia italiana in breve](https://www.bancaditalia.it/pubblicazioni/economia-italiana-in-breve/index.html)
@@ -173,11 +177,12 @@ Questi sono **indici sintetici**: se HICP = 104,3 nel 2020-01, significa che i p
 
 ![Pasted image 20250613115309](media/Pasted%20image%2020250613115309.png)
 
+
 ### [Banca d’Italia. (2025). Proiezioni macroeconomiche per l’Italia](https://www.bancaditalia.it/pubblicazioni/proiezioni-macroeconomiche/)
 
 ![Pasted image 20250613115744](media/Pasted%20image%2020250613115744.png)
   
-(Banca d'Italia, 2025, p. 2) Proiezioni macroeconomiche per l’economia italiana (variazioni percentuali sull’anno precedente, salvo diversa indicazione). Fonte: elaborazioni su dati Banca d’Italia e Istat. Quadro previsivo per l'Italia basato sulle informazioni disponibili al 28 marzo (per la formulazione delle ipotesi tecniche) e al 2 aprile (per i dati congiunturali). (1) Per il PIL e le sue componenti, variazioni stimate su dati trimestrali destagionalizzati e corretti per il numero di giornate lavorative. Senza tale correzione il PIL crescerebbe dello 0,5 per cento nel 2025, dello 0,9 nel 2026 e dello 0,7 nel 2027. – (2) In percentuale del PIL. – (3) Medie annue, valori percentuali.
+_(Banca d'Italia, 2025, p. 2) Proiezioni macroeconomiche per l’economia italiana (variazioni percentuali sull’anno precedente, salvo diversa indicazione). Fonte: elaborazioni su dati Banca d’Italia e Istat. Quadro previsivo per l'Italia basato sulle informazioni disponibili al 28 marzo (per la formulazione delle ipotesi tecniche) e al 2 aprile (per i dati congiunturali). (1) Per il PIL e le sue componenti, variazioni stimate su dati trimestrali destagionalizzati e corretti per il numero di giornate lavorative. Senza tale correzione il PIL crescerebbe dello 0,5 per cento nel 2025, dello 0,9 nel 2026 e dello 0,7 nel 2027. – (2) In percentuale del PIL. – (3) Medie annue, valori percentuali._
 
 
 ## Ufficio Parlamentare di Bilancio. (2025). Nota sulla congiuntura
@@ -189,6 +194,8 @@ Questi sono **indici sintetici**: se HICP = 104,3 nel 2020-01, significa che i p
 ## Banca Intesa
 
 ![Pasted image 20250613123229](media/Pasted%20image%2020250613123229.png)
+
+
 ## teicp000
 
 **versione “light”** dell’HICP
@@ -198,7 +205,8 @@ Questi sono **indici sintetici**: se HICP = 104,3 nel 2020-01, significa che i p
 - **Copertura**: solo **CP00** (indice generale), **senza dettagli per COICOP**, **senza frequenza mensile**, solo **variazione % annuale**.
 - **Uso tipico**: panoramiche economiche rapide, confronti cross-country a colpo d'occhio.
 
-### Quando usare `TEICP000`
+
+### Quando usare `teicp000`
 
 - Per **grafici semplici** che confrontano paesi su base **annua**;
 - In **dashboard** o **slide** con indicatori chiave;
@@ -252,6 +260,8 @@ ma ognuno **trasforma il dato base** (l’indice dei prezzi) in una **vista dive
 - **`mmor`** rispetto al mese scorso;
 - **`mv12r`** ti fa vedere una versione "smussata" della `manr`.
 
+
+
 ### Differenza tra `TEICP000` e `prc_hicp_manr`
 
 |Caratteristica|`TEICP000`|`prc_hicp_manr`|
@@ -274,6 +284,7 @@ ma ognuno **trasforma il dato base** (l’indice dei prezzi) in una **vista dive
 - geo (45):
   AL: Albania | AT: Austria | BE: Belgium | BG: Bulgaria | CH: Switzerland | CY: Cyprus | CZ: Czechia | DE: Germany | DK: Denmark | EA: Euro area (EA11-1999, EA12-2001, EA13-2007, EA15-2008, EA16-2009, EA17-2011, EA18-2014, EA19-2015, EA20-2023) | EA19: Euro area - 19 countries  (2015-2022) | EA20: Euro area – 20 countries (from 2023) | EE: Estonia | EEA: European Economic Area (EEA18-1995, EEA28-2004, EEA30-2007, EEA31-2013, EEA30-2020) | EL: Greece | ES: Spain | EU: European Union (EU6-1958, EU9-1973, EU10-1981, EU12-1986, EU15-1995, EU25-2004, EU27-2007, EU28-2013, EU27-2020) | EU27_2020: European Union - 27 countries (from 2020) | EU28: European Union - 28 countries (2013-2020) | FI: Finland | FR: France | HR: Croatia | HU: Hungary | IE: Ireland | IS: Iceland | IT: Italy | LT: Lithuania | LU: Luxembourg | LV: Latvia | ME: Montenegro | MK: North Macedonia | MT: Malta | NL: Netherlands | NO: Norway | PL: Poland | PT: Portugal | RO: Romania | RS: Serbia | SE: Sweden | SI: Slovenia | SK: Slovakia | TR: Türkiye | UK: United Kingdom | US: United States | XK: Kosovo*
 - time (341): mensilmente, dal  1997-01 al 2025-05
+
 
 
 ## [DB Nomics - Prices](https://db.nomics.world/Eurostat)
