@@ -11,5 +11,5 @@
 
 ## Eurostat
 
-- [IPCA](Github/Eurostat/Eurostat%20IPCA.md)
+- IPCA
 - PIL
