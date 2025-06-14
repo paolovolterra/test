@@ -1,23 +1,3 @@
----
-title: Prezzi al consumo armonizzati per i paesi dell'Unione europea - Indice IPCA HICP
-authors:
-  - Paolo Volterra
-created: 2025-06-13
-aliases:
-  - Prezzi al consumo armonizzati per i paesi dell'Unione europea
-  - IPCA
-  - HICP
-tags:
-  - HICP
-  - IPCA
-  - Istat
-  - io
-  - prezzi
-  - inflazione
-  - indici
-  - NIC
-  - FOI
----
 # IPCA – Indice dei Prezzi al Consumo Armonizzato
 
 - **Definizione:** Misura l'inflazione al consumo secondo criteri armonizzati a livello europeo (Eurostat).
