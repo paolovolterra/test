@@ -140,7 +140,7 @@ Questi sono **indici sintetici**: se HICP = 104,3 nel 2020-01, significa che i p
 - **istat.it** → microdati IPCA su prodotti singoli,
 - **Scanner data / database Nielsen / GfK** (a pagamento).
 
-<br>
+./
 ## IPCA e Istat
 
 ### Prezzi al consumo armonizzati per i paesi dell'Unione europea (Ipca)
@@ -170,7 +170,7 @@ Questi sono **indici sintetici**: se HICP = 104,3 nel 2020-01, significa che i p
 ![Pasted image 20250613120406](./media/Pasted%20image%2020250613120406.png)
 
 
-<br>
+
 ## ICPA e Banca d'Italia
 
 ### [Banca d’Italia. (2025). _EIB-L’economia italiana in breve](https://www.bancaditalia.it/pubblicazioni/economia-italiana-in-breve/index.html)
@@ -198,7 +198,7 @@ _(Banca d'Italia, 2025, p. 2) Proiezioni macroeconomiche per l’economia italia
 
 ![Pasted image 20250613123229](./media/Pasted%20image%2020250613123229.png)
 
-<br>
+
 ## teicp000
 
 **versione “light”** dell’HICP
@@ -215,7 +215,7 @@ _(Banca d'Italia, 2025, p. 2) Proiezioni macroeconomiche per l’economia italia
 - In **dashboard** o **slide** con indicatori chiave;
 - Quando non servono breakdown per categorie di consumo.
  
-<br>
+
 ## Dataset analitici
 
 La tabella appresso rappresenta le principali **serie Eurostat sull'HICP**, ciascuna con un focus diverso sulla dinamica dei prezzi:
@@ -289,7 +289,7 @@ ma ognuno **trasforma il dato base** (l’indice dei prezzi) in una **vista dive
 - time (341): mensilmente, dal  1997-01 al 2025-05
 
 
-<br>
+
 ## [DB Nomics - Prices](https://db.nomics.world/Eurostat)
 
 
@@ -310,7 +310,7 @@ ma ognuno **trasforma il dato base** (l’indice dei prezzi) in una **vista dive
 
 ![Pasted image 20250613122728](./media/Pasted%20image%2020250613122728.png)
 
-<br>
+./
 
 ## Riferimenti
 
