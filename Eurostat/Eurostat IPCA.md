@@ -312,8 +312,8 @@ ma ognuno **trasforma il dato base** (l’indice dei prezzi) in una **vista dive
 
 ## Riferimenti
 
-- [Prezzi al consumo armonizzati per i paesi dell'Unione europea](Github/Eurostat/README.md)
-- [IPCA](Github/Eurostat/README.md)
+- [Prezzi al consumo armonizzati per i paesi dell'Unione europea](Github/README.md)
+- [IPCA](Github/README.md)
 - [Eurostat - IPCA - tutti gli articoli](https://ec.europa.eu/eurostat/databrowser/product/page/teicp000)
 
 [^1]: https://it.wikipedia.org/wiki/Indice_dei_prezzi_al_consumo
