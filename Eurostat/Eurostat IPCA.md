@@ -2,21 +2,22 @@
 # IPCA – Indice dei Prezzi al Consumo Armonizzato
 
 - **Definizione:** Misura l'inflazione al consumo secondo criteri armonizzati a livello europeo (Eurostat).
-    
 - **Copertura geografica:** Uniforme per tutti i Paesi UE.
-    
 - **Uso principale:** Confrontabilità tra paesi dell'UE. È l'indicatore ufficiale per la **BCE** (Banca Centrale Europea) per monitorare la **stabilità dei prezzi**.
     
-- **Caratteristiche:**
+## Caratteristiche
     
-    - Esclude la **spesa per abitazione di proprietà** (spesa stimata e non affitto reale).
-        
-    - Include la spesa di **tutte le famiglie** e **turisti stranieri** in Italia.
-        
+L'indice è stato sviluppato per assicurare una misura dell'inflazione che fosse comparabile a livello europeo
+
+L'indice, riferito alla stessa popolazione ed allo stesso territorio dell'indice dei prezzi al consumo per l'intera collettività, è però calcolato in relazione ad un paniere di beni e servizi costruito tenendo conto sia delle particolarità di ogni paese sia di regole comuni per la ponderazione dei beni che compongono tale paniere (ad esempio il paniere considerato esclude, sulla base di un accordo comunitario, le [lotterie](https://it.wikipedia.org/wiki/Lotteria "Lotteria"), il [lotto](https://it.wikipedia.org/wiki/Lotto "Lotto") e i concorsi pronostici); 
+
+L'IPCA è stato assunto come indicatore di verifica della convergenza delle economie dei paesi membri dell'UE al fine dell'accesso all'[Unione monetaria](https://it.wikipedia.org/wiki/Unione_economica_e_monetaria "Unione economica e monetaria") e della permanenza nella stessa dei paesi aderenti [^1].
+
+- Esclude la **spesa per abitazione di proprietà** (spesa stimata e non affitto reale).
+- Include la spesa di **tutte le famiglie** e **turisti stranieri** in Italia.
 - **Fonte:** Istat, con standard Eurostat.
 
-L'indice è stato sviluppato per assicurare una misura dell'inflazione che fosse comparabile a livello europeo; l'indice, riferito alla stessa popolazione ed allo stesso territorio dell'indice dei prezzi al consumo per l'intera collettività, è però calcolato in relazione ad un paniere di beni e servizi costruito tenendo conto sia delle particolarità di ogni paese sia di regole comuni per la ponderazione dei beni che compongono tale paniere (ad esempio il paniere considerato esclude, sulla base di un accordo comunitario, le [lotterie](https://it.wikipedia.org/wiki/Lotteria "Lotteria"), il [lotto](https://it.wikipedia.org/wiki/Lotto "Lotto") e i concorsi pronostici); l'IPCA è stato assunto come indicatore di verifica della convergenza delle economie dei paesi membri dell'UE al fine dell'accesso all'[Unione monetaria](https://it.wikipedia.org/wiki/Unione_economica_e_monetaria "Unione economica e monetaria") e della permanenza nella stessa dei paesi aderenti [^1].
-
+## NUTS
 
 Su Eurostat l’IPCA **non è pubblicato a livello NUTS 3**, ma solo a livello **NUTS 2** (regioni di base) e **NUTS 1**:
 
@@ -33,7 +34,7 @@ Su Eurostat l’IPCA **non è pubblicato a livello NUTS 3**, ma solo a livello
     
     Solo NUTS 2 assicura questi requisiti uniformi.
         
-## definizioni e confronto tra **IPCA**, **NIC** e **FOI**
+## Confronto **IPCA**, **NIC** e **FOI**
 
 | Caratteristica                 | **IPCA**                                            | **NIC**                                                 | **FOI**                                               |
 | ------------------------------ | --------------------------------------------------- | ------------------------------------------------------- | ----------------------------------------------------- |
@@ -47,9 +48,7 @@ Su Eurostat l’IPCA **non è pubblicato a livello NUTS 3**, ma solo a livello
 ### 🔍 Approfondimenti:
 
 - **IPCA** è l’unico indice prodotto secondo le direttive **Eurostat**, utilizzato anche per le politiche monetarie della BCE.
-    
 - **NIC** è il riferimento **domestico** principale per capire l’inflazione percepita dalle famiglie italiane.
-    
 - **FOI** viene ancora usato per **aggiornamenti automatici** di importi monetari (es. affitti).
     
 
@@ -63,9 +62,9 @@ Su Eurostat l’IPCA **non è pubblicato a livello NUTS 3**, ma solo a livello
 
 ### In breve:
 
-- **IPCA** → confronto europeo, senza spesa abitativa.
-- **NIC** → misura ufficiale dell’inflazione in Italia.
-- **FOI** → usato per rivalutazioni, è una versione ristretta del NIC.   
+- **IPCA** → confronto europeo, senza spesa abitativa
+- **NIC** → misura ufficiale dell’inflazione in Italia
+- **FOI** → usato per rivalutazioni, è una versione ristretta del NIC
 
 
 
@@ -86,12 +85,11 @@ Su Eurostat l’IPCA **non è pubblicato a livello NUTS 3**, ma solo a livello
 	- [SDMX](https://ec.europa.eu/eurostat/api/dissemination/sdmx/2.1/data/prc_hicp_manr?format=SDMX-CSV&compressed=true)
 	- [TSV](https://ec.europa.eu/eurostat/api/dissemination/sdmx/2.1/data/prc_hicp_manr?format=TSV&compressed=true)
 
-- l'API che rende disponibile i dati è customizzabile per estrarre un subset: qui ad esempio estraggo CP00 Italia 
+- l'API che rende disponibile i dati è customizzabile per estrarre un subset: qui ad esempio estraggo CP01 Italia 
 
 ```
-https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/prc_hicp_manr?coicop=CP00&geo=IT
+https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/prc_hicp_manr?coicop=CP01&geo=IT
 ```
-
 
 
 ### livello dell'indice dei prezzi
@@ -213,9 +211,9 @@ _(Banca d'Italia, 2025, p. 2) Proiezioni macroeconomiche per l’economia italia
 
 ### Quando usare `teicp000`
 
-- Per **grafici semplici** che confrontano paesi su base **annua**;
-- In **dashboard** o **slide** con indicatori chiave;
-- Quando non servono breakdown per categorie di consumo.
+- Per **grafici semplici** che confrontano paesi su base **annua**
+- In **dashboard** o **slide** con indicatori chiave
+- Quando non servono breakdown per categorie di consumo
  
 
 ## Dataset analitici
@@ -359,12 +357,7 @@ ma ognuno **trasforma il dato base** (l’indice dei prezzi) in una **vista dive
 |URL API|`/data/teicp000`|`/data/prc_hicp_manr`|
 
 
-
-
-
 ---
-
-
 ## [DB Nomics - Prices](https://db.nomics.world/Eurostat)
 
 
@@ -385,7 +378,6 @@ ma ognuno **trasforma il dato base** (l’indice dei prezzi) in una **vista dive
 
 ![Pasted image 20250613122728](./media/Pasted%20image%2020250613122728.png)
 
-./
 
 ## Riferimenti
 
