@@ -15,78 +15,61 @@
         
 - **Fonte:** Istat, con standard Eurostat.
 
+L'indice è stato sviluppato per assicurare una misura dell'inflazione che fosse comparabile a livello europeo; l'indice, riferito alla stessa popolazione ed allo stesso territorio dell'indice dei prezzi al consumo per l'intera collettività, è però calcolato in relazione ad un paniere di beni e servizi costruito tenendo conto sia delle particolarità di ogni paese sia di regole comuni per la ponderazione dei beni che compongono tale paniere (ad esempio il paniere considerato esclude, sulla base di un accordo comunitario, le [lotterie](https://it.wikipedia.org/wiki/Lotteria "Lotteria"), il [lotto](https://it.wikipedia.org/wiki/Lotto "Lotto") e i concorsi pronostici); l'IPCA è stato assunto come indicatore di verifica della convergenza delle economie dei paesi membri dell'UE al fine dell'accesso all'[Unione monetaria](https://it.wikipedia.org/wiki/Unione_economica_e_monetaria "Unione economica e monetaria") e della permanenza nella stessa dei paesi aderenti [^1].
 
 
-## definizioni e del confronto tra **IPCA**, **NIC**, **FOI**, e **FOB**
+Su Eurostat l’IPCA **non è pubblicato a livello NUTS 3**, ma solo a livello **NUTS 2** (regioni di base) e **NUTS 1**:
 
-### NIC – Indice dei Prezzi al Consumo per l'intera collettività
-
-- **Definizione:** Misura l’inflazione percepita dalle **famiglie residenti in Italia**, su tutto il territorio nazionale.
+1. **Copertura dati e campionamento**  
+    - L’HICP è calcolato a partire dalle rilevazioni dei prezzi al dettaglio.  
+    - A livello NUTS 3 (es. provincia o microregione) i campioni diventano troppo piccoli e poco rappresentativi.  
+    - Perciò Eurostat, in accordo con le autorità statistiche nazionali, diffonde i dati solo fino al livello NUTS 2.
     
-- **Uso principale:** Analisi **interna** del potere d’acquisto e contrattazione salariale.
+2. **Standard normativi**  
+    Il regolamento HICP richiede che l’indice sia calcolato su aree geografiche con:
+    - date rigorose
+    - metodologie comparabili
+    - numeri minimi di osservazioni  
     
-- **Caratteristiche:**
-    
-    - Include sia famiglie proprietarie sia affittuarie.
+    Solo NUTS 2 assicura questi requisiti uniformi.
         
-    - Non considera spese sostenute da **non residenti**.
-        
-- **Fonte:** Istat.
+## definizioni e confronto tra **IPCA**, **NIC** e **FOI**
+
+| Caratteristica                 | **IPCA**                                            | **NIC**                                                 | **FOI**                                               |
+| ------------------------------ | --------------------------------------------------- | ------------------------------------------------------- | ----------------------------------------------------- |
+| **Nome completo**              | Indice dei Prezzi al Consumo Armonizzato            | Indice dei Prezzi al Consumo per l’intera collettività  | Indice dei Prezzi al Consumo per operai e impiegati   |
+| **Definizione**                | Misura armonizzata dell’inflazione UE               | Misura l’inflazione per le famiglie residenti in Italia | Variante del NIC limitata a operai e impiegati        |
+| **Uso principale**             | Confronti internazionali (Eurostat, BCE)            | Analisi interna e contrattazione salariale              | Rivalutazioni monetarie (affitti, assegni)            |
+| **Popolazione di riferimento** | Famiglie residenti + non residenti (es. turisti)    | Famiglie residenti (tutte)                              | Famiglie di operai e impiegati                        |
+| **Note distintive**            | Esclude aree rurali isolate; base per obiettivi BCE | Include tutte le spese delle famiglie residenti         | Esclude tabacchi; molto usato per aggiornamenti ISTAT |
+
+
+### 🔍 Approfondimenti:
+
+- **IPCA** è l’unico indice prodotto secondo le direttive **Eurostat**, utilizzato anche per le politiche monetarie della BCE.
     
-
-
-### FOI – Indice dei Prezzi al Consumo per le famiglie di operai e impiegati**
-
-- **Definizione:** Derivato dal NIC, ma limitato alle **famiglie di operai e impiegati** (escluse quelle con solo pensionati o imprenditori).
+- **NIC** è il riferimento **domestico** principale per capire l’inflazione percepita dalle famiglie italiane.
     
-- **Uso principale:** Riferimento per **rivalutazioni monetarie**, come **canoni di affitto**, **assegni**, ecc.
+- **FOI** viene ancora usato per **aggiornamenti automatici** di importi monetari (es. affitti).
     
-- **Caratteristiche:**
-    
-    - È il più “tradizionale” degli indici.
-        
-    - Non include le spese per **tabacchi**.
-        
-- **Fonte:** Istat.
-    
-
-
-
-### FOB – Free On Board (Prezzi all’Export)
-
-- **Definizione:** Non è un indice dei prezzi al consumo, ma una **condizione di consegna** nel commercio estero: il prezzo di un bene **alla frontiera del paese esportatore**, senza includere trasporto o assicurazione internazionale.
-    
-- **Uso principale:** Commercio estero, **bilancia commerciale**.
-    
-- **Differenza chiave:** Si riferisce ai **prezzi all’esportazione**, **non all’inflazione interna**.
-    
-
-
 
 ### CONFRONTO SINTETICO
 
-|Sigla|Nome|Copertura|Uso principale|Esclude / Include|
-|---|---|---|---|---|
-|IPCA|Indice armonizzato|UE|Politica monetaria BCE|Include turisti, esclude proprietà|
-|NIC|Collettività nazionale|Italia (residenti)|Analisi inflazione interna|Include tutti i residenti|
-|FOI|Famiglie operai/impiegati|Italia (subset NIC)|Rivalutazioni monetarie|Esclude tabacchi, include solo alcune famiglie|
-|FOB|Free On Board (export)|Internazionale|Prezzo export alla frontiera|Non è un indice dei prezzi al consumo|
-
+| Sigla | Nome                      | Copertura           | Uso principale               | Esclude / Include                              |
+| ----- | ------------------------- | ------------------- | ---------------------------- | ---------------------------------------------- |
+| IPCA  | Indice armonizzato        | UE                  | Politica monetaria BCE       | Include turisti, esclude proprietà             |
+| NIC   | Collettività nazionale    | Italia (residenti)  | Analisi inflazione interna   | Include tutti i residenti                      |
+| FOI   | Famiglie operai/impiegati | Italia (subset NIC) | Rivalutazioni monetarie      | Esclude tabacchi, include solo alcune famiglie |
 
 ### In breve:
 
 - **IPCA** → confronto europeo, senza spesa abitativa.
 - **NIC** → misura ufficiale dell’inflazione in Italia.
 - **FOI** → usato per rivalutazioni, è una versione ristretta del NIC.   
-- **FOB** → prezzo doganale all’esportazione, non è un indice di inflazione.
-    
-Se vuoi posso anche prepararti un grafico comparativo con i trend storici dei tre indici italiani (IPCA, NIC, FOI). Vuoi procedere?
+
 
 
 # IPCA - approfondimenti
-
-
-L'indice è stato sviluppato per assicurare una misura dell'inflazione che fosse comparabile a livello europeo; l'indice, riferito alla stessa popolazione ed allo stesso territorio dell'indice dei prezzi al consumo per l'intera collettività, è però calcolato in relazione ad un paniere di beni e servizi costruito tenendo conto sia delle particolarità di ogni paese sia di regole comuni per la ponderazione dei beni che compongono tale paniere (ad esempio il paniere considerato esclude, sulla base di un accordo comunitario, le [lotterie](https://it.wikipedia.org/wiki/Lotteria "Lotteria"), il [lotto](https://it.wikipedia.org/wiki/Lotto "Lotto") e i concorsi pronostici); l'IPCA è stato assunto come indicatore di verifica della convergenza delle economie dei paesi membri dell'UE al fine dell'accesso all'[Unione monetaria](https://it.wikipedia.org/wiki/Unione_economica_e_monetaria "Unione economica e monetaria") e della permanenza nella stessa dei paesi aderenti [^1].
 
 - **CP00** è il codice standard Eurostat per **"All-items HICP"**, ovvero l’indice generale (non solo un sottoinsieme di beni/servizi).    
 - **IPCA** è la traduzione italiana del termine **HICP**, usato da **ISTAT** e **Banca d’Italia** per indicare l’indice armonizzato europeo.
