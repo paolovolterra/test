@@ -87,6 +87,8 @@ Su Eurostat l’IPCA **non è pubblicato a livello NUTS 3**, ma solo a livello
 
 - l'API che rende disponibile i dati è customizzabile per estrarre un subset: qui ad esempio estraggo CP01 Italia 
 
+
+## Estrazioni personalizzate
 ```
 https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/prc_hicp_manr?coicop=CP01&geo=IT
 ```
