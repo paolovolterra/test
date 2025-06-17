@@ -16,7 +16,7 @@ Per monitorare i prezzi rilevanti per le imprese, esistono altri indici di prezz
 
 ### Prezzi alla produzione industriale
 
-- Nome ISTAT/Eurostat: **PPI** – [[Producer Price Index]]
+- Nome ISTAT/Eurostat: **PPI** – [[MD/Producer Price Index]]
 - Codici Eurostat: `ppi` (es. **`sts_inpp_m`**)
 - Descrizione: misura la variazione dei prezzi dei beni venduti dalle imprese manifatturiere, sia sul mercato interno che estero, al netto dell’IVA.
 - Uso: **utile per monitorare la pressione sui margini, l’inflazione importata, l’evoluzione dei prezzi di cessione di beni industriali**.
