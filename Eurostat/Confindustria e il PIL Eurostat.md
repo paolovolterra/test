@@ -1,3 +1,5 @@
+# Confindustria e il PIL Eurostat
+
 _impariamo da chi ci sa fare_
 
 I grafici di Confindustria. 2025. «Congiuntura Flash». [https://www.confindustria.it/centro-studi/congiuntura-flash/](https://www.confindustria.it/centro-studi/congiuntura-flash/) mi piacciono molto.  

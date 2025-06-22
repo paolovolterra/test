@@ -1,16 +1,6 @@
----
-title:
-authors:
-  - 
-url:
-tags:
-  - PIL
-  - Eurostat
-  - Prometeia
-  - grafici
-  - Python
-created: 2025-06-16 20:53
----
+# Prodotto interno Lordo for dummies
+
+
 **Eurostat** mette a disposizione oltre **10.000 dataset** che raccolgono informazioni statistiche sui 27 Paesi dell’Unione Europea.  
 Ogni dataset è una struttura complessa, organizzata in più dimensioni (territorio, tempo, unità di misura, variabili economiche, ecc.).
 

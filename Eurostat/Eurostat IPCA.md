@@ -1,4 +1,3 @@
-
 # IPCA – Indice dei Prezzi al Consumo Armonizzato
 
 - **Definizione:** Misura l'inflazione al consumo secondo criteri armonizzati a livello europeo (Eurostat).

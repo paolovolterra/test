@@ -1,15 +1,4 @@
----
-title:
-authors:
-  - 
-url:
-tags:
-  - sts_inpp_m
-  - Eurostat
-  - ei_pric_im_m
-created: 2025-06-16 13:39
----
-
+# IPCA - Indice dei Prezzi al Consumo Armonizzato
 
 L'[[Github/Eurostat/IPCA sts_inpp_m]] (Indice dei Prezzi al Consumo Armonizzato) è pensato per misurare l'inflazione percepita dalle famiglie consumatrici, ed è utilizzato principalmente per confronti internazionali tra paesi dell’UE.
 Per monitorare i prezzi rilevanti per le imprese, esistono altri indici di prezzo specifici
