@@ -1,4 +1,4 @@
-# Prodotto interno Lordo for dummies
+# PIL for dummies
 
 
 **Eurostat** mette a disposizione oltre **10.000 dataset** che raccolgono informazioni statistiche sui 27 Paesi dell’Unione Europea.  
@@ -47,7 +47,7 @@ Per lavorare con questi dati in Python, è consigliabile:
 - convertirli in DataFrame con una funzione di parsing personalizzata 
 - oppure usare librerie compatibili con JSON-stat, come [`pyjstat`](https://pypi.org/project/pyjstat/).
 
-![](Github/Eurostat/media/cruscotto_pil_colorato.png)
+![](../media/cruscotto_pil_colorato.png)
 
 
 
