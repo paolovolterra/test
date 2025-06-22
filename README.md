@@ -11,5 +11,5 @@
 
 ## Eurostat
 
-- IPCA
-- PIL
+- [IPCA](IPCA/index)
+- [PIL](PIL/index)
