@@ -1,6 +1,12 @@
 # Costruiamo il PIL
 
+
+
+![](https://ec.europa.eu/eurostat/o/estat-theme-ecl/images/header/estat-logo-horizontal.svg?browserId=other&minifierType=js&languageId=en_GB&t=1749220086000)
+
 _capire le dimensioni che compongono i dataset di Eurostat_
+
+
 
 ![](Pasted%20image%2020250622114356.png)
 
@@ -221,7 +227,7 @@ data["dimension"]["time"]["category"]["label"]
 
 ```python
 # filtro sulla dimensione na_item
-url=f"https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/namq_10_gdp?unit=CLV_I20&s_adj=SCA&na_item=B1G&geo=IT&time=2025-Q1"
+url=f"https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/namq_10_gdp?unit=CLV_I20&s_adj=SCA&na_item=B1G&geo=IT&time=2023-Q1"
 response = requests.get(url)
 data = response.json()
 print("📐 Dimensioni disponibili:", data["dimension"].keys())
@@ -231,16 +237,21 @@ print("🔢 Numero di valori:", len(data["value"]))
     📐 Dimensioni disponibili: dict_keys(['freq', 'unit', 's_adj', 'na_item', 'geo', 'time'])
     🔢 Numero di valori: 1
 
+Oltre a [namq_10_gdp](https://ec.europa.eu/eurostat/en/web/main/search/-/search/dataset?_estatsearchportlet_WAR_estatsearchportlet_INSTANCE_bHVzuvn1SZ8J_pageNumber=1&_estatsearchportlet_WAR_estatsearchportlet_INSTANCE_bHVzuvn1SZ8J_pageSize=11&_estatsearchportlet_WAR_estatsearchportlet_INSTANCE_bHVzuvn1SZ8J_text=tec00115&p_auth=tvLAcqGs&text=namq_10_gdp), stessa cosa possiamo ottenerla da [nama_10_gdp](https://ec.europa.eu/eurostat/en/web/main/search/-/search/dataset?_estatsearchportlet_WAR_estatsearchportlet_INSTANCE_bHVzuvn1SZ8J_pageNumber=1&_estatsearchportlet_WAR_estatsearchportlet_INSTANCE_bHVzuvn1SZ8J_pageSize=11&_estatsearchportlet_WAR_estatsearchportlet_INSTANCE_bHVzuvn1SZ8J_text=namq_10_gdp&p_auth=tvLAcqGs&text=nama_10_gdp) - **Gross domestic product (GDP) and main components (output, expenditure and income)**
 
-Abbiamo alla fine ottenuto 1 solo valore relativo a:
-1. unit 'CLV_I20': 'Chain linked volumes, index 2020=100'
-2. s_adj 'SCA': 'Seasonally and calendar adjusted data'
-3. na_item 'B1GQ': 'Gross domestic product at market prices'
-4. geo 'IT': 'Italy'
-5. time '2025-Q1'
+vediamo come la serie di filtri hanno ridotto i dati sa estrarre: 
 
-valorizzando puntualmente le dimensioni del dataset  
-questo è il [link](https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/namq_10_gdp?unit=CLV_I20&s_adj=SCA&na_item=B1G&geo=IT&time=2025-Q1)
+| dimensione | filtro                                            | namq_10_gdp | nama_10_gdp |
+| ---------- | ------------------------------------------------- | ----------: | ----------: |
+|            |                                                   |   7.881.265 |   1.049.888 |
+| unit       | 'CLV_I20': 'Chain linked volumes, index 2020=100' |     245.663 |      29.825 |
+| s_adj      | 'SCA': 'Seasonally and calendar adjusted data'    |     105.015 |             |
+| na_item    | 'B1GQ': 'Gross domestic product at market prices' |       4.721 |       1.313 |
+| geo        | 'IT': 'Italy'                                     |         117 |          30 |
+| time       | '2023-Q1' / '2023'                                |           1 |           1 |
+
+
+questo è il [link](https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/namq_10_gdp?unit=CLV_I20&s_adj=SCA&na_item=B1G&geo=IT&time=2025-Q1) per avere il valore puntuale 
 
 ```python
 data
@@ -353,3 +364,81 @@ https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/namq_10_gdp?
 A questo punto diventa fondamentale conoscere tutti i valori che possono assumere tutte le dimensioni presenti negli oltre 9.300 dataset Eurostat.
 Un giochetto ! ;-)
 
+
+
+## namq_10_gdp VS nama_10_gdp
+
+le differenze tra `**namq_10_gdp**` e `**nama_10_gdp**` si riducono principalmente alla **frequenza temporale**:
+
+|Dataset|Frequenza|Nome completo|Note principali|
+|---|---|---|---|
+|`namq_10_gdp`|**Trimestrale**|**National accounts - quarterly data (ESA 2010)**|Dati a frequenza **Q** (Quarterly)|
+|`nama_10_gdp`|**Annuale**|**National accounts - annual data (ESA 2010)**|Dati a frequenza **A** (Annual)|
+
+### Ulteriori differenze:
+
+Entrambi i dataset contengono voci come:
+
+- `na_item = B1GQ` (PIL ai prezzi di mercato)
+    
+- `unit = CLV_I10` o `CLV_I20` (prezzi concatenati, base 2010 o 2020)
+    
+- `s_adj = SCA` (dati destagionalizzati e corretti per effetti di calendario)
+    
+- `geo = ...` (paesi UE, EA19, ecc.)
+    
+
+### Compatibilità delle dimensioni:
+
+- Le dimensioni (`na_item`, `unit`, `geo`, ecc.) sono **quasi identiche**.
+    
+- La dimensione `freq` non è presente come filtro esplicito perché **è fissa per ciascun dataset** (`A` o `Q`).
+    
+
+Se vuoi confrontare **PIL annuale vs trimestrale**, puoi:
+
+- Usare `nama_10_gdp` per un **long-term trend**.
+    
+- Usare `namq_10_gdp` per analisi **cicliche o a breve termine**.
+
+
+## Altri dataset simili
+
+oltre a `namq_10_gdp` (trimestrale) e `nama_10_gdp` (annuale), Eurostat pubblica diversi [dataset paralleli o derivati](https://ec.europa.eu/eurostat/en/web/main/search/-/search/dataset?_estatsearchportlet_WAR_estatsearchportlet_INSTANCE_bHVzuvn1SZ8J_pageNumber=1&_estatsearchportlet_WAR_estatsearchportlet_INSTANCE_bHVzuvn1SZ8J_pageSize=11&_estatsearchportlet_WAR_estatsearchportlet_INSTANCE_bHVzuvn1SZ8J_text=nama_10_gdp&p_auth=tvLAcqGs&text=) che riguardano il PIL o aggregati simili. Ecco una panoramica organizzata per **tematica**:
+
+### Contabilità nazionale – PIL e componenti
+
+|Codice dataset|Frequenza|Descrizione sintetica|Note|
+|---|---|---|---|
+|**namq_10_gdp**|Trimestrale|Contabilità nazionale trimestrale - PIL|Principale per analisi congiunturale|
+|**nama_10_gdp**|Annuale|Contabilità nazionale annuale - PIL|Principale per analisi strutturale|
+|**nama_10_pc**|Annuale|PIL pro capite|In euro, SPA, PPS|
+|**nama_10r_3gdp**|Annuale|PIL regionale a prezzi di mercato|Disponibile per NUTS2|
+|**nama_10r_2gdp**|Annuale|PIL regionale per abitante|Complemento di `nama_10r_3gdp`|
+|**namq_10_sa**|Trimestrale|PIL e componenti, destagionalizzati|Include consumi, investimenti, ecc.|
+|**nama_10_f**|Annuale|PIL per branca di attività|Settori ATECO/NACE|
+|**nama_10_an6**|Annuale|PIL e occupazione per attività|Più dettagliato|
+|**nama_10_c**|Annuale|PIL per tipo di spesa (final consumption, GFCF, ecc.)|Domanda aggregata|
+
+### Indicatori derivati e confronti internazionali
+
+| Codice dataset      | Frequenza | Descrizione                          | Note                                  |
+| ------------------- | --------- | ------------------------------------ | ------------------------------------- |
+| **tec00115**        | Annuale   | PIL reale per abitante               | Dataset semplificato                  |
+| **nama_10_lp_ulc**  | Annuale   | Produttività e costo del lavoro      | Include PIL per ora lavorata          |
+| **nama_10_exi**     | Annuale   | PIL e saldo estero                   | Esportazioni, importazioni, ecc.      |
+| **nama_10_gdpdefl** | Annuale   | Deflatore del PIL                    | Utile per passare da nominale a reale |
+| **sdg_08_10**       | Annuale   | SDG: crescita PIL reale per abitante | Sustainable Development Goal 8        |
+
+### Serie internazionali (PPS, SPA, Eurostat-OECD)
+
+|Codice dataset|Frequenza|Descrizione|
+|---|---|---|
+|**prc_ppp_ind**|Annuale|PIL in standard di potere d’acquisto (PPS)|
+|**nama_aux_gph**|Annuale|Gross domestic product per hour worked (OCSE-Eurostat)|
+
+
+### Come esplorarli:
+
+Puoi cercarli via [Eurostat Data Browser](https://ec.europa.eu/eurostat/databrowser/)
+    
