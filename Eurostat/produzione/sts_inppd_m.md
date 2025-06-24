@@ -1,0 +1,473 @@
+# Produzione industriale - sts_inppd_m
+
+## [sts_inppd_m](https://ec.europa.eu/eurostat/en/web/main/search/-/search/dataset?_estatsearchportlet_WAR_estatsearchportlet_INSTANCE_bHVzuvn1SZ8J_pageNumber=1&_estatsearchportlet_WAR_estatsearchportlet_INSTANCE_bHVzuvn1SZ8J_pageSize=11&_estatsearchportlet_WAR_estatsearchportlet_INSTANCE_bHVzuvn1SZ8J_text=namq_10_gdp&p_auth=dZnccyEE&text=sts_inppd_m)
+
+“**sts_inppd_m**” è il codice identificativo nel database Eurostat per il dataset **“Producer prices in industry, domestic market – monthly data”** (Prezzi alla produzione nell’industria, mercato interno – dati mensili) ([ec.europa.eu](https://ec.europa.eu/eurostat/databrowser/product/view/sts_inppd_m?category=sts.sts_ind.sts_ind_pric.sts_inpp_d&lang=en&utm_source=chatgpt.com "Producer prices in industry, domestic market - monthly data")).
+
+- È un indice dei prezzi alla produzione (PPI) calcolato su base mensile, focalizzato sui beni prodotti e venduti sul mercato nazionale (esclusi quelli destinati all’export) .
+    
+- Rappresenta la variazione dei prezzi effettivi transati tra produttori (senza IVA, ma includendo eventuali sussidi) .
+    
+
+### A cosa serve?
+
+1. **Indicatore economico anticipatore**: segnala tendenze verso l’inflazione futura.
+    
+2. **Deflatore statistico**: serve a correggere altri dati economici, come la produzione industriale, eliminando l’effetto dell’inflazione.
+    
+3. **Clausole contrattuali**: viene usato per adeguamenti automatici dei prezzi in contratti commerciali .
+    
+
+### Frequenza e normativa
+
+- Viene pubblicato **mensilmente**; i paesi UE trasmettono i dati circa 1 mese e 5 giorni dopo la fine del periodo di riferimento .
+    
+- Il calcolo si basa su prezzi reali e campionamenti statistici rigorosi (NACE Rev. 2) ([ec.europa.eu](https://ec.europa.eu/eurostat/statistics-explained/index.php/Industrial_producer_price_index_overview?utm_source=chatgpt.com "Industrial producer price index overview - Statistics Explained")).
+    
+
+### Contesto attuale
+
+L’indice fa parte della più ampia categoria “sts_inppd_m” per il mercato domestico, che si affianca a “sts_inppd_a” per i dati annuali e ad altre serie come “sts_inppnd_m” (mercato non domestico) ([ec.europa.eu](https://ec.europa.eu/eurostat/databrowser/explore/all/icts?display=list&extractionId=sts_inppd_m&lang=en&sort=category&subtheme=sts.sts_tot.sts_tot_prod&utm_source=chatgpt.com "Database - Statistics | Eurostat - European Union")).
+
+### In breve:
+
+- **Codice**: _sts_inppd_m_
+    
+- **Oggetto**: prezzi alla produzione mensili del mercato interno
+    
+- **Uso**: monitoraggio dell’inflazione, analisi economica, aggiornamenti contrattuali
+    
+
+## Link
+
+
+- https://ec.europa.eu/eurostat/api/dissemination/files?file=metadata/sts_esms.sdmx.zip
+- https://ec.europa.eu/eurostat/cache/metadata/en/sts_esms.htm
+- https://opendata.marche.camcom.it/json-chart.htm?dse=sts_trtu_m?format=JSON&unit=I21&unit=PCH_PRE&unit=PCH_SM&indic_bt=VOL_SLS&nace_r2=G&nace_r2=G45&nace_r2=G46&nace_r2=G47&s_adj=SCA+f5v=15
+
+## Dimensioni
+
+### link di esempio 
+
+- https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/sts_inppd_m?nace_r2=B-E36&nace_r2=B_C_X_MIG_NRG&nace_r2=MIG_CAG&nace_r2=MIG_DCOG&nace_r2=MIG_ING&nace_r2=MIG_NDCOG&nace_r2=MIG_NRG&unit=I21&unit=PCH_PRE&unit=PCH_SM
+- https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/sts_inppd_m?geo=IT&time=2025-04
+
+### componenti
+- sts_inppd_m?
+
+- nace_r2=B-E36&
+- nace_r2=B_C_X_MIG_NRG&
+- nace_r2=MIG_CAG&
+- nace_r2=MIG_DCOG&
+- nace_r2=MIG_ING&
+- nace_r2=MIG_NDCOG&
+- nace_r2=MIG_NRG&
+
+- unit=I21&
+- unit=PCH_PRE&
+- unit=PCH_SM
+
+
+    - "freq",
+    - "indic_bt",
+    - "nace_r2",
+    - "s_adj",
+    - "unit",
+    - "geo",
+    - "time"
+
+### indic_bt Business trend indicator
+
+- "PRC_PRR_DOM": "Domestic producer prices"
+
+### nace_r2 Statistical classification of economic activities in the European Community (NACE Rev. 2)
+
+- "B-E36": "Industry (except construction, sewerage, waste management and remediation activities)",
+- "B-E36_X_FOOD": "Industry (except construction, sewerage, waste management and remediation activities), except food, beverages and tobacco",
+- "B-D": "Mining and quarrying; manufacturing; electricity, gas, steam and air conditioning supply",
+
+- "MIG_ING": "MIG - intermediate goods",
+- "MIG_NRG": "MIG - energy",
+- "MIG_NRG_X_D_E": "MIG - energy (except sections D and E)",
+- "MIG_CAG": "MIG - capital goods",
+- "MIG_COG": "MIG - consumer goods",
+- "MIG_COG_X_FOOD": "MIG - consumer goods (except food, beverages and tobacco)",
+- "MIG_DCOG": "MIG - durable consumer goods",
+- "MIG_NDCOG": "MIG - non-durable consumer goods",
+- "B_C": "Mining and quarrying; manufacturing",
+- "B_C_X_MIG_NRG": "Mining and quarrying; manufacturing (except MIG energy)",
+- "B_C_X_FD_MIG_NRG": "Mining and quarrying; manufacturing (except MIG energy), except food, beverages and tobacco",
+
+- "B": "Mining and quarrying",
+- "B05": "Mining of coal and lignite",
+- "B051": "Mining of hard coal",
+- "B052": "Mining of lignite",
+- "B06": "Extraction of crude petroleum and natural gas",
+- "B061": "Extraction of crude petroleum",
+- "B062": "Extraction of natural gas",
+- "B07": "Mining of metal ores",
+- "B071": "Mining of iron ores",
+- "B072": "Mining of non-ferrous metal ores",
+- "B08": "Other mining and quarrying",
+- "B081": "Quarrying of stone, sand and clay",
+- "B089": "Mining and quarrying n.e.c.",
+- "B0891": "Mining of chemical and fertiliser minerals",
+- "B0892": "Extraction of peat",
+- "B0893": "Extraction of salt",
+- "B0899": "Other mining and quarrying n.e.c.",
+- "B09": "Mining support service activities",
+
+- "C": "Manufacturing",
+- "C10-C12": "Manufacture of food products; beverages and tobacco products",
+- "C10_C11": "Manufacture of food products and beverages",
+- "C10": "Manufacture of food products",
+- "C101": "Processing and preserving of meat and production of meat products",
+- "C1011": "Processing and preserving of meat",
+- "C1012": "Processing and preserving of poultry meat",
+- "C1013": "Production of meat and poultry meat products",
+- "C102": "Processing and preserving of fish, crustaceans and molluscs",
+- "C103": "Processing and preserving of fruit and vegetables",
+- "C1031": "Processing and preserving of potatoes",
+- "C1032": "Manufacture of fruit and vegetable juice",
+- "C1039": "Other processing and preserving of fruit and vegetables",
+- "C104": "Manufacture of vegetable and animal oils and fats",
+- "C1041": "Manufacture of oils and fats",
+- "C1042": "Manufacture of margarine and similar edible fats",
+- "C105": "Manufacture of dairy products",
+- "C1051": "Operation of dairies and cheese making",
+- "C1052": "Manufacture of ice cream",
+- "C106": "Manufacture of grain mill products, starches and starch products",
+- "C1061": "Manufacture of grain mill products",
+- "C1062": "Manufacture of starches and starch products",
+- "C107": "Manufacture of bakery and farinaceous products",
+- "C1071": "Manufacture of bread; manufacture of fresh pastry goods and cakes",
+- "C1072": "Manufacture of rusks and biscuits; manufacture of preserved pastry goods and cakes",
+- "C1073": "Manufacture of macaroni, noodles, couscous and similar farinaceous products",
+- "C108": "Manufacture of other food products",
+- "C1081": "Manufacture of sugar",
+- "C1082": "Manufacture of cocoa, chocolate and sugar confectionery",
+- "C1083": "Processing of tea and coffee",
+- "C1084": "Manufacture of condiments and seasonings",
+- "C1085": "Manufacture of prepared meals and dishes",
+- "C1086": "Manufacture of homogenised food preparations and dietetic food",
+- "C1089": "Manufacture of other food products n.e.c.",
+- "C109": "Manufacture of prepared animal feeds",
+- "C1091": "Manufacture of prepared feeds for farm animals",
+- "C1092": "Manufacture of prepared pet foods",
+- "C11": "Manufacture of beverages",
+- "C1101": "Distilling, rectifying and blending of spirits",
+- "C1102": "Manufacture of wine from grape",
+- "C1103": "Manufacture of cider and other fruit wines",
+- "C1104": "Manufacture of other non-distilled fermented beverages",
+- "C1105": "Manufacture of beer",
+- "C1106": "Manufacture of malt",
+- "C1107": "Manufacture of soft drinks; production of mineral waters and other bottled waters",
+- "C12": "Manufacture of tobacco products",
+- "C13-C15": "Manufacture of textiles, wearing apparel, leather and related products",
+- "C13_C14": "Manufacture of textiles and wearing apparel",
+- "C13": "Manufacture of textiles",
+- "C131": "Preparation and spinning of textile fibres",
+- "C132": "Weaving of textiles",
+- "C133": "Finishing of textiles",
+- "C139": "Manufacture of other textiles",
+- "C1391": "Manufacture of knitted and crocheted fabrics",
+- "C1392": "Manufacture of made-up textile articles, except apparel",
+- "C1393": "Manufacture of carpets and rugs",
+- "C1394": "Manufacture of cordage, rope, twine and netting",
+- "C1395": "Manufacture of non-wovens and articles made from non-wovens, except apparel",
+- "C1396": "Manufacture of other technical and industrial textiles",
+- "C1399": "Manufacture of other textiles n.e.c.",
+- "C14": "Manufacture of wearing apparel",
+- "C141": "Manufacture of wearing apparel, except fur apparel",
+- "C1411": "Manufacture of leather clothes",
+- "C1412": "Manufacture of workwear",
+- "C1413": "Manufacture of other outerwear",
+- "C1414": "Manufacture of underwear",
+- "C1419": "Manufacture of other wearing apparel and accessories",
+- "C142": "Manufacture of articles of fur",
+- "C143": "Manufacture of knitted and crocheted apparel",
+- "C1431": "Manufacture of knitted and crocheted hosiery",
+- "C1439": "Manufacture of other knitted and crocheted apparel",
+- "C15": "Manufacture of leather and related products",
+- "C151": "Tanning and dressing of leather; manufacture of luggage, handbags, saddlery and harness; dressing and dyeing of fur",
+- "C1511": "Tanning and dressing of leather; dressing and dyeing of fur",
+- "C1512": "Manufacture of luggage, handbags and the like, saddlery and harness",
+- "C152": "Manufacture of footwear",
+- "C16-C18": "Manufacture of wood, paper, printing and reproduction",
+- "C16": "Manufacture of wood and of products of wood and cork, except furniture; manufacture of articles of straw and plaiting materials",
+- "C161": "Sawmilling and planing of wood",
+- "C162": "Manufacture of products of wood, cork, straw and plaiting materials",
+- "C1621": "Manufacture of veneer sheets and wood-based panels",
+- "C1622": "Manufacture of assembled parquet floors",
+- "C1623": "Manufacture of other builders' carpentry and joinery",
+- "C1624": "Manufacture of wooden containers",
+- "C1629": "Manufacture of other products of wood; manufacture of articles of cork, straw and plaiting materials",
+- "C17_C18": "Manufacture of paper and paper products; printing and reproduction of recorded media",
+- "C17": "Manufacture of paper and paper products",
+- "C171": "Manufacture of pulp, paper and paperboard",
+- "C1711": "Manufacture of pulp",
+- "C1712": "Manufacture of paper and paperboard",
+- "C172": "Manufacture of articles of paper and paperboard",
+- "C1721": "Manufacture of corrugated paper and paperboard and of containers of paper and paperboard",
+- "C1722": "Manufacture of household and sanitary goods and of toilet requisites",
+- "C1723": "Manufacture of paper stationery",
+- "C1724": "Manufacture of wallpaper",
+- "C1729": "Manufacture of other articles of paper and paperboard",
+- "C18": "Printing and reproduction of recorded media",
+- "C181": "Printing and service activities related to printing",
+- "C1811": "Printing of newspapers",
+- "C1812": "Other printing",
+- "C1813": "Pre-press and pre-media services",
+- "C1814": "Binding and related services",
+- "C182": "Reproduction of recorded media",
+- "C19": "Manufacture of coke and refined petroleum products",
+- "C191": "Manufacture of coke oven products",
+- "C192": "Manufacture of refined petroleum products",
+- "C20_C21": "Manufacture of chemicals and chemical products; basic pharmaceutical products and pharmaceutical preparations",
+- "C20": "Manufacture of chemicals and chemical products",
+- "C201": "Manufacture of basic chemicals, fertilisers and nitrogen compounds, plastics and synthetic rubber in primary forms",
+- "C2011": "Manufacture of industrial gases",
+- "C2012": "Manufacture of dyes and pigments",
+- "C2013": "Manufacture of other inorganic basic chemicals",
+- "C2014": "Manufacture of other organic basic chemicals",
+- "C2015": "Manufacture of fertilisers and nitrogen compounds",
+- "C2016": "Manufacture of plastics in primary forms",
+- "C2017": "Manufacture of synthetic rubber in primary forms",
+- "C202": "Manufacture of pesticides and other agrochemical products",
+- "C203": "Manufacture of paints, varnishes and similar coatings, printing ink and mastics",
+- "C204": "Manufacture of soap and detergents, cleaning and polishing preparations, perfumes and toilet preparations",
+- "C2041": "Manufacture of soap and detergents, cleaning and polishing preparations",
+- "C2042": "Manufacture of perfumes and toilet preparations",
+- "C205": "Manufacture of other chemical products",
+- "C2051": "Manufacture of explosives",
+- "C2052": "Manufacture of glues",
+- "C2053": "Manufacture of essential oils",
+- "C2059": "Manufacture of other chemical products n.e.c.",
+- "C206": "Manufacture of man-made fibres",
+- "C21": "Manufacture of basic pharmaceutical products and pharmaceutical preparations",
+- "C211": "Manufacture of basic pharmaceutical products",
+- "C212": "Manufacture of pharmaceutical preparations",
+- "C22": "Manufacture of rubber and plastic products",
+- "C221": "Manufacture of rubber products",
+- "C2211": "Manufacture of rubber tyres and tubes; retreading and rebuilding of rubber tyres",
+- "C2219": "Manufacture of other rubber products",
+- "C222": "Manufacture of plastics products",
+- "C2221": "Manufacture of plastic plates, sheets, tubes and profiles",
+- "C22_C23": "Manufacture of rubber and plastic products and other non-metallic mineral products",
+- "C2222": "Manufacture of plastic packing goods",
+- "C2223": "Manufacture of builders' ware of plastic",
+- "C2229": "Manufacture of other plastic products",
+- "C23": "Manufacture of other non-metallic mineral products",
+- "C231": "Manufacture of glass and glass products",
+- "C2311": "Manufacture of flat glass",
+- "C2312": "Shaping and processing of flat glass",
+- "C2313": "Manufacture of hollow glass",
+- "C2314": "Manufacture of glass fibres",
+- "C2319": "Manufacture and processing of other glass, including technical glassware",
+- "C232": "Manufacture of refractory products",
+- "C233": "Manufacture of clay building materials",
+- "C2331": "Manufacture of ceramic tiles and flags",
+- "C2332": "Manufacture of bricks, tiles and construction products, in baked clay",
+- "C234": "Manufacture of other porcelain and ceramic products",
+- "C2341": "Manufacture of ceramic household and ornamental articles",
+- "C2342": "Manufacture of ceramic sanitary fixtures",
+- "C2343": "Manufacture of ceramic insulators and insulating fittings",
+- "C2344": "Manufacture of other technical ceramic products",
+- "C2349": "Manufacture of other ceramic products",
+- "C235": "Manufacture of cement, lime and plaster",
+- "C2351": "Manufacture of cement",
+- "C2352": "Manufacture of lime and plaster",
+- "C236": "Manufacture of articles of concrete, cement and plaster",
+- "C2361": "Manufacture of concrete products for construction purposes",
+- "C2362": "Manufacture of plaster products for construction purposes",
+- "C2363": "Manufacture of ready-mixed concrete",
+- "C2364": "Manufacture of mortars",
+- "C2365": "Manufacture of fibre cement",
+- "C2369": "Manufacture of other articles of concrete, plaster and cement",
+- "C237": "Cutting, shaping and finishing of stone",
+- "C239": "Manufacture of abrasive products and non-metallic mineral products n.e.c.",
+- "C2391": "Production of abrasive products",
+- "C2399": "Manufacture of other non-metallic mineral products n.e.c.",
+- "C24_C25": "Manufacture of basic metals and fabricated metal products, except machinery and equipment",
+- "C24": "Manufacture of basic metals",
+- "C241": "Manufacture of basic iron and steel and of ferro-alloys",
+- "C242": "Manufacture of tubes, pipes, hollow profiles and related fittings, of steel",
+- "C243": "Manufacture of other products of first processing of steel",
+- "C2431": "Cold drawing of bars",
+- "C2432": "Cold rolling of narrow strip",
+- "C2433": "Cold forming or folding",
+- "C2434": "Cold drawing of wire",
+- "C244": "Manufacture of basic precious and other non-ferrous metals",
+- "C2441": "Precious metals production",
+- "C2442": "Aluminium production",
+- "C2443": "Lead, zinc and tin production",
+- "C2444": "Copper production",
+- "C2445": "Other non-ferrous metal production",
+- "C245": "Casting of metals",
+- "C2451": "Casting of iron",
+- "C2452": "Casting of steel",
+- "C2453": "Casting of light metals",
+- "C2454": "Casting of other non-ferrous metals",
+- "C25": "Manufacture of fabricated metal products, except machinery and equipment",
+- "C251": "Manufacture of structural metal products",
+- "C2511": "Manufacture of metal structures and parts of structures",
+- "C2512": "Manufacture of doors and windows of metal",
+- "C252": "Manufacture of tanks, reservoirs and containers of metal",
+- "C2521": "Manufacture of central heating radiators and boilers",
+- "C2529": "Manufacture of other tanks, reservoirs and containers of metal",
+- "C253": "Manufacture of steam generators, except central heating hot water boilers",
+- "C254": "Manufacture of weapons and ammunition",
+- "C255": "Forging, pressing, stamping and roll-forming of metal; powder metallurgy",
+- "C256": "Treatment and coating of metals; machining",
+- "C2561": "Treatment and coating of metals",
+- "C2562": "Machining",
+- "C257": "Manufacture of cutlery, tools and general hardware",
+- "C2571": "Manufacture of cutlery",
+- "C2572": "Manufacture of locks and hinges",
+- "C2573": "Manufacture of tools",
+- "C259": "Manufacture of other fabricated metal products",
+- "C2591": "Manufacture of steel drums and similar containers",
+- "C2592": "Manufacture of light metal packaging",
+- "C2593": "Manufacture of wire products, chain and springs",
+- "C2594": "Manufacture of fasteners and screw machine products",
+- "C2599": "Manufacture of other fabricated metal products n.e.c.",
+- "C26_C27": "Manufacture of computer, electronic and optical products; manufacture of electrical equipment",
+- "C26": "Manufacture of computer, electronic and optical products",
+- "C261": "Manufacture of electronic components and boards",
+- "C2611": "Manufacture of electronic components",
+- "C2612": "Manufacture of loaded electronic boards",
+- "C262": "Manufacture of computers and peripheral equipment",
+- "C263": "Manufacture of communication equipment",
+- "C264": "Manufacture of consumer electronics",
+- "C265": "Manufacture of instruments and appliances for measuring, testing and navigation; watches and clocks",
+- "C2651": "Manufacture of instruments and appliances for measuring, testing and navigation",
+- "C2652": "Manufacture of watches and clocks",
+- "C266": "Manufacture of irradiation, electromedical and electrotherapeutic equipment",
+- "C267": "Manufacture of optical instruments and photographic equipment",
+- "C268": "Manufacture of magnetic and optical media",
+- "C27": "Manufacture of electrical equipment",
+- "C271": "Manufacture of electric motors, generators, transformers and electricity distribution and control apparatus",
+- "C2711": "Manufacture of electric motors, generators and transformers",
+- "C2712": "Manufacture of electricity distribution and control apparatus",
+- "C272": "Manufacture of batteries and accumulators",
+- "C273": "Manufacture of wiring and wiring devices",
+- "C2731": "Manufacture of fibre optic cables",
+- "C2732": "Manufacture of other electronic and electric wires and cables",
+- "C2733": "Manufacture of wiring devices",
+- "C274": "Manufacture of electric lighting equipment",
+- "C275": "Manufacture of domestic appliances",
+- "C2751": "Manufacture of electric domestic appliances",
+- "C2752": "Manufacture of non-electric domestic appliances",
+- "C279": "Manufacture of other electrical equipment",
+- "C28": "Manufacture of machinery and equipment n.e.c.",
+- "C281": "Manufacture of general-purpose machinery",
+- "C2811": "Manufacture of engines and turbines, except aircraft, vehicle and cycle engines",
+- "C2812": "Manufacture of fluid power equipment",
+- "C2813": "Manufacture of other pumps and compressors",
+- "C2814": "Manufacture of other taps and valves",
+- "C2815": "Manufacture of bearings, gears, gearing and driving elements",
+- "C282": "Manufacture of other general-purpose machinery",
+- "C2821": "Manufacture of ovens, furnaces and furnace burners",
+- "C2822": "Manufacture of lifting and handling equipment",
+- "C2823": "Manufacture of office machinery and equipment (except computers and peripheral equipment)",
+- "C2824": "Manufacture of power-driven hand tools",
+- "C2825": "Manufacture of non-domestic cooling and ventilation equipment",
+- "C2829": "Manufacture of other general-purpose machinery n.e.c.",
+- "C283": "Manufacture of agricultural and forestry machinery",
+- "C284": "Manufacture of metal forming machinery and machine tools",
+- "C2841": "Manufacture of metal forming machinery",
+- "C2849": "Manufacture of other machine tools",
+- "C289": "Manufacture of other special-purpose machinery",
+- "C2891": "Manufacture of machinery for metallurgy",
+- "C2892": "Manufacture of machinery for mining, quarrying and construction",
+- "C2893": "Manufacture of machinery for food, beverage and tobacco processing",
+- "C2894": "Manufacture of machinery for textile, apparel and leather production",
+- "C2895": "Manufacture of machinery for paper and paperboard production",
+- "C2896": "Manufacture of plastics and rubber machinery",
+- "C2899": "Manufacture of other special-purpose machinery n.e.c.",
+- "C29_C30": "Manufacture of motor vehicles, trailers, semi-trailers and of other transport equipment",
+- "C29": "Manufacture of motor vehicles, trailers and semi-trailers",
+- "C291": "Manufacture of motor vehicles",
+- "C292": "Manufacture of bodies (coachwork) for motor vehicles; manufacture of trailers and semi-trailers",
+- "C293": "Manufacture of parts and accessories for motor vehicles",
+- "C2931": "Manufacture of electrical and electronic equipment for motor vehicles",
+- "C2932": "Manufacture of other parts and accessories for motor vehicles",
+- "C30": "Manufacture of other transport equipment",
+- "C301": "Building of ships and boats",
+- "C3011": "Building of ships and floating structures",
+- "C3012": "Building of pleasure and sporting boats",
+- "C302": "Manufacture of railway locomotives and rolling stock",
+- "C303": "Manufacture of air and spacecraft and related machinery",
+- "C309": "Manufacture of transport equipment n.e.c.",
+- "C3091": "Manufacture of motorcycles",
+- "C3092": "Manufacture of bicycles and invalid carriages",
+- "C3099": "Manufacture of other transport equipment n.e.c.",
+- "C31-C33": "Manufacture of furniture; jewellery, musical instruments, toys; repair and installation of machinery and equipment",
+- "C31_C32": "Manufacture of furniture; other manufacturing",
+- "C31": "Manufacture of furniture",
+- "C310": "Manufacture of furniture",
+- "C3101": "Manufacture of office and shop furniture",
+- "C3102": "Manufacture of kitchen furniture",
+- "C3103": "Manufacture of mattresses",
+- "C3109": "Manufacture of other furniture",
+- "C32": "Other manufacturing",
+- "C321": "Manufacture of jewellery, bijouterie and related articles",
+- "C3211": "Striking of coins",
+- "C3212": "Manufacture of jewellery and related articles",
+- "C3213": "Manufacture of imitation jewellery and related articles",
+- "C322": "Manufacture of musical instruments",
+- "C323": "Manufacture of sports goods",
+- "C324": "Manufacture of games and toys",
+- "C325": "Manufacture of medical and dental instruments and supplies",
+- "C329": "Manufacturing n.e.c.",
+- "C3291": "Manufacture of brooms and brushes",
+- "C3299": "Other manufacturing n.e.c.",
+- "C33": "Repair and installation of machinery and equipment",
+- "C331": "Repair of fabricated metal products, machinery and equipment",
+- "C3311": "Repair of fabricated metal products",
+- "C3312": "Repair of machinery",
+- "C3313": "Repair of electronic and optical equipment",
+- "C3314": "Repair of electrical equipment",
+- "C3315": "Repair and maintenance of ships and boats",
+- "C3316": "Repair and maintenance of aircraft and spacecraft",
+- "C3317": "Repair and maintenance of other transport equipment",
+- "C3319": "Repair of other equipment",
+- "C332": "Installation of industrial machinery and equipment",
+
+- "D": "Electricity, gas, steam and air conditioning supply",
+- "D35": "Electricity, gas, steam and air conditioning supply",
+- "D351": "Electric power generation, transmission and distribution",
+- "D352": "Manufacture of gas; distribution of gaseous fuels through mains",
+- "D353": "Steam and air conditioning supply",
+- "E36": "Water collection, treatment and supply"
+
+
+### s_adj "Seasonal adjustment"
+
+- "NSA": "Unadjusted data (i.e. neither seasonally adjusted nor calendar adjusted data)"
+
+### unit "Unit of measure
+          "I21": "Index, 2021=100",
+          "I15": "Index, 2015=100",
+          "I10": "Index, 2010=100",
+          "PCH_PRE": "Percentage change on previous period",
+          "PCH_SM": "Percentage change compared to same period in previous year"
+
+
+### geo
+
+
+### time
+
+- 2025-04
+- 
+
+
+      "label": {
+        "p": "provisional",
+        "i": "value imputed by Eurostat or other receiving agencies",
+        "|C": "|confidential",
+        "e": "estimated",
+        "de": "definition differs (see metadata), estimated"
+
+

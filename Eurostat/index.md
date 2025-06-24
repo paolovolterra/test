@@ -7,6 +7,16 @@ https://ec.europa.eu/eurostat/databrowser/explore/all/all_themes
 
 
 - [costruiamo il link](urls)
+- [Eurostat VS Istat](Eurostat%20VS%20Istat.md)
+## PIL
+
 - [PIL](./PIL/index.md)
+
+## IPCA
+
 - [IPCA](./IPCA/index.md)
+
+## Produzione
+## demografia
+
 

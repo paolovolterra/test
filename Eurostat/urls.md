@@ -1,4 +1,4 @@
-# Costruiamo il PIL
+# Costruiamo il link
 
 
 
@@ -7,8 +7,48 @@
 _capire le dimensioni che compongono i dataset di Eurostat_
 
 
+Eurostat pubblica diversi [dataset paralleli o derivati](https://ec.europa.eu/eurostat/en/web/main/search/-/search/dataset?_estatsearchportlet_WAR_estatsearchportlet_INSTANCE_bHVzuvn1SZ8J_pageNumber=1&_estatsearchportlet_WAR_estatsearchportlet_INSTANCE_bHVzuvn1SZ8J_pageSize=11&_estatsearchportlet_WAR_estatsearchportlet_INSTANCE_bHVzuvn1SZ8J_text=nama_10_gdp&p_auth=tvLAcqGs&text=) che riguardano il PIL o aggregati simili. Ecco una panoramica organizzata per **tematica**:
+### Contabilità nazionale – PIL e componenti
 
-![](Pasted%20image%2020250622114356.png)
+| Codice dataset    | Frequenza   | Descrizione sintetica                                 | Note                                 |
+| ----------------- | ----------- | ----------------------------------------------------- | ------------------------------------ |
+| **namq_10_gdp**   | Trimestrale | Contabilità nazionale trimestrale - PIL               | Principale per analisi congiunturale |
+| **nama_10_gdp**   | Annuale     | Contabilità nazionale annuale - PIL                   | Principale per analisi strutturale   |
+| **nama_10_pc**    | Annuale     | PIL pro capite                                        | In euro, SPA, PPS                    |
+| **nama_10r_3gdp** | Annuale     | PIL regionale a prezzi di mercato                     | Disponibile per NUTS2                |
+| **nama_10r_2gdp** | Annuale     | PIL regionale per abitante                            | Complemento di `nama_10r_3gdp`       |
+| **namq_10_sa**    | Trimestrale | PIL e componenti, destagionalizzati                   | Include consumi, investimenti, ecc.  |
+| **nama_10_f**     | Annuale     | PIL per branca di attività                            | Settori ATECO/NACE                   |
+| **nama_10_an6**   | Annuale     | PIL e occupazione per attività                        | Più dettagliato                      |
+| **nama_10_c**     | Annuale     | PIL per tipo di spesa (final consumption, GFCF, ecc.) | Domanda aggregata                    |
+
+### Indicatori derivati e confronti internazionali
+
+| Codice dataset      | Frequenza | Descrizione                          | Note                                  |
+| ------------------- | --------- | ------------------------------------ | ------------------------------------- |
+| **tec00115**        | Annuale   | PIL reale per abitante               | Dataset semplificato                  |
+| **nama_10_lp_ulc**  | Annuale   | Produttività e costo del lavoro      | Include PIL per ora lavorata          |
+| **nama_10_exi**     | Annuale   | PIL e saldo estero                   | Esportazioni, importazioni, ecc.      |
+| **nama_10_gdpdefl** | Annuale   | Deflatore del PIL                    | Utile per passare da nominale a reale |
+| **sdg_08_10**       | Annuale   | SDG: crescita PIL reale per abitante | Sustainable Development Goal 8        |
+
+### Serie internazionali (PPS, SPA, Eurostat-OECD)
+
+|Codice dataset|Frequenza|Descrizione|
+|---|---|---|
+|**prc_ppp_ind**|Annuale|PIL in standard di potere d’acquisto (PPS)|
+|**nama_aux_gph**|Annuale|Gross domestic product per hour worked (OCSE-Eurostat)|
+
+
+Puoi cercarli via [Eurostat Data Browser](https://ec.europa.eu/eurostat/databrowser/)
+    
+## [namq_10_gdp](https://ec.europa.eu/eurostat/en/web/main/search/-/search/dataset?text=namq_10_gdp)
+
+- Trimestrale
+- Contabilità nazionale trimestrale - PIL
+- Principale per analisi 
+
+![](Github/Eurostat/media/Pasted%20image%2020250622114356.png)
 
 Usiamo come esempio il dataset `nama_10_gdp`  "**Gross domestic product (GDP) and main components (output, expenditure and income)**"  
 voglio sapere quali sono le dimensioni di questo dataset  
@@ -25,8 +65,11 @@ print("🔢 Numero di valori:", len(data["value"]))
 
     📐 Dimensioni disponibili: dict_keys(['freq', 'unit', 's_adj', 'na_item', 'geo', 'time'])
     🔢 Numero di valori: 7881265
-    
+
 filtriamo ora in sequenza le varie dimensioni ['freq', 'unit', 's_adj', 'na_item', 'geo', 'time'] dopo averle interrogate una per volta 
+
+
+### filtro su unit
 
 ```python
 data["dimension"]["unit"]["category"]["label"]
@@ -78,7 +121,9 @@ print("🔢 Numero di valori:", len(data["value"]))
 
     📐 Dimensioni disponibili: dict_keys(['freq', 'unit', 's_adj', 'na_item', 'geo', 'time'])
     🔢 Numero di valori: 245663
-    
+
+### filtro su s_adj
+
 ```python
 data["dimension"]["s_adj"]["category"]["label"]
 ```
@@ -99,6 +144,8 @@ print("🔢 Numero di valori:", len(data["value"]))
 
     📐 Dimensioni disponibili: dict_keys(['freq', 'unit', 's_adj', 'na_item', 'geo', 'time'])
     🔢 Numero di valori: 105015
+
+### filtro su na_item
 
 ```python
 data["dimension"]["na_item"]["category"]["label"]
@@ -144,6 +191,7 @@ data["dimension"]["na_item"]["category"]["label"]
      'P3_P5': 'Final consumption expenditure and gross capital formation',
      'P3_P6': 'Final consumption expenditure, gross capital formation and exports of goods and services'}
 
+
 ```python
 # filtro sulla nazione
 url=f"https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/namq_10_gdp?unit=CLV_I20&s_adj=SCA&na_item=B1G"
@@ -155,6 +203,8 @@ print("🔢 Numero di valori:", len(data["value"]))
 
     📐 Dimensioni disponibili: dict_keys(['freq', 'unit', 's_adj', 'na_item', 'geo', 'time'])
     🔢 Numero di valori: 4721
+
+### filtro su nazione
 
 ```python
 data["dimension"]["geo"]["category"]["label"]
@@ -215,7 +265,9 @@ print("🔢 Numero di valori:", len(data["value"]))
 
     📐 Dimensioni disponibili: dict_keys(['freq', 'unit', 's_adj', 'na_item', 'geo', 'time'])
     🔢 Numero di valori: 117
- 
+
+### filtro su time
+
 ```python
 data["dimension"]["time"]["category"]["label"]
 ```
@@ -236,6 +288,13 @@ print("🔢 Numero di valori:", len(data["value"]))
 
     📐 Dimensioni disponibili: dict_keys(['freq', 'unit', 's_adj', 'na_item', 'geo', 'time'])
     🔢 Numero di valori: 1
+
+## nama_10_gdp
+
+- Gross domestic product (GDP) and main components (output, expenditure and income)
+- annuale
+- Contabilità nazionale annuale
+- Principale per analisi strutturale
 
 Oltre a [namq_10_gdp](https://ec.europa.eu/eurostat/en/web/main/search/-/search/dataset?_estatsearchportlet_WAR_estatsearchportlet_INSTANCE_bHVzuvn1SZ8J_pageNumber=1&_estatsearchportlet_WAR_estatsearchportlet_INSTANCE_bHVzuvn1SZ8J_pageSize=11&_estatsearchportlet_WAR_estatsearchportlet_INSTANCE_bHVzuvn1SZ8J_text=tec00115&p_auth=tvLAcqGs&text=namq_10_gdp), stessa cosa possiamo ottenerla da [nama_10_gdp](https://ec.europa.eu/eurostat/en/web/main/search/-/search/dataset?_estatsearchportlet_WAR_estatsearchportlet_INSTANCE_bHVzuvn1SZ8J_pageNumber=1&_estatsearchportlet_WAR_estatsearchportlet_INSTANCE_bHVzuvn1SZ8J_pageSize=11&_estatsearchportlet_WAR_estatsearchportlet_INSTANCE_bHVzuvn1SZ8J_text=namq_10_gdp&p_auth=tvLAcqGs&text=nama_10_gdp) - **Gross domestic product (GDP) and main components (output, expenditure and income)**
 
@@ -402,43 +461,8 @@ Se vuoi confrontare **PIL annuale vs trimestrale**, puoi:
 - Usare `namq_10_gdp` per analisi **cicliche o a breve termine**.
 
 
-## Altri dataset simili
 
-oltre a `namq_10_gdp` (trimestrale) e `nama_10_gdp` (annuale), Eurostat pubblica diversi [dataset paralleli o derivati](https://ec.europa.eu/eurostat/en/web/main/search/-/search/dataset?_estatsearchportlet_WAR_estatsearchportlet_INSTANCE_bHVzuvn1SZ8J_pageNumber=1&_estatsearchportlet_WAR_estatsearchportlet_INSTANCE_bHVzuvn1SZ8J_pageSize=11&_estatsearchportlet_WAR_estatsearchportlet_INSTANCE_bHVzuvn1SZ8J_text=nama_10_gdp&p_auth=tvLAcqGs&text=) che riguardano il PIL o aggregati simili. Ecco una panoramica organizzata per **tematica**:
+## nama_10r_3gdp
 
-### Contabilità nazionale – PIL e componenti
+## altri dataset simili
 
-|Codice dataset|Frequenza|Descrizione sintetica|Note|
-|---|---|---|---|
-|**namq_10_gdp**|Trimestrale|Contabilità nazionale trimestrale - PIL|Principale per analisi congiunturale|
-|**nama_10_gdp**|Annuale|Contabilità nazionale annuale - PIL|Principale per analisi strutturale|
-|**nama_10_pc**|Annuale|PIL pro capite|In euro, SPA, PPS|
-|**nama_10r_3gdp**|Annuale|PIL regionale a prezzi di mercato|Disponibile per NUTS2|
-|**nama_10r_2gdp**|Annuale|PIL regionale per abitante|Complemento di `nama_10r_3gdp`|
-|**namq_10_sa**|Trimestrale|PIL e componenti, destagionalizzati|Include consumi, investimenti, ecc.|
-|**nama_10_f**|Annuale|PIL per branca di attività|Settori ATECO/NACE|
-|**nama_10_an6**|Annuale|PIL e occupazione per attività|Più dettagliato|
-|**nama_10_c**|Annuale|PIL per tipo di spesa (final consumption, GFCF, ecc.)|Domanda aggregata|
-
-### Indicatori derivati e confronti internazionali
-
-| Codice dataset      | Frequenza | Descrizione                          | Note                                  |
-| ------------------- | --------- | ------------------------------------ | ------------------------------------- |
-| **tec00115**        | Annuale   | PIL reale per abitante               | Dataset semplificato                  |
-| **nama_10_lp_ulc**  | Annuale   | Produttività e costo del lavoro      | Include PIL per ora lavorata          |
-| **nama_10_exi**     | Annuale   | PIL e saldo estero                   | Esportazioni, importazioni, ecc.      |
-| **nama_10_gdpdefl** | Annuale   | Deflatore del PIL                    | Utile per passare da nominale a reale |
-| **sdg_08_10**       | Annuale   | SDG: crescita PIL reale per abitante | Sustainable Development Goal 8        |
-
-### Serie internazionali (PPS, SPA, Eurostat-OECD)
-
-|Codice dataset|Frequenza|Descrizione|
-|---|---|---|
-|**prc_ppp_ind**|Annuale|PIL in standard di potere d’acquisto (PPS)|
-|**nama_aux_gph**|Annuale|Gross domestic product per hour worked (OCSE-Eurostat)|
-
-
-### Come esplorarli:
-
-Puoi cercarli via [Eurostat Data Browser](https://ec.europa.eu/eurostat/databrowser/)
-    

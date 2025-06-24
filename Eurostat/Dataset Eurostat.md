@@ -79,7 +79,7 @@ vlfsi_sla_q?s_adj=SA&age=Y15-24&age=Y25-54&age=Y55-74&age=Y15-74`
 `lfsi_emp_q`
 
 ### Occupazione per Settore di Attività Economica (Valori Assoluti 
-`tec00109+f5v=16`
+`tec00109`
 
 ### Occupazione per Settore di Attività Economica (Variazione Congiunturale 
 `tec00108`
@@ -178,16 +178,11 @@ vlfsi_sla_q?s_adj=SA&age=Y15-24&age=Y25-54&age=Y55-74&age=Y15-74`
 ### Persone che hanno ordinato beni o servizi su Internet per uso privato Territori Regionali
 `isoc_r_blt12_i+f1v=2+f3v=172
 
-### Persone che vivono in famiglie a intensità lavorativa molto bassa per età e sesso `ilc_lvhl11`
+### Persone che vivono in famiglie a intensità lavorativa molto bassa per età e sesso 
+`ilc_lvhl11`
 
 ### Persone in condizioni di grave deprivazione materiale per età e sesso
 `ilc_mddd11` 
-
-### Popolazione al 1° gennaio per classe di Età e Territorio (livello provinciale 
-`demo_r_pjangrp3?sex=T`
-
-### Popolazione per Livello di Istruzione
-`edat_lfse_03`
 
 ### Presenze nelle Strutture Ricettive (dati annuali 
 `tour_occ_ninat`
@@ -203,6 +198,17 @@ vlfsi_sla_q?s_adj=SA&age=Y15-24&age=Y25-54&age=Y55-74&age=Y15-74`
 
 ### Attività via Internet non svolte per motivi di sicurezza 
 `isoc_cisci_ax`
+
+### Debito Pubblico Dati Trimestrali 
+`gov_10q_ggdebt?sector=S11001&sector=S13&unit=MIO_EUR&unit=PC_GDP&unit=PC_TOT`
+
+### Donne in posizioni dirigenziali
+`sdg_05_60`
+
+
+
+## Demografia
+
 
 ### Bilancio Demografico: 28 indicatori 
 `demo_gind`
@@ -225,8 +231,10 @@ vlfsi_sla_q?s_adj=SA&age=Y15-24&age=Y25-54&age=Y55-74&age=Y15-74`
 ### Nati vivi per Età della Madre e Ordine di Nascita 
 `demo_fordagec`
 
-### Debito Pubblico Dati Trimestrali 
-`gov_10q_ggdebt?sector=S11001&sector=S13&unit=MIO_EUR&unit=PC_GDP&unit=PC_TOT`
 
-### Donne in posizioni dirigenziali
-`sdg_05_60`
+
+### Popolazione al 1° gennaio per classe di Età e Territorio (livello provinciale 
+`demo_r_pjangrp3?sex=T`
+
+### Popolazione per Livello di Istruzione
+`edat_lfse_03`
