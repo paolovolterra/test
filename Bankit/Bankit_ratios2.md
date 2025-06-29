@@ -1,0 +1,623 @@
+# Bilanci imprese - ratios regionali - seconda parte
+Paolo Volterra
+
+Questa è una seconda analisi per: - ricostruire i dati di bilancio
+partendo dai ratios - creare una mappa radar - clusterizzare le regioni
+(le imprese delle regioni)
+
+## Ricostruiamo i dati di bilancio
+
+Per analizzare i dati contenuti in un file CSV strutturato in modo non
+convenzionale, iniziamo caricando il file localizzato su disco. Il file
+contiene, riga per riga, informazioni su una regione, una voce di
+bilancio (espressa con parole), e una sequenza di valori numerici
+riferiti agli anni dal 2018 al 2023. Alcune righe del file contengono
+metadati introdotti da \##, che vengono filtrati. Una volta letti i
+dati, il codice estrae ogni riga utile e la scompone nei suoi elementi
+costitutivi: identifica la regione come primo elemento, poi separa la
+descrizione testuale della voce (che può contenere più parole) dai
+valori numerici. Per farlo, individua il primo elemento che rappresenta
+un numero valido (con virgola convertita in punto), assumendo che tutto
+ciò che precede quel punto sia parte della descrizione della voce. I
+valori numerici successivi vengono poi convertiti in float e accodati
+alla riga come sequenza di indicatori per ciascun anno. Tutte le righe
+vengono poi aggregate in una lista e trasformate in un DataFrame Pandas
+con intestazioni esplicite per regione, voce e anni dal 2018 al 2023.
+Infine, viene mostrata la dimensione della tabella risultante e un
+campione casuale di 20 righe viene copiato automaticamente negli appunti
+per una verifica immediata o un’eventuale analisi esplorativa su Excel.
+
+``` python
+import pandas as pd
+
+# Carichiamo il file CSV
+file_path = "D:/Bankit_ratios_20182023.csv"
+
+with open(file_path, "r", encoding="utf-8") as f:
+    lines = f.readlines()
+data_lines = [line.strip() for line in lines if line.strip() and not line.startswith("##")]
+parsed_rows = []
+for line in data_lines[1:]:  # saltiamo intestazione
+    parts = line.split()
+    regione = parts[0]
+    # identifichiamo l'inizio dei numeri (percentuali), che sono da dividere dal nome della voce
+    for i, part in enumerate(parts):
+        try:
+            float(part.replace(",", "."))
+            split_index = i
+            break
+        except ValueError:
+            continue
+    voce = " ".join(parts[1:split_index])
+    valori = [float(p.replace(",", ".")) for p in parts[split_index:]]
+    parsed_rows.append([regione, voce] + valori)
+
+columns = ["Regione", "Voce", "2018", "2019", "2020", "2021", "2022", "2023"]
+df = pd.DataFrame(parsed_rows, columns=columns)
+df.shape, df.sample(20).to_clipboard()
+```
+
+    ((339, 8), None)
+
+``` python
+df[df['Regione']=='LAZ'][['Voce','2023']].to_clipboard()
+```
+
+``` python
+df.to_csv('D:/Bilanci_20182023.tsv', sep='|', index=False)
+```
+
+Il codice ha l’obiettivo di analizzare graficamente l’andamento nel
+tempo degli indicatori economico-finanziari relativi alla regione
+Puglia. Si parte filtrando il DataFrame iniziale per selezionare
+soltanto le righe relative a questa regione. Successivamente, i dati
+vengono trasformati in formato “long”, più adatto per la visualizzazione
+con Seaborn: ogni riga rappresenta una combinazione tra voce di
+bilancio, anno e valore corrispondente. Per garantire che le voci siano
+visualizzate sempre nello stesso ordine, viene imposta una
+categorizzazione ordinata sulla colonna “Voce”. A questo punto, si
+utilizza FacetGrid di Seaborn per costruire un insieme di grafici a
+linee, uno per ciascun indicatore, impaginati automaticamente su più
+colonne. Ogni sottografico mostra l’evoluzione annuale dell’indicatore
+con punti marcati. Le etichette degli assi vengono personalizzate per
+migliorare la leggibilità, con rotazione dei testi sull’asse x. Viene
+infine aggiunto un titolo generale che specifica la regione analizzata,
+e si regola il layout per evitare sovrapposizioni, assicurando una
+visualizzazione ordinata e chiara. Questo tipo di rappresentazione
+consente di osservare immediatamente tendenze, discontinuità o
+cambiamenti strutturali nei diversi indicatori lungo l’arco temporale
+2018–2023.
+
+``` python
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# Filtro regione
+df_puglia = df[df["Regione"] == "PUG"]
+regione = df_puglia["Regione"].iloc[0]
+
+# Long format
+df_long = df_puglia.melt(
+    id_vars=["Regione", "Voce"],
+    value_vars=["2018", "2019", "2020", "2021", "2022", "2023"],
+    var_name="Anno",
+    value_name="Valore"
+)
+
+# Ordine delle voci
+voci_ordinate = sorted(df_long["Voce"].unique())
+df_long["Voce"] = pd.Categorical(df_long["Voce"], categories=voci_ordinate, ordered=True)
+
+# FacetGrid
+g = sns.FacetGrid(df_long, col="Voce", col_wrap=6, height=5, aspect=1.4, sharey=False)
+g.map_dataframe(sns.lineplot, x="Anno", y="Valore", marker="o")
+
+# Etichette e rotazione
+for ax in g.axes.flat:
+    ax.set_xlabel("Anno")
+    ax.set_ylabel("% su Attivo")
+    for label in ax.get_xticklabels():
+        label.set_rotation(45)
+        label.set_horizontalalignment("right")
+
+g.set_titles(col_template="{col_name}")
+
+# Allontanamento del titolo
+plt.subplots_adjust(top=0.88)  # ← cambia qui per aumentare la distanza
+plt.suptitle(f"Indicatori economico-finanziari – Regione {regione}", fontsize=16)
+
+plt.tight_layout()
+plt.savefig("D:/PKM/Github/Bankit/media/fig1.png", dpi=300, bbox_inches="tight")
+# plt.show()
+```
+
+![](Bankit_ratios2_files/figure-commonmark/cell-5-output-1.png)
+
+![](media/fig1.png)
+
+Questo script ha l’obiettivo di ricostruire una rappresentazione
+semplificata e coerente del conto economico (CE) e dello stato
+patrimoniale (SP) delle imprese regionali italiane, a partire da un set
+di indicatori economico-finanziari percentuali. I dati iniziali sono
+organizzati in un DataFrame con colonne per ogni anno dal 2018 al 2023 e
+contengono, per ciascuna regione e voce, valori espressi in percentuale
+sull’attivo, sulla produzione o su altre basi contabili. Dopo aver
+ristrutturato i dati in formato “long”, il codice procede a creare un
+pivot per ciascun anno, organizzando le voci come colonne e le regioni
+come righe. Successivamente, una funzione dedicata ricostruisce valori
+stimati delle principali voci contabili a partire dagli indici
+disponibili. Si assume un attivo convenzionale pari a 100 per ogni
+regione, e da qui si risale a vari aggregati come MOL, valore della
+produzione, oneri finanziari, utile netto e patrimonio netto, usando
+semplici formule inverse degli indici noti (es. MOL/Attivo, ROA,
+Leverage, ecc.). Le voci del passivo sono calcolate per differenza,
+distinguendo fra debiti finanziari (ottenuti dalla somma tra PFN e
+liquidità) e debiti non finanziari. La logica è applicata iterativamente
+a ciascun anno e a ciascuna regione, e i risultati ricostruiti vengono
+salvati in due nuovi DataFrame: uno per il conto economico e uno per lo
+stato patrimoniale. Questo approccio consente di passare da indicatori
+aggregati a stime strutturate della composizione economico-finanziaria
+delle imprese regionali italiane, mantenendo coerenza logica e
+contabile.
+
+``` python
+import pandas as pd
+from scipy.stats import zscore
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# Ristrutturiamo in formato long
+df_long = df.melt(id_vars=["Regione", "Voce"], var_name="Anno", value_name="Valore")
+
+
+# Assumiamo che `df` sia già correttamente strutturato in memoria con colonne:
+# ["Regione", "Voce", "2018", "2019", "2020", "2021", "2022", "2023"]
+
+# Convertiamo le colonne anno in float (se non già fatto)
+anni = ["2018", "2019", "2020", "2021", "2022", "2023"]
+for year in anni:
+    df[year] = pd.to_numeric(df[year], errors="coerce")
+
+# Pivot per ogni anno
+pivot_anni = {
+    anno: df[["Regione", "Voce", anno]].pivot(index="Regione", columns="Voce", values=anno)
+    for anno in anni
+}
+
+# Funzione per ricostruire SP + CE
+def ricostruisci_bilancio_e_ce(indici: pd.Series) -> dict:
+    ATTIVO = 100
+    try:
+        mol_attivo = indici['Margine operativo lordo/attivo']
+        mol_va = indici['Margine operativo lordo/valore aggiunto']
+        mol_vp = indici['Margine operativo lordo/valore produzione']
+        roa = indici['ROA']
+        roe = indici['ROE']
+        oneri_mol = indici['Oneri finanziari/margine operativo lordo']
+        leverage = indici['Leverage']
+        pfn_attivo = indici['Posizione finanziaria netta / Attivo']
+        liquid_attivo = indici['Liquidità/attivo']
+    except KeyError:
+        return None
+
+    mol = mol_attivo / 100 * ATTIVO
+    valore_aggiunto = mol / (mol_va / 100)
+    valore_produzione = mol / (mol_vp / 100)
+    oneri_finanziari = mol * (oneri_mol / 100)
+    utile_ante_oneri = roa / 100 * ATTIVO
+    utile_netto = utile_ante_oneri - oneri_finanziari
+    pn = ATTIVO / (1 + leverage)
+    passivo = ATTIVO - pn
+    liquidita = liquid_attivo / 100 * ATTIVO
+    pfn = pfn_attivo / 100 * ATTIVO
+    df = pfn + liquidita
+    dnf = passivo - df
+
+    return {
+        "CE": {
+            "Valore produzione": valore_produzione,
+            "Valore aggiunto": valore_aggiunto,
+            "MOL": mol,
+            "Oneri finanziari": oneri_finanziari,
+            "Utile ante oneri finanziari": utile_ante_oneri,
+            "Utile netto": utile_netto,
+        },
+        "SP": {
+            "Attivo": ATTIVO,
+            "Liquidità": liquidita,
+            "Debiti finanziari": df,
+            "Debiti non finanziari": dnf,
+            "Patrimonio netto": pn,
+            "Passivo": passivo,
+            "PFN (DF - Liquidità)": df - liquidita
+        }
+    }
+
+# Applichiamo a tutti gli anni e regioni
+ce_records = []
+sp_records = []
+
+for anno, df_pivot in pivot_anni.items():
+    outputs = df_pivot.apply(ricostruisci_bilancio_e_ce, axis=1)
+    for regione, result in outputs.items():
+        if result:
+            ce_row = result["CE"]
+            ce_row["Regione"] = regione
+            ce_row["Anno"] = anno
+            ce_records.append(ce_row)
+            sp_row = result["SP"]
+            sp_row["Regione"] = regione
+            sp_row["Anno"] = anno
+            sp_records.append(sp_row)
+
+# Salviamo i risultati
+df_ce_completo = pd.DataFrame(ce_records)
+df_sp_completo = pd.DataFrame(sp_records)
+```
+
+Dopo aver ricostruito il conto economico e lo stato patrimoniale stimati
+per ciascuna regione e anno, questo blocco di codice si concentra
+sull’analisi della sola regione Puglia. Si selezionano le righe relative
+a questa regione e si ordinano cronologicamente. Per rendere i dati
+compatibili con la visualizzazione, si procede a una trasformazione in
+formato “long”, separando le variabili chiave (“Regione” e “Anno”) dai
+valori delle diverse voci economico-finanziarie, che vengono etichettate
+come “Voce”. Le informazioni relative al conto economico e allo stato
+patrimoniale vengono poi unite in un unico DataFrame, in modo da poter
+essere visualizzate congiuntamente. Per facilitare la lettura dei
+grafici risultanti, le voci vengono ordinate in maniera semantica: le
+voci che rappresentano risultati economici o valori di produzione
+vengono posizionate per prime. Sebbene la sezione finale che genera i
+grafici sia commentata, essa prevede la costruzione di un layout
+FacetGrid con un grafico a linee per ciascuna voce, rappresentando
+l’evoluzione temporale dal 2018 al 2023. Questo tipo di visualizzazione
+consente di osservare con immediatezza le dinamiche strutturali delle
+imprese pugliesi nel periodo considerato, distinguendo tra voci di
+natura reddituale e patrimoniale.
+
+``` python
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# Filtriamo i dati per la regione Puglia
+ce_pug = df_ce_completo[df_ce_completo["Regione"] == "PUG"].sort_values("Anno")
+sp_pug = df_sp_completo[df_sp_completo["Regione"] == "PUG"].sort_values("Anno")
+
+# Uniamo CE e SP in un unico DataFrame lungo per plotting
+ce_long = ce_pug.melt(id_vars=["Regione", "Anno"], var_name="Voce", value_name="Valore")
+sp_long = sp_pug.melt(id_vars=["Regione", "Anno"], var_name="Voce", value_name="Valore")
+
+df_plot = pd.concat([ce_long, sp_long])
+
+# Ordiniamo le voci per migliore leggibilità
+voci_ordinate = sorted(df_plot["Voce"].unique(), key=lambda x: (("Valore" not in x) and ("Utile" not in x), x))
+df_plot["Voce"] = pd.Categorical(df_plot["Voce"], categories=voci_ordinate, ordered=True)
+```
+
+Per visualizzare l’evoluzione temporale delle principali voci
+economico-finanziarie della regione Puglia, viene utilizzato un grafico
+a griglia (FacetGrid) con un pannello separato per ciascuna voce del
+conto economico o dello stato patrimoniale ricostruito. Ogni pannello
+mostra un grafico a linee che rappresenta l’andamento del valore
+percentuale rispetto all’attivo tra il 2018 e il 2023. Le etichette
+degli assi vengono personalizzate per migliorare la leggibilità: l’asse
+x mostra gli anni, con rotazione delle etichette per evitare
+sovrapposizioni, mentre l’asse y esplicita l’unità di misura. I titoli
+di ciascun pannello riportano chiaramente la voce rappresentata, e il
+layout viene adattato per garantire una presentazione ordinata e
+compatta. Questo tipo di visualizzazione consente una lettura immediata
+e comparativa tra indicatori patrimoniali e reddituali, facilitando
+l’interpretazione delle dinamiche finanziarie delle imprese pugliesi nel
+tempo.
+
+``` python
+# Ricreiamo il FacetGrid con label esplicite su ogni facet
+g = sns.FacetGrid(df_plot, col="Voce", col_wrap=5, height=2.5, aspect=1.4, sharey=False)
+g.map_dataframe(sns.lineplot, x="Anno", y="Valore", )
+
+# Impostiamo titolo e label asse per ciascun asse individualmente
+for ax in g.axes.flat:
+    ax.set_xlabel("Anno")
+    ax.set_ylabel("% su Attivo")
+    for label in ax.get_xticklabels():
+        label.set_rotation(45)
+        label.set_horizontalalignment("right")
+
+g.set_titles(col_template="{col_name}")
+plt.tight_layout()
+plt.savefig("D:/PKM/Github/Bankit/media/fig2.png", dpi=300, bbox_inches="tight")
+# plt.show()
+```
+
+![](Bankit_ratios2_files/figure-commonmark/cell-8-output-1.png)
+
+![](media/fig2.png)
+
+## standardizzazione (Z-score) e radar
+
+Per confrontare le regioni italiane sulla base della struttura
+economico-finanziaria delle imprese nel 2023, si è proceduto con una
+standardizzazione dei dati tramite Z-score, calcolato per ciascun
+indicatore rispetto alla distribuzione nazionale. Questo consente di
+misurare il posizionamento relativo di ciascuna regione per ogni voce,
+eliminando l’effetto delle diverse scale. I dati così normalizzati sono
+stati organizzati in una matrice con regioni per riga e indici per
+colonna. Dopo aver eliminato eventuali valori mancanti, si è applicata
+una riduzione dimensionale tramite PCA, al fine di proiettare i dati su
+uno spazio bidimensionale preservando le principali componenti di
+variazione. Successivamente, è stato eseguito un clustering non
+supervisionato con l’algoritmo KMeans, fissando arbitrariamente tre
+gruppi. A ciascun cluster è stato attribuito un’etichetta qualitativa —
+“Fragile”, “Intermedio” e “Solido” — sulla base del punteggio
+complessivo medio degli indicatori standardizzati, considerato come
+proxy sintetico della solidità economico-finanziaria.
+
+Per rappresentare graficamente i profili medi dei tre cluster, è stato
+utilizzato un grafico radar che mostra, per ciascun gruppo, il valore
+medio degli Z-score relativi a tutti gli indicatori. I cluster sono
+stati colorati secondo una scala semantica (rosso per i fragili, verde
+per i solidi, arancione per quelli intermedi), e disposti in ordine
+crescente di robustezza. Il risultato consente di visualizzare
+chiaramente i punti di forza e di debolezza tipici di ciascun gruppo,
+evidenziando differenze strutturali tra territori e facilitando
+confronti comparativi sull’equilibrio tra liquidità, redditività,
+indebitamento e capitale proprio.
+
+``` python
+from scipy.stats import zscore
+from sklearn.preprocessing import StandardScaler
+from sklearn.decomposition import PCA
+from sklearn.cluster import KMeans
+
+# Calcolo dello z-score per ogni ratio
+df_long["Zscore"] = df_long.groupby("Voce")["Valore"].transform(zscore)
+
+# Selezione dati per il 2023
+df_2023 = df_long[df_long["Anno"] == "2023"].pivot(index="Regione", columns="Voce", values="Zscore")
+
+# Pulizia NaN se presenti
+df_2023_clean = df_2023.dropna()
+
+# Standardizzazione
+scaler = StandardScaler()
+X_scaled = scaler.fit_transform(df_2023_clean)
+
+# PCA per riduzione dimensionale
+pca = PCA(n_components=2)
+X_pca = pca.fit_transform(X_scaled)
+
+# Clustering KMeans
+kmeans = KMeans(n_clusters=3, random_state=42)
+labels = kmeans.fit_predict(X_pca)
+
+# Aggiunta cluster ai dati originali
+df_clustered = df_2023_clean.copy()
+df_clustered["Cluster"] = labels
+
+# Calcolo medie per cluster
+cluster_means = df_clustered.groupby("Cluster").mean(numeric_only=True)
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Ordina i cluster in base alla somma dei valori medi (proxy per "solidità")
+cluster_scores = cluster_means.sum(axis=1)
+sorted_clusters = cluster_scores.sort_values().index.tolist()
+
+# Mappatura dei cluster
+cluster_means_sorted = cluster_means.loc[sorted_clusters]
+cluster_labels = {sorted_clusters[0]: "Fragile", sorted_clusters[1]: "Intermedio", sorted_clusters[2]: "Solido"}
+color_map = {
+    "Fragile": "#e41a1c",     # Rosso
+    "Solido": "#4daf4a",      # Verde
+    "Intermedio": "#ff7f00"   # Arancione
+}
+
+# Radar plot
+labels = cluster_means_sorted.columns.tolist()
+num_vars = len(labels)
+angles = np.linspace(0, 2 * np.pi, num_vars, endpoint=False).tolist()
+angles += angles[:1]  # chiusura cerchio
+
+fig, ax = plt.subplots(figsize=(11, 7), subplot_kw=dict(polar=True))
+
+for cluster_id in sorted_clusters:
+    row = cluster_means_sorted.loc[cluster_id]
+    values = row.tolist() + [row.tolist()[0]]
+    label = cluster_labels[cluster_id]
+    color = color_map[label]
+    ax.plot(angles, values, label=label, linewidth=2, color=color)
+    ax.fill(angles, values, alpha=0.25, color=color)
+
+# Impostazioni estetiche
+ax.set_theta_offset(np.pi / 2)
+ax.set_theta_direction(-1)
+ax.set_xticks([])
+
+for angle, label in zip(angles, labels + [labels[0]]):
+    ha = "left" if np.cos(angle) >= 0 else "right"
+    ax.text(
+        angle,
+        ax.get_rmax() * 1.08,
+        label,
+        size=9,
+        horizontalalignment=ha,
+        verticalalignment="center",
+        rotation=0
+    )
+
+ax.yaxis.grid(True, color="gray", linestyle="--", linewidth=0.5)
+ax.spines["polar"].set_visible(False)
+
+plt.title("Profili Z-score medi per Cluster (ordinati per robustezza)", size=14, pad=40)
+plt.legend(title="Cluster", loc="lower center", bbox_to_anchor=(0.5, -0.15), ncol=3, frameon=False)
+
+plt.tight_layout()
+plt.savefig("D:/PKM/Github/Bankit/media/fig3.png", dpi=300, bbox_inches="tight")
+# plt.show()
+```
+
+![](Bankit_ratios2_files/figure-commonmark/cell-9-output-1.png)
+
+![](media/fig3.png)
+
+Per fornire una visione d’insieme delle differenze territoriali negli
+indicatori economico-finanziari, è stata costruita una matrice degli
+Z-score relativi all’anno 2023. Ogni valore rappresenta la deviazione
+standard dell’indicatore di una data regione rispetto alla media
+nazionale dello stesso indicatore: valori positivi indicano performance
+superiori alla media, mentre valori negativi suggeriscono condizioni
+relativamente peggiori. La matrice viene visualizzata attraverso una
+heatmap, in cui ciascuna riga corrisponde a una regione e ciascuna
+colonna a una voce contabile o finanziaria. La scala di colori centrata
+su zero — dal blu (valori inferiori alla media) al rosso (valori
+superiori) — consente di individuare rapidamente le aree di forza e di
+debolezza relativa per ciascun territorio. La visualizzazione rende
+immediato il confronto tra regioni e tra dimensioni finanziarie,
+facilitando l’identificazione di pattern sistemici, anomalie localizzate
+o cluster informali di regioni con profili simili.
+
+``` python
+# Calcolo dello z-score per ogni ratio
+df_long["Zscore"] = df_long.groupby("Voce")["Valore"].transform(zscore)
+
+# Heatmap per il 2023
+df_2023 = df_long[df_long["Anno"] == "2023"].pivot(index="Regione", columns="Voce", values="Zscore")
+
+plt.figure(figsize=(16, 10))
+sns.heatmap(df_2023, cmap="coolwarm", center=0, annot=False, linewidths=0.3, cbar_kws={"label": "Z-score"})
+plt.title("Heatmap Z-score dei ratio finanziari per Regione (2023)")
+plt.xticks(rotation=90)
+plt.yticks(rotation=0)
+plt.tight_layout()
+plt.savefig("D:/PKM/Github/Bankit/media/fig4.png", dpi=300, bbox_inches="tight")
+# plt.show()
+```
+
+![](Bankit_ratios2_files/figure-commonmark/cell-10-output-1.png)
+
+![](media/fig4.png)
+
+## Clusterizzazione delle regioni (KMeans o dendrogramma)
+
+``` python
+# Rilanciamo PCA e clustering con definizione esplicita degli oggetti persi
+from sklearn.preprocessing import StandardScaler
+from sklearn.decomposition import PCA
+from sklearn.cluster import KMeans
+
+# Scala i dati
+scaler = StandardScaler()
+X_scaled = scaler.fit_transform(df_2023_clean)
+
+# PCA
+pca = PCA(n_components=2)
+X_pca = pca.fit_transform(X_scaled)
+
+# Clustering KMeans
+kmeans = KMeans(n_clusters=3, random_state=42)
+labels = kmeans.fit_predict(X_pca)
+
+# Prepara dataframe con risultati
+df_clusters = pd.DataFrame({
+    "Regione": df_2023_clean.index,
+    "PC1": X_pca[:, 0],
+    "PC2": X_pca[:, 1],
+    "Cluster": labels
+})
+
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+plt.figure(figsize=(10, 6))
+sns.scatterplot(data=df_clusters, x="PC1", y="PC2", hue="Cluster", palette="Set2", s=100)
+for i in range(df_clusters.shape[0]):
+    plt.text(df_clusters["PC1"][i] + 0.02, df_clusters["PC2"][i], df_clusters["Regione"][i], fontsize=9)
+plt.title("Cluster di Regioni (KMeans, Z-score su 2023)")
+plt.xlabel("PCA Component 1")
+plt.ylabel("PCA Component 2")
+plt.legend(title="Cluster")
+plt.grid(True)
+plt.tight_layout()
+plt.savefig("D:/PKM/Github/Bankit/media/fig5.png", dpi=300, bbox_inches="tight")
+# plt.show()
+```
+
+![](Bankit_ratios2_files/figure-commonmark/cell-11-output-1.png)
+
+![](media/fig5.png)
+
+Per classificare le regioni italiane secondo la struttura
+economico-finanziaria delle imprese nel 2023, si è adottato un approccio
+di apprendimento non supervisionato mediante l’algoritmo KMeans. I dati,
+già standardizzati tramite Z-score, vengono ulteriormente trasformati
+attraverso un’analisi delle componenti principali (PCA), che riduce la
+dimensionalità del dataset conservando le principali direttrici di
+variabilità. Questa proiezione bidimensionale permette sia una
+rappresentazione visiva efficace, sia un input semplificato per il
+clustering. Le regioni vengono quindi raggruppate in tre cluster, scelti
+arbitrariamente per rappresentare tipologie ricorrenti di profili
+economico-finanziari. Ciascun punto del grafico risultante rappresenta
+una regione, posizionata secondo le sue coordinate nelle prime due
+componenti principali, e colorata in base al cluster di appartenenza. Le
+etichette delle regioni sovrapposte al grafico facilitano
+l’interpretazione immediata del posizionamento relativo e
+dell’omogeneità interna ai cluster. Questa visualizzazione fornisce uno
+strumento intuitivo per comprendere le affinità e le divergenze
+territoriali, e può costituire la base per ulteriori analisi, ad esempio
+il confronto tra performance e politiche economiche regionali.
+
+## Radar
+
+Dopo aver assegnato a ciascuna regione un’etichetta di cluster tramite
+l’algoritmo KMeans, si procede ad analizzare i profili
+economico-finanziari medi associati a ciascun gruppo. A tal fine, si
+arricchisce il dataset originale — contenente gli Z-score degli
+indicatori per l’anno 2023 — con la colonna del cluster di appartenenza.
+Questo consente di calcolare, per ciascun cluster, la media normalizzata
+di ogni indicatore. Il risultato è una tabella riassuntiva che mostra,
+per ciascun gruppo omogeneo di regioni, il valore medio di ciascun ratio
+rispetto alla media nazionale (espresso in deviazioni standard). Questa
+rappresentazione permette di confrontare i profili medi dei cluster,
+evidenziandone punti di forza e debolezza sistemici, e supporta
+l’interpretazione qualitativa delle etichette attribuite ai gruppi (es.
+cluster “solido” con valori positivi sistematici su liquidità,
+patrimonializzazione, redditività, ecc.). Tale sintesi è anche
+propedeutica alla successiva rappresentazione radar e ad analisi
+comparative tra territori e policy.
+
+``` python
+# Aggiungiamo i cluster all'originale df_2023_clean per fare le medie dei ratio per cluster
+df_clustered = df_2023_clean.copy()
+
+df_clustered["Cluster"] = labels
+
+# Calcoliamo la media dei ratio per ogni cluster
+cluster_means = df_clustered.groupby("Cluster").mean(numeric_only=True)
+
+# Visualizziamo come tabella
+import pandas as pd
+cluster_means
+```
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+&#10;    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+&#10;    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+
+| Voce | Debiti bancari / Debiti finanziari | Debiti finanziari / Fatturato | Indice di gestione incassi e pagamenti | Leverage | Leverage corretto per la liquidità | Liquidità corrente | Liquidità immediata | Liquidità/attivo | Margine operativo lordo/attivo | Margine operativo lordo/valore aggiunto | Margine operativo lordo/valore produzione | Obbligazioni/debiti finanziari | Oneri finanziari/margine operativo lordo | Posizione finanziaria netta / Attivo | Quota debiti finanziari a medio-lungo termine | ROA | ROE |
+|----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|
+| Cluster |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| 0 | -2.609514 | 1.118446 | -1.811085 | 0.372717 | 0.862160 | -1.068977 | -0.301723 | -0.730521 | -0.022857 | 1.286756 | 0.812454 | 2.215099 | 2.034251 | -0.963284 | 0.527223 | 0.699347 | 0.182372 |
+| 1 | 0.095707 | -0.876685 | -0.630539 | -1.087626 | -1.144607 | 0.636247 | 0.723705 | 0.610727 | 1.298320 | 1.127397 | 0.988362 | -0.276935 | 0.635305 | 1.072152 | 0.108728 | 1.403199 | 0.998900 |
+| 2 | -0.622477 | -0.067051 | -0.981920 | -0.857532 | -0.451346 | -0.917150 | -0.853570 | 0.186917 | 0.082636 | 0.063604 | 0.365785 | -0.177620 | 1.535683 | 0.281691 | -1.271999 | 0.394810 | 0.009170 |
+
+</div>
