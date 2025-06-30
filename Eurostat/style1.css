@@ -1,0 +1,78 @@
+/* Centrare le figure */
+.quarto-figure {
+    text-align: center;
+    margin: 2em 0;
+  }
+  
+  /* Centrare le immagini all’interno delle figure */
+  .quarto-figure img {
+    display: block;
+    margin: 0 auto;
+    max-width: 90%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+  
+  /* Caption stile elegante */
+  .quarto-figure figcaption {
+    font-style: italic;
+    font-size: 0.9em;
+    margin-top: 0.5em;
+    color: #555;
+    text-align: center;
+  }
+  
+  /* Impostazione generale contenuto */
+  body {
+    max-width: 900px;
+    margin: auto;
+    line-height: 1.6;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+  }
+  
+  table.styled-table {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    border-collapse: collapse;
+  }
+  table.styled-table th, table.styled-table td {
+    padding: 6px;
+    border: 1px solid #ccc;
+  }
+  
+  /* Box personalizzato "Executive Summary" */
+.callout-summary {
+  border-left: 4px solid #0d6efd;
+  background-color: #f0f6ff;
+  padding: 1em;
+  margin: 1.5em 0;
+  border-radius: 8px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.callout-summary h3 {
+  margin-top: 0;
+  color: #0d6efd;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.callout-summary p {
+  margin-bottom: 0.3em;
+  line-height: 1.6;
+}
+
+
+.cell-output {
+  margin-top: 1em;
+  margin-bottom: 2em;
+}

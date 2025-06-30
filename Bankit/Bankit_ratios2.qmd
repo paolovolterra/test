@@ -18,14 +18,36 @@ format:
 ---
 
 Questa è una seconda analisi per:
+
 - ricostruire i dati di bilancio partendo dai ratios
 - creare una mappa radar
 - clusterizzare le regioni (le imprese delle regioni)
 
 
+ChatGPT mi ha aiutato a commentare il codice
+
+Le librerie sono replicate in ogni sezione per rendere il più possibile il codice replicabile standalone
+
+---
+
+
 ## Ricostruiamo i dati di bilancio 
 
-Per analizzare i dati contenuti in un file CSV strutturato in modo non convenzionale, iniziamo caricando il file localizzato su disco. Il file contiene, riga per riga, informazioni su una regione, una voce di bilancio (espressa con parole), e una sequenza di valori numerici riferiti agli anni dal 2018 al 2023. Alcune righe del file contengono metadati introdotti da ##, che vengono filtrati. Una volta letti i dati, il codice estrae ogni riga utile e la scompone nei suoi elementi costitutivi: identifica la regione come primo elemento, poi separa la descrizione testuale della voce (che può contenere più parole) dai valori numerici. Per farlo, individua il primo elemento che rappresenta un numero valido (con virgola convertita in punto), assumendo che tutto ciò che precede quel punto sia parte della descrizione della voce. I valori numerici successivi vengono poi convertiti in float e accodati alla riga come sequenza di indicatori per ciascun anno. Tutte le righe vengono poi aggregate in una lista e trasformate in un DataFrame Pandas con intestazioni esplicite per regione, voce e anni dal 2018 al 2023. Infine, viene mostrata la dimensione della tabella risultante e un campione casuale di 20 righe viene copiato automaticamente negli appunti per una verifica immediata o un’eventuale analisi esplorativa su Excel.
+Per analizzare i dati contenuti in un file CSV strutturato in modo non convenzionale, iniziamo caricando il file localizzato su disco.  
+
+Il file contiene, riga per riga, informazioni su una regione, una voce di bilancio (espressa con parole), e una sequenza di valori numerici riferiti agli anni dal 2018 al 2023.  
+
+Alcune righe del file contengono metadati introdotti da ##, che vengono filtrati.  U
+
+na volta letti i dati, il codice estrae ogni riga utile e la scompone nei suoi elementi costitutivi: identifica la regione come primo elemento, poi separa la descrizione testuale della voce (che può contenere più parole) dai valori numerici. 
+
+Per farlo, individua il primo elemento che rappresenta un numero valido (con virgola convertita in punto), assumendo che tutto ciò che precede quel punto sia parte della descrizione della voce.  
+
+I valori numerici successivi vengono poi convertiti in float e accodati alla riga come sequenza di indicatori per ciascun anno.  
+
+Tutte le righe vengono poi aggregate in una lista e trasformate in un DataFrame Pandas con intestazioni esplicite per regione, voce e anni dal 2018 al 2023. 
+
+Infine, viene mostrata la dimensione della tabella risultante e un campione casuale di 20 righe viene copiato automaticamente negli appunti per una verifica immediata o un’eventuale analisi esplorativa su Excel.
 
 ```{python}
 import pandas as pd
@@ -65,7 +87,23 @@ df[df['Regione']=='LAZ'][['Voce','2023']].to_clipboard()
 df.to_csv('D:/Bilanci_20182023.tsv', sep='|', index=False)
 ```
 
-Il codice ha l’obiettivo di analizzare graficamente l’andamento nel tempo degli indicatori economico-finanziari relativi alla regione Puglia. Si parte filtrando il DataFrame iniziale per selezionare soltanto le righe relative a questa regione. Successivamente, i dati vengono trasformati in formato “long”, più adatto per la visualizzazione con Seaborn: ogni riga rappresenta una combinazione tra voce di bilancio, anno e valore corrispondente. Per garantire che le voci siano visualizzate sempre nello stesso ordine, viene imposta una categorizzazione ordinata sulla colonna "Voce". A questo punto, si utilizza FacetGrid di Seaborn per costruire un insieme di grafici a linee, uno per ciascun indicatore, impaginati automaticamente su più colonne. Ogni sottografico mostra l’evoluzione annuale dell’indicatore con punti marcati. Le etichette degli assi vengono personalizzate per migliorare la leggibilità, con rotazione dei testi sull’asse x. Viene infine aggiunto un titolo generale che specifica la regione analizzata, e si regola il layout per evitare sovrapposizioni, assicurando una visualizzazione ordinata e chiara. Questo tipo di rappresentazione consente di osservare immediatamente tendenze, discontinuità o cambiamenti strutturali nei diversi indicatori lungo l’arco temporale 2018–2023.
+Il codice ha l’obiettivo di analizzare graficamente l’andamento nel tempo degli indicatori economico-finanziari relativi alla regione Puglia. 
+
+Si parte filtrando il DataFrame iniziale per selezionare soltanto le righe relative a questa regione. 
+
+Successivamente, i dati vengono trasformati in formato “long”, più adatto per la visualizzazione con Seaborn: ogni riga rappresenta una combinazione tra voce di bilancio, anno e valore corrispondente.
+
+Per garantire che le voci siano visualizzate sempre nello stesso ordine, viene imposta una categorizzazione ordinata sulla colonna "Voce". 
+
+A questo punto, si utilizza FacetGrid di Seaborn per costruire un insieme di grafici a linee, uno per ciascun indicatore, impaginati automaticamente su più colonne.
+
+Ogni sottografico mostra l’evoluzione annuale dell’indicatore con punti marcati. 
+
+Le etichette degli assi vengono personalizzate per migliorare la leggibilità, con rotazione dei testi sull’asse x. 
+
+Viene infine aggiunto un titolo generale che specifica la regione analizzata, e si regola il layout per evitare sovrapposizioni, assicurando una visualizzazione ordinata e chiara. 
+
+Questo tipo di rappresentazione consente di osservare immediatamente tendenze, discontinuità o cambiamenti strutturali nei diversi indicatori lungo l’arco temporale 2018–2023.
 
 ```{python}
 import seaborn as sns
@@ -110,10 +148,17 @@ plt.savefig("D:/PKM/Github/Bankit/media/fig1.png", dpi=300, bbox_inches="tight")
 # plt.show()
 ```
 
-![](media/fig1.png)
 
 
-Questo script ha l’obiettivo di ricostruire una rappresentazione semplificata e coerente del conto economico (CE) e dello stato patrimoniale (SP) delle imprese regionali italiane, a partire da un set di indicatori economico-finanziari percentuali. I dati iniziali sono organizzati in un DataFrame con colonne per ogni anno dal 2018 al 2023 e contengono, per ciascuna regione e voce, valori espressi in percentuale sull’attivo, sulla produzione o su altre basi contabili. Dopo aver ristrutturato i dati in formato "long", il codice procede a creare un pivot per ciascun anno, organizzando le voci come colonne e le regioni come righe. Successivamente, una funzione dedicata ricostruisce valori stimati delle principali voci contabili a partire dagli indici disponibili. Si assume un attivo convenzionale pari a 100 per ogni regione, e da qui si risale a vari aggregati come MOL, valore della produzione, oneri finanziari, utile netto e patrimonio netto, usando semplici formule inverse degli indici noti (es. MOL/Attivo, ROA, Leverage, ecc.). Le voci del passivo sono calcolate per differenza, distinguendo fra debiti finanziari (ottenuti dalla somma tra PFN e liquidità) e debiti non finanziari. La logica è applicata iterativamente a ciascun anno e a ciascuna regione, e i risultati ricostruiti vengono salvati in due nuovi DataFrame: uno per il conto economico e uno per lo stato patrimoniale. Questo approccio consente di passare da indicatori aggregati a stime strutturate della composizione economico-finanziaria delle imprese regionali italiane, mantenendo coerenza logica e contabile.
+Questo script ha l’obiettivo di ricostruire una rappresentazione semplificata e coerente del conto economico (CE) e dello stato patrimoniale (SP) delle imprese regionali italiane, a partire da un set di indicatori economico-finanziari percentuali. 
+
+I dati iniziali sono organizzati in un DataFrame con colonne per ogni anno dal 2018 al 2023 e contengono, per ciascuna regione e voce, valori espressi in percentuale sull’attivo, sulla produzione o su altre basi contabili. Dopo aver ristrutturato i dati in formato "long", il codice procede a creare un pivot per ciascun anno, organizzando le voci come colonne e le regioni come righe. 
+
+Successivamente, una funzione dedicata ricostruisce valori stimati delle principali voci contabili a partire dagli indici disponibili. Si assume un attivo convenzionale pari a 100 per ogni regione, e da qui si risale a vari aggregati come MOL, valore della produzione, oneri finanziari, utile netto e patrimonio netto, usando semplici formule inverse degli indici noti (es. MOL/Attivo, ROA, Leverage, ecc.). 
+
+Le voci del passivo sono calcolate per differenza, distinguendo fra debiti finanziari (ottenuti dalla somma tra PFN e liquidità) e debiti non finanziari. La logica è applicata iterativamente a ciascun anno e a ciascuna regione, e i risultati ricostruiti vengono salvati in due nuovi DataFrame: uno per il conto economico e uno per lo stato patrimoniale. 
+
+Questo approccio consente di passare da indicatori aggregati a stime strutturate della composizione economico-finanziaria delle imprese regionali italiane, mantenendo coerenza logica e contabile.
 
 ```{python}
 

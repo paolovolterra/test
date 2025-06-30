@@ -1,0 +1,132 @@
+---
+title: "Prodotto Interno Lordo (PIL) a prezzi correnti, analizzato per regioni NUTS2"
+author: Paolo Volterra
+created: 2025-06-25
+
+affiliation: "UO Studi e Governo Iniziative"
+subtitle: "Analisi per area geografica basata su dati Eurostat"
+abstract: |
+  Questo report analizza l'evoluzione del PIL pro capite a prezzi correnti nelle regioni italiane NUTS2,
+  utilizzando i dati del dataset Eurostat `nama_10r_2gdp`.
+
+keywords: [economia, PIL, Italia, NUTS2, Eurostat, nama_10r_2gdp]
+jupyter: python3
+format:
+  html:
+    code-fold: true # Nasconde il codice ma lo rende espandibile/collassabile 
+    css: style1.css # MCC_ChatGPT.css
+    theme: none
+    toc: true
+    number-sections: true
+    echo: false  # nasconde tutto il codice Python
+    self-contained: true     # <--- TUTTO incluso nel file HTML
+  markdown:
+    embed-resources: true   # immagini in base64
+    toc: true
+    html-math-method: mathjax
+    code-fold: false
+---
+
+::: {.callout-summary}
+### Executive Summary
+
+Questo report analizza il **Prodotto Interno Lordo (PIL) pro capite** a prezzi correnti nelle regioni italiane NUTS2, con dati Eurostat aggiornati.
+
+- Ampie differenze territoriali: persistente divario Nord-Sud
+- Dinamiche post-COVID: resilienza variabile tra macroaree
+- Periodo osservato: **2000–2024**
+
+I dati provengono dal dataset `nama_10r_2gdp` e sono visualizzati con serie storiche comparate.
+:::
+
+
+
+```{python}
+#| echo: false
+import requests
+import pandas as pd
+import matplotlib.pyplot as plt
+from itertools import product
+```
+
+```{python}
+#| echo: false
+# === 1. Funzione universale per scaricare e parse Eurostat JSON ===
+def fetch_eurostat_data(dataset, filters):
+    base_url = "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data"
+    query_parts = []
+    for key, value in filters.items():
+        if isinstance(value, list):
+            query_parts.extend([f"{key}={v}" for v in value])
+        else:
+            query_parts.append(f"{key}={value}")
+    query_str = "&".join(query_parts)
+    url = f"{base_url}/{dataset}?{query_str}&format=JSON"
+    response = requests.get(url)
+    if response.status_code != 200:
+        raise ValueError(f"Errore {response.status_code}: {response.text}")
+    data = response.json()
+    dims = data["dimension"]
+    dim_order = data["id"]
+    dim_labels = {dim: dims[dim]["category"]["label"] for dim in dim_order}
+    dim_keys = {dim: list(dim_labels[dim].keys()) for dim in dim_order}
+    combinations = list(product(*[dim_keys[dim] for dim in dim_order]))
+    records = []
+    for i, combo in enumerate(combinations):
+        if str(i) in data["value"]:
+            record = {}
+            for dim, key in zip(dim_order, combo):
+                record[f"{dim}_code"] = key
+                record[f"{dim}_label"] = dim_labels[dim][key]
+            record["value"] = data["value"][str(i)]
+            records.append(record)
+    df = pd.DataFrame(records)
+    if 'time_label' in df.columns:
+        df['time'] = pd.to_datetime(df['time_label'], errors='coerce')
+        mask_quarter = df['time'].isna() & df['time_label'].str.contains('Q')
+        df.loc[mask_quarter, 'time'] = pd.PeriodIndex(df.loc[mask_quarter, 'time_label'], freq='Q').to_timestamp()
+    # pd.to_datetime(df['time'], format='%Y-%m-%d')
+    return df
+```
+
+```{python}
+#| label: fig1
+#| fig-cap: "Prodotto Interno Lordo (PIL) a prezzi correnti, analizzato per regioni NUTS2"
+#| fig-align: center
+#| echo: false
+#| fig-width: 100%
+
+# _Gross domestic product (GDP) at current market prices by NUTS 2 region_
+df = fetch_eurostat_data(
+    dataset='nama_10r_2gdp',
+    filters={
+        'geo': [
+            "ITC", # "ITC1", "ITC2", "ITC3", "ITC4", 
+            "ITF", # "ITF1", "ITF2", "ITF3", "ITF4", "ITF5", "ITF6", 
+            "ITG", # "ITG1", "ITG2", 
+            "ITH", # "ITH1", "ITH2", "ITH3", "ITH4", "ITH5", 
+            "ITI", # "ITI1", "ITI2", "ITI3", "ITI4"
+            ],
+        'unit': ["EUR_HAB"], # "MIO_EUR",
+    }
+)
+
+df_pivot  = df.pivot_table(index='time_code', columns=['geo_label'], values='value').sort_values(by='time_code')
+
+import matplotlib.pyplot as plt
+# Plot
+df_pivot.plot(figsize=(12, 6), marker='o')
+plt.title('Trend per area geografica')
+plt.xlabel('Periodo')
+plt.ylabel('Valore')
+plt.grid(True)
+plt.legend(title='Geo')
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.show()
+```
+
+```{python}
+from IPython.display import display, HTML
+display(HTML(df_pivot.to_html(classes='dataframe styled-table')))
+```

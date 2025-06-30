@@ -1,0 +1,19 @@
+body {
+    font-family: "Georgia", serif;
+    background-color: #fdfdfd;
+    color: #222;
+    line-height: 1.6;
+  }
+  
+  h1 {
+    color: #003366;
+    border-bottom: 2px solid #ccc;
+  }
+  
+  blockquote {
+    font-style: italic;
+    background: #f0f0f0;
+    padding: 1em;
+    border-left: 4px solid #999;
+  }
+  
