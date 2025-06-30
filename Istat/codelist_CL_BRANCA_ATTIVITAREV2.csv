@@ -1,0 +1,233 @@
+Codice,Descrizione
+V,total economic activities
+_T,total economic activities
+VNM,non market economic activities
+NMKT,non market economic activities
+VA,"agriculture, forestry and fishing"
+A,"agriculture, forestry and fishing"
+V01_02,"crop and animal production, hunting and related service activities, forestry"
+A01_02,"crop and animal production, hunting and related service activities, forestry and logging"
+V01,"crop and animal production, hunting and related service activities"
+A01,"crop and animal production, hunting and related service activities"
+V02,forestry and logging
+A02,forestry and logging
+V03,fishing and aquaculture
+A03,fishing and aquaculture
+VB_F,"mining and quarrying, manufacturing, electricity, gas, steam and air conditioning supply, water supply, sewerage, waste management and remediation activities, construction"
+BTF,"mining and quarrying, manufacturing, electricity, gas, steam and air conditioning supply, water supply, sewerage, waste management and remediation activities, construction"
+VB_E,"mining and quarrying, manufacturing, electricity, gas, steam and air conditioning supply, water supply, sewerage, waste management and remediation activities"
+BTE,"mining and quarrying, manufacturing, electricity, gas, steam and air conditioning supply, water supply, sewerage, waste management and remediation activities"
+BTDAE36,"industry (except construction, sewerage, waste management and remediation activities)"
+VBEVCDEVDEVE,"mining and quarrying, manufacture of coke and refined petroleum products, electricity, gas, steam and air conditioning supply, water supply, sewerage, waste management and remediation activities"
+B_C19_D_E,"mining and quarrying, manufacture of coke and refined petroleum products, electricity, gas, steam and air conditioning supply, water supply, sewerage, waste management and remediation activities"
+VB,mining and quarrying
+B,mining and quarrying
+VC,manufacturing
+VCA_CMNOCD,products of industrial transformation
+C,manufacturing
+CX19,products of industrial transformation
+VCA,"manufacture of food products, beverages and tobacco products"
+C10T12,"manufacture of food products, beverages and tobacco products"
+VCD_CF,"manufacture of coke and refined petroleum products, manufacture of chemicals and chemical products,manufacture of basic pharmaceutical products and pharmaceutical preparations"
+C13T18,"manufacture of textiles, wearing apparel and leather products, manufacture of wood and paper products, and printing"
+VCB_CC,"manufacture of textiles, wearing apparel and leather products, manufacture of wood and paper products, and printing"
+VCB,"manufacture of textiles, wearing apparel and leather products"
+C13T15,"manufacture of textiles, wearing apparel and leather products"
+VCCEVCM,"manufacture of wood and paper products, and printing, manufacture of furniture, other manufacturing, repair and installation of machinery and equipment"
+C16T18_C31T33,"manufacture of wood and paper products, and printing, manufacture of furniture, other manufacturing, repair and installation of machinery and equipment"
+VCEEVCF,"manufacture of chemicals and chemical products, manufacture of basic pharmaceutical products and pharmaceutical preparations"
+VCC,"manufacture of wood and paper products, and printing"
+C16T18,"manufacture of wood and paper products, and printing"
+V16,"manufacture of wood and of products of wood and cork, except furniture, manufacture of articles of straw and plaiting materials"
+C16,"manufacture of wood and of products of wood and cork, except furniture, manufacture of articles of straw and plaiting materials"
+V17,manufacture of paper and paper products
+C17,manufacture of paper and paper products
+V18,printing and reproduction of recorded media
+C18,printing and reproduction of recorded media
+VCD,manufacture of coke and refined petroleum products
+C19T21,"manufacture of coke and refined petroleum products, manufacture of chemicals and chemical products, manufacture of basic pharmaceutical products and pharmaceutical preparations"
+C19,manufacture of coke and refined petroleum products
+VCE_CF,manufacture of chemicals and pharmaceutical products
+C20_21,manufacture of chemicals and pharmaceutical products
+VCE,manufacture of chemicals and chemical products
+C20,manufacture of chemicals and chemical products
+VCF,manufacture of basic pharmaceutical products and pharmaceutical preparations
+C21,manufacture of basic pharmaceutical products and pharmaceutical preparations
+VCG_CH,"manufacture of rubber and plastic products, other non-metallic mineral products, manufacture of basic metals and fabricated metal products, except machinery and equipment"
+C22T25,"manufacture of rubber and plastic products, other non-metallic mineral products, manufacture of basic metals and fabricated metal products, except machinery and equipment"
+VCG,"manufacture of rubber and plastic products, and other non-metallic mineral products"
+C22_23,"manufacture of rubber and plastic products, and other non-metallic mineral products"
+V22,manufacture of rubber and plastic products
+C22,manufacture of rubber and plastic products
+VCI_CK,"manufacture of computer, electronic and optical products, manufacture of electrical equipment, manufacture of machinery and equipment n.e.c"
+V23,manufacture of other non-metallic mineral products
+C23,manufacture of other non-metallic mineral products
+VCH,"manufacture of basic metals and fabricated metal products, except machinery and equipment"
+C24_25,"manufacture of basic metals and fabricated metal products, except machinery and equipment"
+V24,manufacture of basic metals
+C24,manufacture of basic metals
+V25,"manufacture of fabricated metal products, except machinery and equipment"
+C25,"manufacture of fabricated metal products, except machinery and equipment"
+VCI,"manufacture of computer, electronic and optical products"
+C26T28,"manufacture of computer, electronic and optical products, manufacture of electrical equipment, manufacture of machinery and equipment n.e.c"
+C26,"manufacture of computer, electronic and optical products"
+VCJ,manufacture of electrical equipment
+C27,manufacture of electrical equipment
+VCK,manufacture of machinery and equipment n.e.c.
+C28,manufacture of machinery and equipment n.e.c.
+VCL,manufacture of transport equipment
+C29_30,manufacture of transport equipment
+V29,"manufacture of motor vehicles, trailers and semi-trailers"
+C29,"manufacture of motor vehicles, trailers and semi-trailers"
+V30,manufacture of other transport equipment
+C30,manufacture of other transport equipment
+VCM,"manufacture of furniture, other manufacturing, repair and installation of machinery and equipment"
+C31T33,"manufacture of furniture, other manufacturing, repair and installation of machinery and equipment"
+V31_32,"manufacture of furniture, other manufacturing"
+C31_32,"manufacture of furniture, other manufacturing"
+V33,repair and installation of machinery and equipment
+C33,repair and installation of machinery and equipment
+VD_E,"electricity, gas, steam and air conditioning supply, water supply, sewerage, waste management and remediation activities"
+D_E,"electricity, gas, steam and air conditioning supply,  water supply, sewerage, waste management and remediation activities"
+VD,"electricity, gas, steam and air conditioning supply"
+D,"electricity, gas, steam and air conditioning supply"
+VE,"water supply, sewerage, waste management and remediation activities"
+E,"water supply, sewerage, waste management and remediation activities"
+V36,"water collection, treatment and supply"
+E36,"water collection, treatment and supply"
+V37_39,"sewerage, waste collection, treatment and disposal activities, materials recovery, remediation activities and other waste management services"
+E37T39,"sewerage, waste collection, treatment and disposal activities, materials recovery, remediation activities and other waste management services"
+VF,construction
+F,construction
+VG_U,services
+GTU,services
+VG_J,"wholesale and retail trade services, repair of vehicles and motorcycles, transportation and storage, accommodation and food service activities, information and communication"
+GTJ,"wholesale and retail trade services, repair of  vehicles and motorcycles, transportation and storage, accommodation and food service activities, information and communication"
+VGEV53EVI,"wholesale and retail trade services, repair of vehicles and motorcycles, postal and courier activities,"
+G_H53_I,"wholesale and retail trade services, repair of  vehicles and motorcycles, postal and courier activities,"
+VK_N,"financial and insurance activities, real estate activities, real estate activities, administrative and support service activities"
+VHNOV53,transportation and storage excluding postal and courier activities
+HX53,transportation and storage excluding postal and courier activities
+VO_U,"public administration and defence, compulsory social security, education, human health and social work activities,arts, entertainment and recreation, repair of household goods and other services"
+VG_I,"wholesale and retail trade, repair of motor vehicles and motorcycles, transportation and storage, accommodation and food service activities"
+GTI,"wholesale and retail trade, repair of motor vehicles and motorcycles, transportation and storage, accommodation and food service activities"
+VG,"wholesale and retail trade services, repair of vehicles and motorcycles"
+G,"wholesale and retail trade services, repair of  vehicles and motorcycles"
+V45,wholesale and retail trade and repair of motor vehicles and motorcycles
+G45,wholesale and retail trade and repair of motor vehicles and motorcycles
+V46,"wholesale trade, except of motor vehicles and motorcycles"
+G46,"wholesale trade, except of motor vehicles and motorcycles"
+V47,"retail trade, except of motor vehicles and motorcycles"
+G47,"retail trade, except of motor vehicles and motorcycles"
+VH,transportation and storage
+H,transportation and storage
+V49,land transport and transport via pipelines
+H49,land transport and transport via pipelines
+V50,water transport
+H50,water transport
+V51,air transport
+H51,air transport
+V52,warehousing and support activities for transportation
+H52,warehousing and support activities for transportation
+V53,postal and courier activities
+H53,postal and courier activities
+VI,accommodation and food service activities
+I,accommodation and food service activities
+VJ,information and communication
+J,information and communication
+VJA,"publishing, audiovisual and broadcasting activities"
+J58T60,"publishing, audiovisual and broadcasting activities"
+V58,publishing activities
+J58,publishing activities
+V59_60,"motion picture, video and television programme production, sound recording and music publishing activities, programming and broadcasting"
+J59T60,"motion picture, video and television programme production, sound recording and music publishing activities, programming and broadcasting"
+VJB,telecommunications
+J61,telecommunications
+VJC,"computer programming, consultancy and related activities, information service activities"
+J62_63,"computer programming, consultancy and related activities, information service activities"
+VK,financial and insurance activities
+KTN,"financial and insurance activities, real estate activities, real estate activities, administrative and support service activities"
+K,financial and insurance activities
+A64,"financial service activities, except insurance and pension funding"
+K64,"financial service activities, except insurance and pension funding"
+A65,"insurance, reinsurance and pension funding, except compulsory social security"
+K65,"insurance, reinsurance and pension funding, except compulsory social security"
+A66,activities auxiliary to financial services and insurance activities
+K66,activities auxiliary to financial services and insurance activities
+VL_N,"real estate activities, professional, scientific and technical activities, administrative and support service activities"
+LTN,"real estate activities, professional, scientific and technical activities, administrative and support service activities"
+VL,real estate activities
+L,real estate activities
+V68A,"real estate activities, of which:imputated rents of owner-occupied dwellings"
+L68A,"real estate activities, of witch:imputated rents of owner-occupied dwellings"
+L68B,real estate activities excluding imputed rents
+VM_N,"professional, scientific and technical activities, administrative and support service activities"
+M_N,"professional, scientific and technical activities, administrative and support service activities"
+VM,"professional, scientific and technical activities"
+M,"professional, scientific and technical activities"
+VMA,"legal and accounting activities, activities of head offices, management consultancy activities, architectural and engineering activities, technical testing and analysis"
+M69T71,"legal and accounting activities, activities of head offices, management consultancy activities, architectural and engineering activities, technical testing and analysis"
+V69_70,"legal and accounting activities, activities of head offices, management consultancy activities"
+M69_70,"legal and accounting activities, activities of head offices, management consultancy activities"
+V71,"architectural and engineering activities, technical testing and analysis"
+M71,"architectural and engineering activities, technical testing and analysis"
+VMB,scientific research and development
+M72,scientific research and development
+VMC,"advertising and market research, other professional, scientific and technical activities, veterinary activities"
+M73T75,"advertising and market research, other professional, scientific and technical activities, veterinary activities"
+V73,advertising and market research
+M73,advertising and market research
+V74_75,"other professional, scientific and technical activities, veterinary activities"
+M74_75,"other professional, scientific and technical activities, veterinary activities"
+VN,administrative and support service activities
+N,administrative and support service activities
+V77,rental and leasing activities
+N77,rental and leasing activities
+V78,employment activities
+N78,employment activities
+V79,"travel agency, tour operator reservation service and related activities"
+N79,"travel agency, tour operator reservation service and related activities"
+V80_82,"security and investigation activities, services to buildings and landscape activities, office administrative, office support and other business support activities"
+N80T82,"security and investigation activities, services to buildings and landscape activities, office administrative, office support and other business support activities"
+OTU,"public administration and defence, compulsory social security, education, human health and social work activities,arts, entertainment and recreation, repair of household goods and other services"
+VO_Q,"public administration and defence, compulsory social security, education, human health and social work activities"
+OTQ,"public administration and defence, compulsory social security, education, human health and social work activities"
+VO,"public administration and defence, compulsory social security"
+O,"public administration and defence, compulsory social security"
+VP,education
+P,education
+VQ,human health and social work activities
+Q,human health and social work activities
+VQA,human health activities
+Q86,human health activities
+VQB,social work activities
+Q87_88,social work activities
+VR_U,"arts, entertainment and recreation, repair of household goods and other services"
+RTU,"arts, entertainment and recreation, repair of household goods and other services"
+VR_S,"arts, entertainment and recreation, other service activities"
+R_S,"arts, entertainment and recreation, other service activities"
+VR,"arts, entertainment and recreation"
+R,"arts, entertainment and recreation"
+V90_92,"creative, arts and entertainment activities, libraries, archives, museums and other cultural activities, gambling and betting activities"
+R90T92,"creative, arts and entertainment activities, libraries, archives, museums and other cultural activities, gambling and betting activities"
+V93,sports activities and amusement and recreation activities
+R93,sports activities and amusement and recreation activities
+VS,other service activities
+S,other service activities
+V94,activities of membership organisations
+S94,activities of membership organisations
+V95,repair of computers and personal and household goods
+S95,repair of computers and personal and household goods
+V96,other personal service activities
+S96,other personal service activities
+VT,"activities of households as employers, undifferentiated goods- and services-producing activities of households for own use"
+T,"activities of households as employers, undifferentiated goods- and services-producing activities of households for own use"
+VU,services provided by extraterritorial organisations and bodies
+U,services provided by extraterritorial organisations and bodies
+Z,not applicable
+G-I_K_L_N_Q-U,"services (except information and communication, professional, scientific and technical activities, public administration and defence; compulsory social security and education)"
+C19_20,"manufacture of coke, chemicals and refined petroleum and chemical products"
+C21T23,"manufacture of pharmaceuticals, rubber, plastic and other non-metallic products"
+C25T30,"manufacture of fabricated metal products, including machinery and equipment"
+C13T16_18_31T33,other manufacturing activities
+AAE37TU,"agriculture, forestry and fishing; sewerage, waste collection, treatment and disposal activities, materials recovery, remediation activities and other waste management services; construction; services"
