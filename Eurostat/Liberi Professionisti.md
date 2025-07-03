@@ -1,5 +1,8 @@
 ---
 created: 2025-07-03
+tags:
+  - professionisti
+  - Bankit
 ---
 # principali dataset Eurostat dedicati ai “liberi professionisti” 
 

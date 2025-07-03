@@ -1,7 +1,16 @@
-# ISOC
+---
+created: 2025-07-03
+tags:
+  - ISOC
+  - IT
+  - GERD
+---
+# [ISOC](https://ec.europa.eu/eurostat/web/digital-economy-and-society/database)
 
 
-![D:\PKM\Github\Eurostat\media\2025070301.png](file:///d%3A/PKM/Github/Eurostat/media/2025070301.png)
+https://github.com/paolovolterra/test/blob/main/Eurostat/ISOC.md
+
+![D:\PKM\Github\Eurostat\media\2025070301.png](./media/2025070301.png)
 
 
 |dataset     |freq|"size_emp"|"nace_r2"|"indic_is"|"unità"|
