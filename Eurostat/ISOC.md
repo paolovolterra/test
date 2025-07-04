@@ -7,29 +7,80 @@ tags:
 ---
 # [ISOC](https://ec.europa.eu/eurostat/web/digital-economy-and-society/database)
 
-
 https://github.com/paolovolterra/test/blob/main/Eurostat/ISOC.md
 
-![D:\PKM\Github\Eurostat\media\2025070301.png](./media/2025070301.png)
+Il dataset Eurostat "**isoc**" è una famiglia di dataset che raccoglie statistiche ufficiali su tecnologie dell'informazione e della comunicazione (ICT) nei seguenti ambiti:
+
+**ISOC = _Information Society Statistics_**
+
+Il dataset ISOC è molto utile per:
+
+- monitorare l'evoluzione digitale nei diversi paesi UE
+    
+- costruire indicatori di [[competitività]] e [[innovazione]]
+    
+- analizzare divari territoriali o generazionali nella [[digitalizzazione]]
+    
+- valutare l’impatto di policy digitali (es. PNRR, Digitale 2026, AI Act)
+- 
+La famiglia `isoc` include diversi sottodataset organizzati per ambito:
+
+|Sottodominio|Ambito|
+|---|---|
+|`isoc_cii`|ICT nelle imprese (uso di internet, cloud, AI, sicurezza, e-commerce)|
+|`isoc_pi`|ICT nelle famiglie e individui (accesso a internet, competenze digitali, servizi online)|
+|`isoc_r`|Accesso e connettività (banda larga, 5G, infrastrutture digitali)|
+|`isoc_ec`|E-commerce|
+|`isoc_ebi`|Barriere all’adozione ICT nelle imprese|
+|`isoc_sk`|Competenze digitali e formazione|
+|`isoc_ci_ai`|Adozione di Intelligenza Artificiale|
+|`isoc_ci_cfw`|Lavoro da remoto e flessibile|
+
+##  Esempi di dataset specifici
+
+|Codice|Descrizione sintetica|
+|---|---|
+|`isoc_cii_iu`|Accesso e uso di internet nelle imprese|
+|`isoc_cicce_use`|Uso del cloud computing nelle imprese|
+|`isoc_ci_ai_use`|Utilizzo di tecnologie AI nelle imprese|
+|`isoc_pi_ac_i`|Accesso a internet da parte delle famiglie|
+|`isoc_sk_dskl_i`|Competenze digitali degli individui|
+|`isoc_ciegi_use`|Uso dell'e-government da parte delle imprese|
+
+## Variabili comuni
+
+I dataset ISOC includono solitamente le seguenti dimensioni:
+
+- GEO: paese o regione (es. IT, DE, EU27)
+    
+- TIME: anno (2005 – oggi)
+    
+- SIZECLASS: dimensione d’impresa
+    
+- NACE_R2: settore economico (per imprese)
+    
+- IND_TYPE: tipo di indicatore (valore assoluto, percentuale)
+    
+- UNIT: percentuale, numero di imprese/individui
+    
+- INDIC_IS: codice dell’indicatore (es. uso cloud, AI, big data)
+    
+- AGE / SEX / EDU: per dati su individui
+    
+
+# Un esempio
 
 
-|dataset     |freq|"size_emp"|"nace_r2"|"indic_is"|"unità"|
-|-|-|-|-|-|-|
-|isoc_eb_das |A|x|x|x|x|
-|isoc_eb_dan2|A|x|x|x|x|
+![D:\PKM\Github\Eurostat\media\2025070301.png|500](./media/2025070301.png)
 
 
 ## isoc_eb_das - Analisi dei dati per classe dimensionale dell'impresa
 
 - https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/isoc_eb_das?geo=IT
 - id: "frequenza","size_emp","nace_r2","indic_is","unità","geo","tempo"
-
-
 ### freq
 
 - "A": "Annuale"
-
-
 ### size_emp
 
 - "0_1": "Da 0 a 1 persona occupata",
@@ -40,11 +91,9 @@ https://github.com/paolovolterra/test/blob/main/Eurostat/ISOC.md
 - "GE10": "10 o più persone occupate",
 - "50-249": "Da 50 a 249 persone impiegate",
 - "GE250": "250 persone occupate o più"
-
 ### nace_r2
 
 - "C10-S951_X_K": "Tutte le attività (eccetto agricoltura, silvicoltura e pesca, nonché estrazione mineraria e cave), escluso il settore finanziario"
-
 
 ### indic_is
 - "E_DAOWN": "Aziende in cui l'analisi dei dati per l'azienda viene eseguita dai propri dipendenti",
@@ -81,7 +130,6 @@ https://github.com/paolovolterra/test/blob/main/Eurostat/ISOC.md
 - "E_DI3_LO_DA": "Imprese con basso indice di intensità digitale, che eseguono analisi dei dati",
 - "E_DI3_HI_DA": "Imprese con elevato indice di intensità digitale, che eseguono analisi dei dati",
 - "E_DI3_VHI_DA": "Imprese con un indice di intensità digitale molto elevato, che eseguono analisi dei dati"
-	
 	
 ### unit
 - "PC_ENT": "Percentuale di imprese",
