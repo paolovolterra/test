@@ -2,7 +2,7 @@ I dati dell'immagine provengono da **ISTAT** e riguardano **l’indice della pro
 I valori sono espressi per ramo di attività economica secondo la classificazione ATECO.
 
 
-![|500](../../Pasted%20image%2020250705075131.png)
+![|500](media/Pasted%20image%2020250705075131.png)
 
 immagine estratta da _Luigi dell’Olio. 2025. «Innovazione e distretti Le eccellenze nascoste del made in Italy». la Repubblica Affari & Finanza, 7 luglio 2025_
 
