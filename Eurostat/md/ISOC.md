@@ -71,7 +71,7 @@ I dataset ISOC includono solitamente le seguenti dimensioni:
 # Un esempio
 
 
-![D:\PKM\Github\Eurostat\media\2025070301.png|500](./media/2025070301.png)
+![D:\PKM\Github\Eurostat\media\2025070301.png|500](media/2025070301.png)
 
 
 ## isoc_eb_das - Analisi dei dati per classe dimensionale dell'impresa

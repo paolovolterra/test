@@ -27,7 +27,7 @@ Il grafico mostra l’**andamento dell’indice della produzione industriale des
 - Periodo: **2022-Q1 → 2025-Q1**
 - - base 100 nel 2022-Q1**  
 
-![./media/Pasted image 20250621195903.png|300](../media/Pasted%20image%2020250621195903.png)
+![./media/Pasted image 20250621195903.png|300](media/Pasted%20image%2020250621195903.png)
 _Industria europea: segnali di ripartenza, soprattutto in Germania (Produzione, in volume, destag., medie trim., indici: 2022-Q1=100) Fonte: elaborazioni Centro Studi Confindustria su dati Eurostat_
 
 Usiamo **Eurostat → `sts_inpr_q`**, che fornisce **dati trimestrali sulla produzione industriale** per settore C (industria), unità `I15` (indice, base 2015=100), **destagionalizzati** (`SA`).
@@ -69,7 +69,7 @@ Il grafico si basa su dati ufficiali **Eurostat**, in particolare dal dataset:
 
 Si tratta dunque del **PIL reale**, corretto per stagionalità e confrontabile tra trimestri.
 
-![Github/Eurostat/media/Pasted image 20250621195258.png|400](../media/Pasted%20image%2020250621195258.png)
+![Github/Eurostat/media/Pasted image 20250621195258.png|400](media/Pasted%20image%2020250621195258.png)
 _l PIL spagnolo cresce di più almeno da un decennio (Dati trimestrali, in volume, destag, indici: 2014-Q1=100). Fonte: elaborazioni CSC su dati Eurostat._
 
 ### Cosa mostra il grafico

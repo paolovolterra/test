@@ -1,0 +1,55 @@
+93_1227_DF_DCCN_TNA1_6:
+  descrizione: Condizioni economiche delle famiglie (nazionale)
+  endpoint: https://sdmx.istat.it/SDMXWS/rest/data
+  versione: 1.0
+  struttura_dimensioni:
+    GEO: [IT]
+    FAM_TIPOL: [TOT]
+    COMPONENTI: [TOT, 1, 2, 3, 4, 5, GE6]
+    VOCE: [0101, 0201, 0301, 0401, 0501]
+  filters_default:
+    startPeriod: 2015
+    endPeriod: 2024
+    format: compact_v2.1.json
+
+92_1225_DF_DCCN_ANA1_7:
+  descrizione: Condizioni economiche delle famiglie (regionale)
+  endpoint: https://sdmx.istat.it/SDMXWS/rest/data
+  versione: 1.0
+  struttura_dimensioni:
+    GEO: [ITI1, ITI2, ITF2, ITF3, ITC4]
+    DATA_TYPE_AGGR: [VAL]
+    EDITION: [2023]
+    VALUATION: [V]
+  filters_default:
+    startPeriod: 2015
+    endPeriod: 2024
+    format: compact_v2.1.json
+
+45_61:
+  descrizione: PIL regionale italiano (in milioni di euro)
+  endpoint: https://sdmx.istat.it/SDMXWS/rest/data
+  versione: 1.0
+  struttura_dimensioni:
+    GEO: [ITC4, ITI1, ITI2, ITG1]
+    TRANSAC: [B1GQ]
+    VAL_TYPE: [CURRENT]
+    UNIT_MEASURE: [MIO_EUR]
+  filters_default:
+    startPeriod: 2000
+    endPeriod: 2023
+    format: compact_v2.1.json
+
+45_63:
+  descrizione: Valore aggiunto per branca ATECO (regionale)
+  endpoint: https://sdmx.istat.it/SDMXWS/rest/data
+  versione: 1.0
+  struttura_dimensioni:
+    GEO: [ITC4, ITI1, ITF3, ITG1]
+    NACE: [A, B, C, D, E, F]
+    UNIT_MEASURE: [MIO_EUR]
+    VAL_TYPE: [CURRENT]
+  filters_default:
+    startPeriod: 2000
+    endPeriod: 2023
+    format: compact_v2.1.json

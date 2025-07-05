@@ -10,7 +10,7 @@ L'elenco di tutti i dataset è disponibile **[qui](https://ec.europa.eu/eurostat
 [Qui](https://ec.europa.eu/eurostat/databrowser/explore/all/all_themes) invece la versione easy
 
 
-![Pasted image 20250622050249.png|600](./media/Pasted%20image%2020250622050249.png)
+![Pasted image 20250622050249.png|600](md/media/Pasted%20image%2020250622050249.png)
 
 
 # Dataset più utilizzati in letteratura
@@ -78,7 +78,7 @@ L'elenco di tutti i dataset è disponibile **[qui](https://ec.europa.eu/eurostat
 
 ---
 
-- [costruiamo il link](urls.md)
+- [costruiamo il link](md/costruire%20links.md)
 - [Eurostat VS Istat](Eurostat%20VS%20Istat.md)
 - [NUTS](NUTS.md)
 
