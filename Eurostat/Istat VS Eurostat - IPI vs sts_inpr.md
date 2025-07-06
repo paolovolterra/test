@@ -7,19 +7,76 @@ I valori sono espressi per ramo di attività economica secondo la classificazion
 immagine estratta da _Luigi dell’Olio. 2025. «Innovazione e distretti Le eccellenze nascoste del made in Italy». la Repubblica Affari & Finanza, 7 luglio 2025_
 
 
-**Eurostat** pubblica un indicatore del tutto analogo, chiamato:
+La selezione dei settori **non si basa sui codici ATECO/NACE "più rilevanti" in termini strutturali**, ma su quelli che hanno mostrato i maggiori scostamenti (variazioni) ad aprile 2025, sia in positivo che in negativo
 
-> **Production in industry - monthly data (sts_inpr_m)**  
-> [https://ec.europa.eu/eurostat/databrowser/view/sts_inpr_m/default/table?lang=en](https://ec.europa.eu/eurostat/databrowser/view/sts_inpr_m/default/table?lang=en)
+## come è stata costruita la selezione
+
+- Mostrare **i settori con variazioni estreme**, positive o negative, **rispetto alla media (indice generale = +0,3%)**
+    
+- Evidenziare in rosso i settori in calo
+    
+- Dare visibilità a quelli in crescita (grigi), ma meno accentuata
+    
+
+|Settore visualizzato|Probabile codice NACE (ATECO)|Note|
+|---|---|---|
+|Industria legno, carta e stampa|`C16-C18`|+4,7%|
+|Fornitura energia, gas, vapore, aria|`D35`|+4,3%|
+|Computer, elettronica|`C26`|+3,3%|
+|Alimentari, bevande, tabacco|`C10-C12`|+3,2%|
+|**Prodotti farmaceutici di base e preparati**|`C21`|**−11,0%**|
+|**Fabbricazione di mezzi di trasporto**|`C29-C30`|−9,5%|
+|**Coke e raffinati**|`C19`|−5,0%|
+
+### Strategia di comunicazione
+
+- Visualizza **alcuni macrosettori in positivo** (alimentari, energia, elettronica, estrattivo) per mostrare la tenuta dell’industria
+    
+- Evidenzia **settori con crisi marcata** (farmaceutico, auto, coke, apparecchiature) come warning economico
+    
+- Mostra anche settori in flessione leggera per dare **profondità** (es. tessile, -0,5%)
+    
+
+### Confronto con i codici "più rilevanti" (strutturalmente)
+
+Se l’obiettivo fosse stato selezionare i settori:
+
+- più **pesanti in valore aggiunto**
+    
+- o più **strategici per policy industriale (es. high-tech)**
+    
+
+allora avrebbero incluso:
+
+- `C20_C21` → Chimica + farmaceutica
+    
+- `C26_C27` → Elettronica + apparecchi elettrici
+    
+- `C28` → Macchinari
+    
+- `C29_C30` → Auto, aerospazio
+    
+- `C10-C12` → Alimentari
+    
+- `C24_C25` → Metalli
+    
+###  In sintesi:
+
+- La grafica non mostra "i più rilevanti in assoluto"  
+- Ma "quelli che **hanno avuto scostamenti maggiori** a livello congiunturale"  
+- Ottima per l’analisi **a breve termine** (es. shock settoriali, segnali d’allarme)  
+- Per l’analisi **strutturale**, serve partire dai codici aggregati `C_HTC`, `C_LTC`, `MIG_*`, ecc.
+
+---
+# [[md/sts_inpr]]
+
+**Eurostat** pubblica un indicatore del tutto analogo, chiamato: **Production in industry - monthly data 
 
 Questo dataset contiene:
 
 - Indici mensili della produzione industriale per settore (NACE Rev.2),
-    
 - Correzione per effetti di calendario e destagionalizzazione,
-    
 - Possibilità di filtrare per **Stato membro (es. Italia)**,
-    
 - Serie storiche con diverse basi (l’ultima disponibile è spesso base 2021=100).
     
 
@@ -58,4 +115,4 @@ Ecco alcuni esempi di corrispondenze tra i codici ATECO italiani (NACE Rev.2) e 
     - **FREQ = M (Monthly)**
         
 
-Se vuoi, posso prepararti direttamente la query SDMX o lo script Python per scaricare i dati da Eurostat filtrati sulle stesse categorie. Vuoi procedere in questo modo?
+
