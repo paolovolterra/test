@@ -36,6 +36,8 @@ esempio https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama
 
 ## unit
 
+#HAB 
+
 1. "MIO_EUR": "Million euro",
 2. "EUR_HAB": "Euro per inhabitant",
 3. "EUR_HAB_EU27_2020": "Euro per inhabitant in percentage of the EU27 (from 2020) average",

@@ -75,8 +75,8 @@ Su Eurostat l’IPCA **non è pubblicato a livello NUTS 3**, ma solo a livello
 - In Italia si chiama IPCA Indice dei Prezzi al Consumo Armonizzato; all'estero HICP (Harmonised Index of Consumer Prices, HICP)
 - **l’Indice NIC**: sarebbe un’altra dimensione (`CP00_IT`, a volte codificato diversamente).
 - **Confronto tra IPCA e NIC**: l’IPCA è armonizzato a livello europeo, il NIC è pensato per il solo contesto nazionale.
-- Germania, Francia e Spagna hanno [oggi](2025-06-13.md) comunicato i rispettivi **IPCA**
-- Ieri [12 giugno](2025-06-12.md) [Istat](Istat) ha comunicato quelli relativi all'[Italia](https://www.istat.it/comunicato-stampa/comunicazione-ipca-anni-2021-2024/)
+- Germania, Francia e Spagna hanno [oggi](../../../Calendar/2025/202506/2025-06-13.md) comunicato i rispettivi **IPCA**
+- Ieri [12 giugno](../../../Calendar/2025/202506/2025-06-12.md) [Istat](Istat) ha comunicato quelli relativi all'[Italia](https://www.istat.it/comunicato-stampa/comunicazione-ipca-anni-2021-2024/)
 - **l’HICP non contiene prezzi assoluti** (es. 1 litro di latte = 1,30€). Eurostat fornisce **solo indici sintetici**, non il prezzo effettivo di ogni bene
 - i dati IPCA Italia sono disponibili sul sito [Istat]() , Bankit e [CCIAA di Macerata](https://opendata.marche.camcom.it/focus.htm?theme=prezzi-consumo)
 - si tratta di oltre 3M3 di dati (non cliccare sui link: le estrazioni sono pesanti) che vengono forniti in 

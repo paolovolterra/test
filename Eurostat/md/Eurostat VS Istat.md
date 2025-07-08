@@ -12,8 +12,8 @@ I dataset Eurostat sul PIL (`namq_10_gdp`, `nama_10_gdp`, ecc.) offrono:
         - MIO_EUR → milioni di euro correnti
     - CLV_I20 → euro concatenati 2015 (volume reale)
     - PPS_EU27_2020 → standard di potere d'acquisto
-    - EUR_HAB → euro pro capite
-    - PPS_EU27_2020_HAB → PPS pro capite
+    - EUR_HAB → euro pro #capite #HAB
+    - PPS_EU27_2020_HAB → PPS pro #capite #HAB
 - Valori in assoluto, per abitante o come % media UE
     
 
