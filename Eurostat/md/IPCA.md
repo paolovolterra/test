@@ -141,16 +141,16 @@ Se HICP = 104,3 nel 2020-01, significa che i prezzi sono cresciuti del 4,3% risp
 - 168_261 IPCA a tassazione costante – Medie annue dal 2002 (base 2005=100)
 - 168_306 IPCA a tassazione costante – Dati mensili dal 2002 (base 2005=100)
 
-![Pasted image 20250613121026](media/Pasted%20image%2020250613121026.png)
+![Pasted image 20250613121026](../media/Pasted%20image%2020250613121026.png)
 
-![Pasted image 20250613120925](media/Pasted%20image%2020250613120925.png)
+![Pasted image 20250613120925](../media/Pasted%20image%2020250613120925.png)
 
-![Pasted image 20250613120839](media/Pasted%20image%2020250613120839.png)
+![Pasted image 20250613120839](../media/Pasted%20image%2020250613120839.png)
 
-![Pasted image 20250613120819](media/Pasted%20image%2020250613120819.png)
+![Pasted image 20250613120819](../media/Pasted%20image%2020250613120819.png)
 
 
-![Pasted image 20250613120406](media/Pasted%20image%2020250613120406.png)
+![Pasted image 20250613120406](../media/Pasted%20image%2020250613120406.png)
 
 
 
@@ -159,14 +159,14 @@ Se HICP = 104,3 nel 2020-01, significa che i prezzi sono cresciuti del 4,3% risp
 ### [Banca d’Italia. (2025). _EIB-L’economia italiana in breve](https://www.bancaditalia.it/pubblicazioni/economia-italiana-in-breve/index.html)
 
 
-![Pasted image 20250613115258](media/Pasted%20image%2020250613115258.png)
+![Pasted image 20250613115258](../media/Pasted%20image%2020250613115258.png)
 
-![Pasted image 20250613115309](media/Pasted%20image%2020250613115309.png)
+![Pasted image 20250613115309](../media/Pasted%20image%2020250613115309.png)
 
 
 ### [Banca d’Italia. (2025). Proiezioni macroeconomiche per l’Italia](https://www.bancaditalia.it/pubblicazioni/proiezioni-macroeconomiche/)
 
-![Pasted image 20250613115744](media/Pasted%20image%2020250613115744.png)
+![Pasted image 20250613115744](../media/Pasted%20image%2020250613115744.png)
   
 _(Banca d'Italia, 2025, p. 2) Proiezioni macroeconomiche per l’economia italiana (variazioni percentuali sull’anno precedente, salvo diversa indicazione). Fonte: elaborazioni su dati Banca d’Italia e Istat. Quadro previsivo per l'Italia basato sulle informazioni disponibili al 28 marzo (per la formulazione delle ipotesi tecniche) e al 2 aprile (per i dati congiunturali). (1) Per il PIL e le sue componenti, variazioni stimate su dati trimestrali destagionalizzati e corretti per il numero di giornate lavorative. Senza tale correzione il PIL crescerebbe dello 0,5 per cento nel 2025, dello 0,9 nel 2026 e dello 0,7 nel 2027. – (2) In percentuale del PIL. – (3) Medie annue, valori percentuali._
 
@@ -174,12 +174,12 @@ _(Banca d'Italia, 2025, p. 2) Proiezioni macroeconomiche per l’economia italia
 ## Ufficio Parlamentare di Bilancio. (2025). Nota sulla congiuntura
 [https://www.upbilancio.it](https://www.upbilancio.it)
 
-![Pasted image 20250613121656](media/Pasted%20image%2020250613121656.png)
+![Pasted image 20250613121656](../media/Pasted%20image%2020250613121656.png)
 
 
 ## Banca Intesa
 
-![Pasted image 20250613123229](media/Pasted%20image%2020250613123229.png)
+![Pasted image 20250613123229](../media/Pasted%20image%2020250613123229.png)
 
 
 ## teicp000
@@ -377,7 +377,7 @@ ma ognuno **trasforma il dato base** (l’indice dei prezzi) in una **vista dive
 - [[PRC_​HICP_​MMOR] HICP - monthly data (monthly rate of change)](https://db.nomics.world/Eurostat/PRC_HICP_MMOR)
 - [[PRC_​HICP_​MV12R] HICP - monthly data (12-month average rate of change)](https://db.nomics.world/Eurostat/PRC_HICP_MV12R)
 
-![Pasted image 20250613122728](media/Pasted%20image%2020250613122728.png)
+![Pasted image 20250613122728](../media/Pasted%20image%2020250613122728.png)
 
 
 ## Riferimenti

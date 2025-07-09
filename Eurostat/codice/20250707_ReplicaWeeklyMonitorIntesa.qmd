@@ -33,18 +33,23 @@ Nel documento "[Banca Intesa. (2025). La variante iberica: Un confronto tra la p
 | ------------------ | ------------------------------------- | ------------------------ |
 | `namq_10_gdp`      | PIL trimestrale reale                 | Trend macro              |
 | `namq_10_pc`       | PIL pro capite trimestrale            | Confronti standardizzati |
-| `namq_10_lp_ulc`   | Produttività del lavoro               | Confronto efficienza     |
-| `namq_10_a10`      | Composizione domanda (C, I, G, X, M)  | Analisi crescita         |
-| `namq_10_an6`      | Dettaglio investimenti                | Dinamiche GFCF           |
+| `nama_10r_3popgdp` | PIL pro capite regionale              | Confronti subnazionali   |
 | `nama_10r_2gdp`    | PIL regionale                         | Analisi territoriale     |
 | `nama_10r_3gva`    | Valore aggiunto regionale per settore | Composizione economica   |
 | `nama_10r_3empers` | Occupazione regionale                 | Lavoro territoriale      |
-| `nama_10r_3popgdp` | PIL pro capite regionale              | Confronti subnazionali   |
+| `namq_10_lp_ulc`   | Produttività del lavoro               | Confronto efficienza     |
+| `namq_10_a10`      | Composizione domanda (C, I, G, X, M)  | Analisi crescita         |
+| `namq_10_an6`      | Dettaglio investimenti                | Dinamiche GFCF           |
+
 
 
 Vediamo come
 
 ---
+
+
+
+
 
 ## Grafico 1 - PIL reale (volume)
 
@@ -103,7 +108,11 @@ plt.show()
 
 ---
 
-## Grafico 2 - PIL reale indicizzato
+
+
+
+
+# Grafico 2 - PIL reale indicizzato
 
 :::{.text-center}
 - Dopo un avvio lento, la ripresa post-pandemica in Spagna è stata superiore a quella registrata in Italia (e nelle altre principali economie europee)
@@ -117,7 +126,6 @@ Il grafico mostra il PIL reale indicizzato al 4° trimestre 2019 = 100, con i da
 
 e copre il periodo dal 2019Q4 fino al 2025.
 :::
-
 
 ![](./media/Pasted%20image%2020250707122520.png)
 
@@ -173,6 +181,10 @@ plt.legend(loc='lower left')
 plt.tight_layout()
 plt.show()
 ```
+
+
+
+
 
 ## Grafico 3 - PIL reale pro capite
 
@@ -273,6 +285,11 @@ plt.tight_layout()
 plt.show()
 ```
 
+
+
+
+
+
 ## Grafico 4 - Produttività reale per ora lavorata
 
 :::{.text-center}
@@ -352,3 +369,61 @@ plt.tight_layout()
 plt.show()
 ```
 
+
+
+
+
+
+
+
+
+## Inflazione
+
+
+
+![](./media/inflazione.png)
+
+```{python}
+
+import pandas as pd
+import matplotlib.pyplot as plt
+from eurostat_utils import fetch_eurostat_data
+
+# Serie HICP headline (CP00) e core (CP00_XEF00)
+dataset = "prc_hicp_manr"
+filters_headline = {
+    'geo': 'EA',
+    'coicop': 'CP00',
+    'unit': 'RCH_A'
+}
+filters_core = {
+    'geo': 'EA',
+    'coicop': 'CP00_XEF00',
+    'unit': 'RCH_A'
+}
+
+# Estrai i dati
+df_headline = fetch_eurostat_data(dataset, filters_headline)
+df_core = fetch_eurostat_data(dataset, filters_core)
+
+# Unisci i due DataFrame
+df = pd.merge(df_headline[['time', 'value']], df_core[['time', 'value']], on='time', suffixes=('_hicp', '_core'))
+df = df[df['time'] >= '2019-01-01']  # Focus recente
+
+# Plot
+plt.figure(figsize=(9, 7))
+plt.plot(df['time'], df['value_hicp'], label='HICP', color='navy', linewidth=3)
+plt.plot(df['time'], df['value_core'], label='HICP ex energy & unprocessed food', color='darkorange', linewidth=3)
+plt.axhline(2, color='black', linestyle='--', linewidth=1)
+plt.axhline(0, color='black', linewidth=1)
+plt.ylim(-2, 11)
+plt.ylabel("y/y % change", fontsize=16)
+plt.xticks(fontsize=14)
+plt.yticks(fontsize=14)
+plt.legend(loc='lower center', fontsize=20, frameon=False)
+plt.title("Area euro: l’inflazione potrebbe scendere sotto il 2% nel 2025", fontsize=16)
+plt.grid(True, alpha=0.1)
+plt.tight_layout()
+plt.show()
+
+```

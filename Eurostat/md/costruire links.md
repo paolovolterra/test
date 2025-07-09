@@ -48,7 +48,7 @@ Puoi cercarli via [Eurostat Data Browser](https://ec.europa.eu/eurostat/databrow
 - Contabilità nazionale trimestrale - PIL
 - Principale per analisi 
 
-![](media/Pasted%20image%2020250622114356.png)
+![](../media/Pasted%20image%2020250622114356.png)
 
 Usiamo come esempio il dataset `nama_10_gdp`  "**Gross domestic product (GDP) and main components (output, expenditure and income)**"  
 voglio sapere quali sono le dimensioni di questo dataset  

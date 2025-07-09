@@ -47,7 +47,7 @@ Per lavorare con questi dati in Python, è consigliabile:
 - convertirli in DataFrame con una funzione di parsing personalizzata 
 - oppure usare librerie compatibili con JSON-stat, come [`pyjstat`](https://pypi.org/project/pyjstat/).
 
-![](media/cruscotto_pil_colorato.png)
+![](../media/cruscotto_pil_colorato.png)
 
 
 
