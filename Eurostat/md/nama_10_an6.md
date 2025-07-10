@@ -1,0 +1,49 @@
+# nama_10_an6 - Gross fixed capital formation by main asset type
+
+- Formazione lorda di capitale fisso per tipologia di attività principale
+- https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_an6?geo=IT&time=2023
+- https://ec.europa.eu/eurostat/cache/metadata/en/nama_10_an6_esms.htm
+- id :["freq","unit","asset10","geo","time"]
+- unit":"label":"Unit of measure"
+    - "CLV_I20":"Chain linked volumes, index 2020=100",
+    - "CLV_I15":"Chain linked volumes, index 2015=100",
+    - "CLV_I10":"Chain linked volumes, index 2010=100",
+    - "CLV_I05":"Chain linked volumes, index 2005=100",
+    - "PC_GDP":"Percentage of gross domestic product (GDP)",
+    - "PC_TOT":"Percentage of total",
+    - "PC_EU27_2020_MEUR_CP":"Percentage of EU27 (from 2020) total (based on million euro), current prices",
+    - "CP_MEUR":"Current prices, million euro",
+    - "CP_MNAC":"Current prices, million units of national currency",
+    - "CLV20_MEUR":"Chain linked volumes (2020), million euro",
+    - "CLV15_MEUR":"Chain linked volumes (2015), million euro",
+    - "CLV10_MEUR":"Chain linked volumes (2010), million euro",
+    - "CLV05_MEUR":"Chain linked volumes (2005), million euro",
+    - "CLV20_MNAC":"Chain linked volumes (2020), million units of national currency",
+    - "CLV15_MNAC":"Chain linked volumes (2015), million units of national currency",
+    - "CLV10_MNAC":"Chain linked volumes (2010), million units of national currency",
+    - "CLV05_MNAC":"Chain linked volumes (2005), million units of national currency",
+    - "CLV_PCH_PRE":"Chain linked volumes, percentage change on previous period",
+    - "PYP_MEUR":"Previous year prices, million euro",
+    - "PYP_MNAC":"Previous year prices, million units of national currency",
+    - "CON_PPCH_PRE":"Contribution to GDP growth, percentage point change on previous period",
+    - "PD20_EUR":"Price index (implicit deflator), 2020=100, euro",
+    - "PD15_EUR":"Price index (implicit deflator), 2015=100, euro",
+    - "PD10_EUR":"Price index (implicit deflator), 2010=100, euro",
+    - "PD05_EUR":"Price index (implicit deflator), 2005=100, euro",
+    - "PD20_NAC":"Price index (implicit deflator), 2020=100, national currency",
+    - "PD15_NAC":"Price index (implicit deflator), 2015=100, national currency",
+    - "PD10_NAC":"Price index (implicit deflator), 2010=100, national currency",
+    - "PD05_NAC":"Price index (implicit deflator), 2005=100, national currency",
+    - "PD_PCH_PRE_EUR":"Price index (implicit deflator), percentage change on previous period, euro",
+    - "PD_PCH_PRE_NAC":"Price index (implicit deflator), percentage change on previous period, national currency"
+- "asset10":"label":"Assets (ESA 2010)"
+    - "N11G":"Total fixed assets (gross)",
+    - "N11KG":"Total construction (gross)",
+    - "N111G":"Dwellings (gross)",
+    - "N112G":"Other buildings and structures (gross)",
+    - "N11MG":"Machinery and equipment and weapons systems (gross)",
+    - "N1131G":"Transport equipment (gross)",
+    - "N1132G":"ICT equipment (gross)",
+    - "N11OG":"Other machinery and equipment and weapons systems (gross)",
+    - "N115G":"Cultivated biological resources (gross)",
+    - "N117G":"Intellectual property products (gross)
