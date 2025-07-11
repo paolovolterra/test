@@ -15,7 +15,7 @@ Indicatori di fiducia e clima economico, mensili o trimestrali, da indagini Euro
     
 
 📌 Frequenza: principalmente mensili  
-✅ Uso: perfetti per [[nowcasting]] e anticipate svolte economiche.
+✅ Uso: perfetti per [[../../../MD/nowcasting]] e anticipate svolte economiche.
 
 
 
