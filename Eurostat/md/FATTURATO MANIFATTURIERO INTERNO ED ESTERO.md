@@ -1,3 +1,8 @@
+---
+tags:
+  - dataset
+---
+
 # FATTURATO MANIFATTURIERO INTERNO ED ESTERO 
 
 
@@ -16,4 +21,4 @@ I codici Eurostat sono i seguenti:
 ![|500](Github/Eurostat/media/Pasted%20image%2020250710145015.png)
 
 
-![](../../../Pasted%20image%2020250710222200.png)
+![](../media/Pasted%20image%2020250710222200.png)

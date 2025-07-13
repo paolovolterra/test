@@ -2,8 +2,10 @@
 title:
 authors:
   - 
-url: 
-tags: []
+url:
+tags:
+  - dataset
+  - Eurostat
 created: 2025-07-10 07:04
 ---
 

@@ -4,7 +4,9 @@ authors:
   - 
 url:
 tags:
-  - NACE3
+  - dataset
+  - NACE
+  - Eurostat
 created: 2025-06-24 19:46
 aliases:
   - "[bd_hgnace2_r3]"

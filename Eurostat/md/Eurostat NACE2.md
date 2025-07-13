@@ -8,6 +8,8 @@ created: 2025-06-24 19:44
 ---
 ### Dataset strutturati per NACE Rev. 2
 
+#dataset #Eurostat #NACE 
+
 1. **NAMA_10_A10 – Gross value added and income by main industry**  
     Valore aggiunto e redditi aggregati per sezione/divisione NACE Rev. 2 [ec.europa.eu+15ec.europa.eu+15ec.europa.eu+15](https://ec.europa.eu/eurostat/databrowser/view/NAMA_10_A10__custom_375575/default/table?lang=en&utm_source=chatgpt.com)
     

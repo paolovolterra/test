@@ -1,7 +1,7 @@
 # sts_intvnd_m|Turnover in industry, non domestic market - monthly data
 
 
-- sts_intvnd_m
+#sts_intvnd_m #dataset
 - https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/sts_intvnd_m?geo=IT&nace_r2=C&unit=I21&indic_bt=NETTUR_NDOM&s_adj=SCA
 - id":     "freq",    "indic_bt",    "nace_r2",    "s_adj",    "unit",    "geo",    "time"
 
