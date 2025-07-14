@@ -1,8 +1,7 @@
 # Extra-EU trade of other manufactured goods (SITC 6+8) by partner
 
+#ext_lt_mainmanu
 
-
-- ext_lt_mainmanu
 - https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/ext_lt_mainmanu?geo=IT
 - "id": [
     "freq",

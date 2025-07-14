@@ -1,6 +1,6 @@
 # Gross domestic product (GDP) and main components (output, expenditure and income)
 
-#PIL #GDP
+#PIL #GDP #dataset #Eurostat 
 
 - _Fonte: Banca Intesa. (2025). _La variante iberica: Un confronto tra la performance  economica di Italia e Spagna_. [blob:https://imi.intesasanpaolo.com/629f973f-4c7f-4c7e-aba1-45a67bbd98da](https://doi.org/blob:https://imi.intesasanpaolo.com/629f973f-4c7f-4c7e-aba1-45a67bbd98da)
 - https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/namq_10_gdp?geo=IT&s_adj=SCA

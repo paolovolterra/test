@@ -1,14 +1,4 @@
----
-title:
-authors:
-  - 
-url:
-tags:
-  - Eurostat
-  - GDP
-  - PIL
-created: 2025-07-08 14:23
----
+#Eurostat #dataset 
 
 
 | code              | title                                                                                                                      |

@@ -1,6 +1,6 @@
-# nama_10_A10
+# Gross value added and income by main industry (NACE Rev.2 )
 
-**Gross value added and income by main industry (NACE Rev.2 )**
+#nama_10_A10
 
 esempio https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_a10?time=2024&unit=CLV_I20&nace_r2=TOTAL
 

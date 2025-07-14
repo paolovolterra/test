@@ -1,4 +1,6 @@
-# nama_10_an6 - Gross fixed capital formation by main asset type
+# Gross fixed capital formation by main asset type
+
+#nama_10_an6 #Eurostat #dataset 
 
 - Formazione lorda di capitale fisso per tipologia di attività principale
 - https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_an6?geo=IT&time=2023

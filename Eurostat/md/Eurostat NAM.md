@@ -1,11 +1,5 @@
----
-title:
-authors:
-  - 
-url: 
-tags: []
-created: 2025-07-08 14:26
----
+#dataset #Eurostat
+
 | code                | title                                                                                           |
 |---------------------|-------------------------------------------------------------------------------------------------|
 | ei_namq_10_bbr      | Basic breakdowns of main GDP aggregates and employment (by industry and assets)                 |

@@ -1,4 +1,6 @@
-# nama_10_a64_p5 - beni immateriali
+# beni immateriali
+
+#dataset #Eurostat #nama_10_a64_p5
 
 - Capital formation by industry (NACE Rev.2) and detailed asset type
 - https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_a64_p5?geo=IT&time=2023
