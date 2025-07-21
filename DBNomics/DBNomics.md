@@ -96,7 +96,7 @@ DBnomics raccoglie i dati direttamente via API o download dai provider, li _stan
     
 
 
-## [Istat](Istat)
+## [Istat](Istat.md)
 
 
 ![Data providers](Data%20providers.md)

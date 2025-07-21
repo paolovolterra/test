@@ -1,7 +1,7 @@
 ---
-title:
+title: come interrogare Istat SDMX
 authors:
-  - 
+  - Paolo Volterra
 url:
 tags:
   - io
@@ -169,3 +169,21 @@ https://esploradati.istat.it/   databrowser/#/it/dw/categories/IT1,DATAWAREHOUSE
 	8.  ADJUSTMENT: "N"
 	9.  PRICE: "B"
 	10. EDITION: "2025M6"
+
+---
+## Valori pro capite
+
+https://esploradati.istat.it/SDMXWS/rest/data/IT1,93_1227_DF_DCCN_TNA1_6,1.0/A.ITC12........?startPeriod=2014&endPeriod=2014
+
+
+- dimensioni
+	1. <generic:Value id="FREQ" value="A"/>
+	2. <generic:Value id="REF_AREA" value="ITC12"/>
+	3. <generic:Value id="DATA_TYPE_AGGR" value="B1G_B_W2_S1_R_POP"/>
+	4. <generic:Value id="BRKDW_INDUSTRY_NACE_REV2" value="Z"/>
+	5. <generic:Value id="NONFIN_ASSETS" value="Z"/>
+	6. <generic:Value id="EXPEND_PURPOSE_COICOPCOFOG" value="Z"/>
+	7. <generic:Value id="VALUATION" value="V"/>
+	8. <generic:Value id="ADJUSTMENT" value="N"/>
+	9. <generic:Value id="PRICE" value="Z"/>
+	10. <generic:Value id="EDITION" value="2025M6"/>

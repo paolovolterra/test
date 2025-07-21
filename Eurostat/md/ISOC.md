@@ -17,7 +17,7 @@ Il dataset ISOC è molto utile per:
 
 - monitorare l'evoluzione digitale nei diversi paesi UE
     
-- costruire indicatori di [[../../Istat/Competitività]] e [[innovazione]]
+- costruire indicatori di [[../../Istat/MD/Competitività]] e [[innovazione]]
     
 - analizzare divari territoriali o generazionali nella [[digitalizzazione]]
     
