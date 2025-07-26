@@ -1,0 +1,598 @@
+---
+title: "Categorie di dati | Portale dati della BCE"
+source: "https://data.ecb.europa.eu/data/data-categories#inflation-and-consumer-prices"
+author:
+published:
+created: 2025-07-12
+description: "Browse data by statistical topic. For ECB surveys or other not available in the list refer to the list of datasets on the ECB website."
+tags:
+  - "clippings"
+---
+Esplora i dati per argomento statistico. Per le indagini della BCE o altri dati non disponibili nell'elenco, consulta l'elenco dei [set di dati sul sito web della BCE](https://data.ecb.europa.eu/data/datasets#alternative-datatable).
+
+Chiudi tutte le sezioni
+
+- Politica BCE/Eurosistema e tassi di cambio
+	- [tassi di interesse ufficiali](https://data.ecb.europa.eu/data/data-categories/ecbeurosystem-policy-and-exchange-rates/official-interest-rates)
+	- [Riserve minime e liquidità](https://data.ecb.europa.eu/data/data-categories/ecbeurosystem-policy-and-exchange-rates/minimum-reserves-and-liquidity)
+	- Bilancio dell'Eurosistema
+		- [Rendiconto consolidato dell'Eurosistema](https://data.ecb.europa.eu/data/data-categories/ecbeurosystem-policy-and-exchange-rates/eurosystem-balance-sheet/eurosystem-consolidated-statement)
+		- [Contributi della BCE e delle BCN al bilancio consolidato dell'Eurosistema](https://data.ecb.europa.eu/data/data-categories/ecbeurosystem-policy-and-exchange-rates/eurosystem-balance-sheet/ecb-and-ncb-contributions-eurosystem-consolidated-financial-statement)
+		- [Contributi della BCE e delle BCN al bilancio statistico dell'Eurosistema](https://data.ecb.europa.eu/data/data-categories/ecbeurosystem-policy-and-exchange-rates/eurosystem-balance-sheet/ecb-and-ncb-contributions-eurosystem-statistical-balance-sheet)
+	- [Banconote e monete](https://data.ecb.europa.eu/data/data-categories/ecbeurosystem-policy-and-exchange-rates/banknotes-and-coins)
+	- [Saldi TARGET delle BCN partecipanti](https://data.ecb.europa.eu/data/data-categories/ecbeurosystem-policy-and-exchange-rates/target-balances-participating-ncbs)
+	- tassi di cambio
+		- [tassi di riferimento](https://data.ecb.europa.eu/data/data-categories/ecbeurosystem-policy-and-exchange-rates/exchange-rates/reference-rates)
+		- [Tariffe indicative](https://data.ecb.europa.eu/data/data-categories/ecbeurosystem-policy-and-exchange-rates/exchange-rates/indicative-rates)
+		- tassi di cambio effettivi
+			- [EER nominali](https://data.ecb.europa.eu/data/data-categories/ecbeurosystem-policy-and-exchange-rates/exchange-rates/effective-exchange-rates/nominal-eers)
+			- [EER reali deflazionati dall'indice dei prezzi al consumo](https://data.ecb.europa.eu/data/data-categories/ecbeurosystem-policy-and-exchange-rates/exchange-rates/effective-exchange-rates/real-cpi-deflated-eers)
+			- [EER reali deflazionati dall'IPP](https://data.ecb.europa.eu/data/data-categories/ecbeurosystem-policy-and-exchange-rates/exchange-rates/effective-exchange-rates/real-ppi-deflated-eers)
+			- [Deflatori del PIL reale - EER deflazionati](https://data.ecb.europa.eu/data/data-categories/ecbeurosystem-policy-and-exchange-rates/exchange-rates/effective-exchange-rates/real-gdp-deflators-deflated-eers)
+			- [EER reali deflazionati da ULCT](https://data.ecb.europa.eu/data/data-categories/ecbeurosystem-policy-and-exchange-rates/exchange-rates/effective-exchange-rates/real-ulct-deflated-eers)
+			- [EER reali deflazionati da ULCM](https://data.ecb.europa.eu/data/data-categories/ecbeurosystem-policy-and-exchange-rates/exchange-rates/effective-exchange-rates/real-ulcm-deflated-eers)
+			- [EER nominali calcolati dalla Commissione Europea](https://data.ecb.europa.eu/data/data-categories/ecbeurosystem-policy-and-exchange-rates/exchange-rates/effective-exchange-rates/nominal-eers-calculated-european-commission)
+			- [Tassi effettivi di interesse effettivi (EER) deflazionati dall'indice dei prezzi al consumo (IPC) calcolati dalla Commissione Europea](https://data.ecb.europa.eu/data/data-categories/ecbeurosystem-policy-and-exchange-rates/exchange-rates/effective-exchange-rates/real-cpi-deflated-eers-calculated-european-commission)
+		- Indicatori di competitività armonizzati
+			- [HCI nominali](https://data.ecb.europa.eu/data/data-categories/ecbeurosystem-policy-and-exchange-rates/exchange-rates/harmonised-competitiveness-indicators/nominal-hcis)
+			- [HCI reali deflazionati dall'indice dei prezzi al consumo](https://data.ecb.europa.eu/data/data-categories/ecbeurosystem-policy-and-exchange-rates/exchange-rates/harmonised-competitiveness-indicators/real-cpi-deflated-hcis)
+			- [HCI reali deflazionati dall'IPP](https://data.ecb.europa.eu/data/data-categories/ecbeurosystem-policy-and-exchange-rates/exchange-rates/harmonised-competitiveness-indicators/real-ppi-deflated-hcis)
+			- [Deflatori del PIL reale - HCI deflazionati](https://data.ecb.europa.eu/data/data-categories/ecbeurosystem-policy-and-exchange-rates/exchange-rates/harmonised-competitiveness-indicators/real-gdp-deflators-deflated-hcis)
+			- [HCI reali deflazionati da ULCT](https://data.ecb.europa.eu/data/data-categories/ecbeurosystem-policy-and-exchange-rates/exchange-rates/harmonised-competitiveness-indicators/real-ulct-deflated-hcis)
+- Denaro, credito e banche
+	- Aggregati monetari
+		- [M1 e componenti](https://data.ecb.europa.eu/data/data-categories/money-credit-and-banking/monetary-aggregates/m1-and-components)
+		- [M2 e componenti](https://data.ecb.europa.eu/data/data-categories/money-credit-and-banking/monetary-aggregates/m2-and-components)
+		- [M3 e componenti](https://data.ecb.europa.eu/data/data-categories/money-credit-and-banking/monetary-aggregates/m3-and-components)
+		- Controparti di M3
+			- [Attività delle IFM](https://data.ecb.europa.eu/data/data-categories/money-credit-and-banking/monetary-aggregates/counterparts-m3/mfi-assets)
+			- [Passività delle IFM](https://data.ecb.europa.eu/data/data-categories/money-credit-and-banking/monetary-aggregates/counterparts-m3/mfi-liabilities)
+	- Istituzioni finanziarie monetarie (IFM)
+		- [Attività](https://data.ecb.europa.eu/data/data-categories/money-credit-and-banking/mfi-aggregated-balance-sheet/assets)
+		- [Passività](https://data.ecb.europa.eu/data/data-categories/money-credit-and-banking/mfi-aggregated-balance-sheet/liabilities)
+		- Società di deposito
+			- [Attività](https://data.ecb.europa.eu/data/data-categories/money-credit-and-banking/monetary-financial-institutions-mfis/credit-institutions/assets)
+			- [Passività](https://data.ecb.europa.eu/data/data-categories/money-credit-and-banking/credit-institutions-and-money-market-funds/credit-institutions/liabilities)
+		- fondi del mercato monetario
+			- [Attività](https://data.ecb.europa.eu/data/data-categories/money-credit-and-banking/credit-institutions-and-money-market-funds/money-markets-funds/assets)
+			- [Passività](https://data.ecb.europa.eu/data/data-categories/money-credit-and-banking/credit-institutions-and-money-market-funds/money-markets-funds/liabilities)
+	- Prestiti delle Istituzioni Finanziarie di Microfinanza al settore privato
+		- [Famiglie](https://data.ecb.europa.eu/data/data-categories/money-credit-and-banking/mfi-lending-private-sector/households)
+		- Società non finanziarie
+			- [Prestiti](https://data.ecb.europa.eu/data/data-categories/money-credit-and-banking/mfi-lending-private-sector/non-financial-corporations/loans)
+			- [Prestiti stimati per attività economica](https://data.ecb.europa.eu/data/data-categories/money-credit-and-banking/mfi-lending-private-sector/non-financial-corporations/estimated-loans-economic-activity)
+		- [Altri settori](https://data.ecb.europa.eu/data/data-categories/money-credit-and-banking/mfi-lending-private-sector/other-sectors)
+- Società finanziarie non bancarie
+	- Società di veicoli finanziari
+		- Tutte le serie
+			- [Attività](https://data.ecb.europa.eu/data/data-categories/financial-corporations/financial-vehicle-corporations/all-series/assets)
+			- [Passività](https://data.ecb.europa.eu/data/data-categories/financial-corporations/financial-vehicle-corporations/all-series/liabilities)
+		- FVC totali
+			- [Attività](https://data.ecb.europa.eu/data/data-categories/financial-corporations/financial-vehicle-corporations/total-fvcs/assets)
+			- [Passività](https://data.ecb.europa.eu/data/data-categories/financial-corporations/financial-vehicle-corporations/total-fvcs/liabilities)
+		- FVC impegnate nella cartolarizzazione tradizionale
+			- [Attività](https://data.ecb.europa.eu/data/data-categories/financial-corporations/financial-vehicle-corporations/fvcs-engaged-traditional-securitisation/assets)
+			- [Passività](https://data.ecb.europa.eu/data/data-categories/financial-corporations/financial-vehicle-corporations/fvcs-engaged-traditional-securitisation/liabilities)
+		- FVC impegnate nella cartolarizzazione sintetica
+			- [Attività](https://data.ecb.europa.eu/data/data-categories/financial-corporations/financial-vehicle-corporations/fvcs-engaged-synthetic-securitisation/assets)
+			- [Passività](https://data.ecb.europa.eu/data/data-categories/financial-corporations/financial-vehicle-corporations/fvcs-engaged-synthetic-securitisation/liabilities)
+		- FVC che non sono impegnate né nella cartolarizzazione tradizionale né in quella sintetica
+			- [Attività](https://data.ecb.europa.eu/data/data-categories/financial-corporations/financial-vehicle-corporations/fvcs-which-are-neither-engaged-traditional-nor-synthetic-securitisation/assets)
+			- [Passività](https://data.ecb.europa.eu/data/data-categories/financial-corporations/financial-vehicle-corporations/fvcs-which-are-neither-engaged-traditional-nor-synthetic-securitisation/liabilities)
+	- Società finanziarie impegnate nell'erogazione di prestiti
+		- [Attività](https://data.ecb.europa.eu/data/data-categories/financial-corporations/financial-corporations-engaged-lending/assets)
+		- [Passività](https://data.ecb.europa.eu/data/data-categories/financial-corporations/financial-corporations-engaged-lending/liabilities)
+	- Fondi di investimento
+		- [Tutte le serie](https://data.ecb.europa.eu/data/data-categories/financial-corporations/investment-funds/all-series)
+		- [Fondi di investimento totali](https://data.ecb.europa.eu/data/data-categories/financial-corporations/investment-funds/total-investment-funds)
+		- Per politica di investimento
+			- [fondi azionari](https://data.ecb.europa.eu/data/data-categories/financial-corporations/investment-funds/investment-policy/equity-funds)
+			- [fondi obbligazionari](https://data.ecb.europa.eu/data/data-categories/financial-corporations/investment-funds/investment-policy/bond-funds)
+			- [Fondi misti](https://data.ecb.europa.eu/data/data-categories/financial-corporations/investment-funds/investment-policy/mixed-funds)
+			- [fondi immobiliari](https://data.ecb.europa.eu/data/data-categories/financial-corporations/investment-funds/investment-policy/real-estate-funds)
+			- [fondi speculativi](https://data.ecb.europa.eu/data/data-categories/financial-corporations/investment-funds/investment-policy/hedge-funds)
+			- [Altri fondi](https://data.ecb.europa.eu/data/data-categories/financial-corporations/investment-funds/investment-policy/other-funds)
+		- [fondi UCITS](https://data.ecb.europa.eu/data/data-categories/financial-corporations/investment-funds/ucits-funds)
+		- [fondi non UCITS](https://data.ecb.europa.eu/data/data-categories/financial-corporations/investment-funds/non-ucits-funds)
+		- [Fondi aperti](https://data.ecb.europa.eu/data/data-categories/financial-corporations/investment-funds/open-end-funds)
+		- [Fondi chiusi](https://data.ecb.europa.eu/data/data-categories/financial-corporations/investment-funds/closed-end-funds)
+		- [Fondi negoziati in borsa](https://data.ecb.europa.eu/data/data-categories/financial-corporations/investment-funds/exchange-traded-funds)
+		- [Fondi di private equity](https://data.ecb.europa.eu/data/data-categories/financial-corporations/investment-funds/private-equity-funds)
+	- compagnie di assicurazione
+		- Bilancio
+			- Tutte le serie
+				- [Attività](https://data.ecb.europa.eu/data/data-categories/financial-corporations/insurance-corporations/balance-sheet/all-series/assets)
+				- [Passività](https://data.ecb.europa.eu/data/data-categories/financial-corporations/insurance-corporations/balance-sheet/all-series/liabilities)
+			- Totale compagnie di assicurazione
+				- [Attività](https://data.ecb.europa.eu/data/data-categories/financial-corporations/insurance-corporations/balance-sheet/total-insurance-corporations/assets)
+				- [Passività](https://data.ecb.europa.eu/data/data-categories/financial-corporations/insurance-corporations/balance-sheet/total-insurance-corporations/liabilities)
+			- Società di riassicurazione
+				- [Attività](https://data.ecb.europa.eu/data/data-categories/financial-corporations/insurance-corporations/balance-sheet/reinsurance-corporations/assets)
+				- [Passività](https://data.ecb.europa.eu/data/data-categories/financial-corporations/insurance-corporations/balance-sheet/reinsurance-corporations/liabilities)
+			- compagnie di assicurazione sulla vita
+				- [Attività](https://data.ecb.europa.eu/data/data-categories/financial-corporations/insurance-corporations/balance-sheet/life-insurance-corporations/assets)
+				- [Passività](https://data.ecb.europa.eu/data/data-categories/financial-corporations/insurance-corporations/balance-sheet/life-insurance-corporations/liabilities)
+			- Società di assicurazione non vita
+				- [Attività](https://data.ecb.europa.eu/data/data-categories/financial-corporations/insurance-corporations/balance-sheet/non-life-insurance-corporations/assets)
+				- [Passività](https://data.ecb.europa.eu/data/data-categories/financial-corporations/insurance-corporations/balance-sheet/non-life-insurance-corporations/liabilities)
+			- Compagnie di assicurazione composite
+				- [Attività](https://data.ecb.europa.eu/data/data-categories/financial-corporations/insurance-corporations/balance-sheet/composite-insurance-corporations/assets)
+				- [Passività](https://data.ecb.europa.eu/data/data-categories/financial-corporations/insurance-corporations/balance-sheet/composite-insurance-corporations/liabilities)
+		- Premi, sinistri e spese di acquisizione
+			- [Tutte le serie](https://data.ecb.europa.eu/data/data-categories/financial-corporations/insurance-corporations/premiums-claims-and-acquisition-expenses/all-series)
+			- [Totale compagnie di assicurazione](https://data.ecb.europa.eu/data/data-categories/financial-corporations/insurance-corporations/premiums-claims-and-acquisition-expenses/total-insurance-corporations)
+			- [Società di riassicurazione](https://data.ecb.europa.eu/data/data-categories/financial-corporations/insurance-corporations/premiums-claims-and-acquisition-expenses/reinsurance-corporations)
+			- [compagnie di assicurazione sulla vita](https://data.ecb.europa.eu/data/data-categories/financial-corporations/insurance-corporations/premiums-claims-and-acquisition-expenses/life-insurance-corporations)
+			- [Società di assicurazione non vita](https://data.ecb.europa.eu/data/data-categories/financial-corporations/insurance-corporations/premiums-claims-and-acquisition-expenses/non-life-insurance-corporations)
+			- [Compagnie di assicurazione composite](https://data.ecb.europa.eu/data/data-categories/financial-corporations/insurance-corporations/premiums-claims-and-acquisition-expenses/composite-insurance-corporations)
+		- [Grandi gruppi assicurativi](https://data.ecb.europa.eu/data/data-categories/financial-corporations/insurance-corporations/large-insurance-groups)
+	- Fondi pensione
+		- Bilancio
+			- [Attività](https://data.ecb.europa.eu/data/data-categories/financial-corporations/pension-funds/balance-sheet/assets)
+			- [Passività](https://data.ecb.europa.eu/data/data-categories/financial-corporations/pension-funds/balance-sheet/liabilities)
+		- [Membri](https://data.ecb.europa.eu/data/data-categories/financial-corporations/pension-funds/members)
+	- Società di assicurazione e fondi pensione combinati (dismesso)
+		- [Attività](https://data.ecb.europa.eu/data/data-categories/financial-corporations/insurance-corporations-and-pension-funds-combined-discontinued/assets)
+		- [Passività](https://data.ecb.europa.eu/data/data-categories/financial-corporations/insurance-corporations-and-pension-funds-combined-discontinued/liabilities)
+	- Elenco degli istituti finanziari
+		- [Dati](https://data.ecb.europa.eu/data/data-categories/financial-corporations/list-financial-institutions/data)
+	- Indicatori finanziari strutturali
+		- [Dati](https://data.ecb.europa.eu/data/data-categories/financial-corporations/structural-financial-indicators/data)
+- Mercati finanziari e tassi di interesse
+	- tassi di interesse bancari
+		- tassi di interesse
+			- [Prestiti](https://data.ecb.europa.eu/data/data-categories/financial-markets-and-interest-rates/bank-interest-rates/interest-rates/loans)
+			- [Depositi](https://data.ecb.europa.eu/data/data-categories/financial-markets-and-interest-rates/bank-interest-rates/interest-rates/deposits)
+		- volumi d'affari
+			- [Prestiti](https://data.ecb.europa.eu/data/data-categories/financial-markets-and-interest-rates/bank-interest-rates/business-volumes/loans)
+			- [Depositi](https://data.ecb.europa.eu/data/data-categories/financial-markets-and-interest-rates/bank-interest-rates/business-volumes/deposits)
+		- Coefficiente di variazione transnazionale
+			- [Prestiti](https://data.ecb.europa.eu/data/data-categories/financial-markets-and-interest-rates/bank-interest-rates/coefficient-cross-country-variation/loans)
+			- [Depositi](https://data.ecb.europa.eu/data/data-categories/financial-markets-and-interest-rates/bank-interest-rates/coefficient-cross-country-variation/deposits)
+		- Componente del tasso di interesse della variazione mensile del livello dell'area euro
+			- [Prestiti](https://data.ecb.europa.eu/data/data-categories/financial-markets-and-interest-rates/bank-interest-rates/interest-rate-component-euro-area-month-month-level-change/loans)
+			- [Depositi](https://data.ecb.europa.eu/data/data-categories/financial-markets-and-interest-rates/bank-interest-rates/interest-rate-component-euro-area-month-month-level-change/deposits)
+		- Componente ponderale della variazione mensile del livello dell'area euro
+			- [Prestiti](https://data.ecb.europa.eu/data/data-categories/financial-markets-and-interest-rates/bank-interest-rates/weight-component-euro-area-month-month-level-change/loans)
+			- [Depositi](https://data.ecb.europa.eu/data/data-categories/financial-markets-and-interest-rates/bank-interest-rates/weight-component-euro-area-month-month-level-change/deposits)
+		- Indicatori del costo del denaro
+			- [Dati](https://data.ecb.europa.eu/data/data-categories/financial-markets-and-interest-rates/bank-interest-rates/cost-borrowing-indicators/data)
+		- Margini di prestito delle banche
+			- [Dati](https://data.ecb.europa.eu/data/data-categories/financial-markets-and-interest-rates/bank-interest-rates/banks-lending-margins/data)
+		- Indicatori di valutazione del rischio
+			- [Dati](https://data.ecb.europa.eu/data/data-categories/financial-markets-and-interest-rates/bank-interest-rates/risk-assessment-indicators/data)
+	- Statistiche sui tassi di interesse a fini di convergenza
+		- [tassi di interesse a lungo termine](https://data.ecb.europa.eu/data/data-categories/financial-markets-and-interest-rates/interest-rate-statistics-convergence-purposes/long-term-interest-rates)
+		- [tassi di interesse a breve termine](https://data.ecb.europa.eu/data/data-categories/financial-markets-and-interest-rates/interest-rate-statistics-convergence-purposes/short-term-interest-rates)
+	- Emissioni di titoli
+		- CSEC - Statistiche sulle emissioni di titoli
+			- [Titoli di debito](https://data.ecb.europa.eu/data/data-categories/financial-markets-and-interest-rates/securities-issues/csec-securities-issues-statistics/debt-securities)
+			- [Azioni quotate](https://data.ecb.europa.eu/data/data-categories/financial-markets-and-interest-rates/securities-issues/securities-issues-statistics-csec/listed-shares)
+		- SEC - Statistiche sulle emissioni di titoli (non più disponibile)
+			- Titoli di debito
+				- [Importi in sospeso](https://data.ecb.europa.eu/data/data-categories/financial-markets-and-interest-rates/securities-issues/debt-securities/outstanding-amounts)
+				- [Problemi grossolani](https://data.ecb.europa.eu/data/data-categories/financial-markets-and-interest-rates/securities-issues/debt-securities/gross-issues)
+				- [Riscatti](https://data.ecb.europa.eu/data/data-categories/financial-markets-and-interest-rates/securities-issues/debt-securities/redemptions)
+				- [Problemi netti](https://data.ecb.europa.eu/data/data-categories/financial-markets-and-interest-rates/securities-issues/debt-securities/net-issues)
+				- [tassi di crescita](https://data.ecb.europa.eu/data/data-categories/financial-markets-and-interest-rates/securities-issues/debt-securities/growth-rates)
+				- [Indici di tasso di crescita](https://data.ecb.europa.eu/data/data-categories/financial-markets-and-interest-rates/securities-issues/debt-securities/growth-rate-indices)
+			- Azioni quotate
+				- [Importi in sospeso](https://data.ecb.europa.eu/data/data-categories/financial-markets-and-interest-rates/securities-issues/listed-shares/outstanding-amounts)
+				- [Problemi grossolani](https://data.ecb.europa.eu/data/data-categories/financial-markets-and-interest-rates/securities-issues/listed-shares/gross-issues)
+				- [Riscatti](https://data.ecb.europa.eu/data/data-categories/financial-markets-and-interest-rates/securities-issues/listed-shares/redemptions)
+				- [Problemi netti](https://data.ecb.europa.eu/data/data-categories/financial-markets-and-interest-rates/securities-issues/listed-shares/net-issues)
+				- [tassi di crescita](https://data.ecb.europa.eu/data/data-categories/financial-markets-and-interest-rates/securities-issues/listed-shares/growth-rates)
+				- [Indici di tasso di crescita](https://data.ecb.europa.eu/data/data-categories/financial-markets-and-interest-rates/securities-issues/listed-shares/growth-rate-indices)
+			- Indagine sui mercati finanziari
+				- [Titoli di debito](https://data.ecb.europa.eu/data/data-categories/financial-markets-and-interest-rates/securities-issues/sec-securities-issues-statistics-discontinued/financial-markets-survey/debt-securities)
+				- [Azioni quotate](https://data.ecb.europa.eu/data/data-categories/financial-markets-and-interest-rates/securities-issues/financial-markets-survey/listed-shares)
+	- Titoli in portafoglio
+		- SHSS - Statistiche sui titoli in portafoglio
+			- [Titoli di debito](https://data.ecb.europa.eu/data/data-categories/financial-markets-and-interest-rates/securities-holdings-statistics/shss-securities-holdings-statistics/debt-securities)
+			- [Azioni quotate e quote di fondi](https://data.ecb.europa.eu/data/data-categories/financial-markets-and-interest-rates/securities-holdings-statistics/shss-securities-holdings-statistics/listed-shares-and-fund-shares)
+			- [Tutti gli strumenti combinati](https://data.ecb.europa.eu/data/data-categories/financial-markets-and-interest-rates/securities-holdings-statistics/shss-securities-holdings-statistics/all-instruments-combined)
+		- SHS - Statistiche sui titoli in portafoglio (non più disponibile)
+			- [Titoli di debito](https://data.ecb.europa.eu/data/data-categories/financial-markets-and-interest-rates/securities-holdings-statistics/shs-securities-holdings-statistics-discontinued/debt-securities)
+			- [Azioni quotate e quote di fondi](https://data.ecb.europa.eu/data/data-categories/financial-markets-and-interest-rates/securities-holdings-statistics/shs-securities-holdings-statistics-discontinued/listed-shares-and-fund-shares)
+	- Titolo di Stato europeo a breve termine (STEP)
+		- [Rendimenti e spread superiori ai tassi di riferimento](https://data.ecb.europa.eu/data/data-categories/financial-markets-and-interest-rates/short-term-european-paper-step/yields-and-spreads-above-benchmark-rates)
+		- [Dati di volume](https://data.ecb.europa.eu/data/data-categories/financial-markets-and-interest-rates/short-term-european-paper-step/volume-data)
+	- Curva dei rendimenti dell'area euro
+		- Curva dei rendimenti di tutti i titoli di Stato
+			- [Curva spot](https://data.ecb.europa.eu/data/data-categories/financial-markets-and-interest-rates/euro-area-yield-curves/all-government-bonds-yield-curve/spot-curve)
+			- [Curva in avanti istantanea](https://data.ecb.europa.eu/data/data-categories/financial-markets-and-interest-rates/euro-area-yield-curves/all-government-bonds-yield-curve/instantaneous-forward-curve)
+			- [Curva Par](https://data.ecb.europa.eu/data/data-categories/financial-markets-and-interest-rates/euro-area-yield-curves/all-government-bonds-yield-curve/par-curve)
+			- [Parametri](https://data.ecb.europa.eu/data/data-categories/financial-markets-and-interest-rates/euro-area-yield-curves/all-government-bonds-yield-curve/parameters)
+		- Curva dei rendimenti dei titoli di Stato con rating AAA
+			- [Curva spot](https://data.ecb.europa.eu/data/data-categories/financial-markets-and-interest-rates/euro-area-yield-curves/aaa-rated-government-bonds-yield-curve/spot-curve)
+			- [Curva in avanti istantanea](https://data.ecb.europa.eu/data/data-categories/financial-markets-and-interest-rates/euro-area-yield-curves/aaa-rated-government-bonds-yield-curve/instantaneous-forward-curve)
+			- [Curva Par](https://data.ecb.europa.eu/data/data-categories/financial-markets-and-interest-rates/euro-area-yield-curves/aaa-rated-government-bonds-yield-curve/par-curve)
+			- [Parametri](https://data.ecb.europa.eu/data/data-categories/financial-markets-and-interest-rates/euro-area-yield-curves/aaa-rated-government-bonds-yield-curve/parameters)
+	- Mercato monetario dell'euro
+		- [Tasso di interesse a breve termine dell'euro](https://data.ecb.europa.eu/data/data-categories/financial-markets-and-interest-rates/euro-money-market/euro-short-term-rate)
+		- [Tassi di interesse a breve termine composti in euro e indice](https://data.ecb.europa.eu/data/data-categories/financial-markets-and-interest-rates/euro-money-market/compounded-euro-short-term-rates-and-index)
+		- [Tasso di interesse a breve termine pre-euro](https://data.ecb.europa.eu/data/data-categories/financial-markets-and-interest-rates/euro-money-market/pre-euro-short-term-rate)
+		- Segnalazione statistica del mercato monetario
+			- [Mercato non garantito](https://data.ecb.europa.eu/data/data-categories/financial-markets-and-interest-rates/euro-money-market/money-market-statistical-reporting/unsecured-market)
+			- [Mercato protetto](https://data.ecb.europa.eu/data/data-categories/financial-markets-and-interest-rates/euro-money-market/money-market-statistical-reporting/secured-market)
+			- [Mercato OIS](https://data.ecb.europa.eu/data/data-categories/financial-markets-and-interest-rates/euro-money-market/money-market-statistical-reporting/ois-market)
+		- [Indagine sul mercato monetario](https://data.ecb.europa.eu/data/data-categories/financial-markets-and-interest-rates/euro-money-market/money-market-survey)
+	- Dati del mercato finanziario
+		- [Equità](https://data.ecb.europa.eu/data/data-categories/financial-markets-and-interest-rates/financial-market-data/equity)
+		- [Si diffonde](https://data.ecb.europa.eu/data/data-categories/financial-markets-and-interest-rates/financial-market-data/spreads)
+		- [Mercati monetari](https://data.ecb.europa.eu/data/data-categories/financial-markets-and-interest-rates/financial-market-data/money-markets)
+		- [Mercati dei capitali](https://data.ecb.europa.eu/data/data-categories/financial-markets-and-interest-rates/financial-market-data/capital-markets)
+		- [tassi di interesse ufficiali](https://data.ecb.europa.eu/data/data-categories/financial-markets-and-interest-rates/financial-market-data/official-interest-rates)
+		- [Materie prime](https://data.ecb.europa.eu/data/data-categories/financial-markets-and-interest-rates/financial-market-data/commodities)
+	- L'integrazione finanziaria nell'area dell'euro
+		- [Dati](https://data.ecb.europa.eu/data/data-categories/financial-markets-and-interest-rates/financial-integration-euro-area/data)
+- Statistiche macroeconomiche e settoriali
+	- Inflazione e prezzi al consumo
+		- [Totale](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/consumer-prices-and-inflation/total)
+		- [Per classificazione dello scopo di consumo](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/consumer-prices-and-inflation/classification-consumption-purpose)
+		- [Merce](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/measuring-inflation-harmonised-index-consumer-prices-hicp/harmonised-index-consumer-prices-hicp/goods)
+		- [Servizi](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/measuring-inflation-harmonised-index-consumer-prices-hicp/harmonised-index-consumer-prices-hicp/services)
+		- [Prezzi amministrati](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/measuring-inflation-harmonised-index-consumer-prices-hicp/harmonised-index-consumer-prices-hicp/administered-prices)
+		- [Serie destagionalizzata](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/measuring-inflation-harmonised-index-consumer-prices-hicp/harmonised-index-consumer-prices-hicp/seasonally-adjusted-series)
+	- Altri prezzi e costi
+		- prezzi alla produzione industriale
+			- [Totale](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/other-prices-and-costs/industrial-producer-prices/total)
+			- [Domestico](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/other-prices-and-costs/industrial-producer-prices/domestic)
+			- [Non domestico](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/other-prices-and-costs/industrial-producer-prices/non-domestic)
+		- [Prezzi e costi di produzione delle costruzioni](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/other-prices-and-costs/construction-producer-prices-and-costs)
+		- [prezzi all'importazione](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/other-prices-and-costs/import-prices)
+		- prezzi delle materie prime
+			- [Prezzi delle materie prime non energetiche della BCE](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/other-prices-and-costs/commodity-prices/ecb-non-energy-commodity-prices)
+			- [Prezzi delle materie prime alla fattoria e all'ingrosso](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/other-prices-and-costs/commodity-prices/farm-gate-and-wholesale-commodity-prices)
+		- Prezzi degli immobili
+			- [Prezzi degli immobili residenziali](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/other-prices-and-costs/property-prices/residential-property-prices)
+			- [prezzi degli immobili commerciali](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/other-prices-and-costs/property-prices/commercial-property-prices)
+		- costi di manodopera
+			- [Costi orari del lavoro](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/other-prices-and-costs/labour-costs/hourly-labour-costs)
+			- [Costi unitari del lavoro](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/other-prices-and-costs/labour-costs/unit-labour-costs)
+			- [Retribuzione dei dipendenti](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/other-prices-and-costs/labour-costs/compensation-employees)
+			- [Stipendi e salari](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/other-prices-and-costs/labour-costs/wages-and-salaries)
+			- [Compensazione per input di lavoro](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/other-prices-and-costs/labour-costs/compensation-input-labour)
+			- [salari negoziati](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/other-prices-and-costs/labour-costs/negotiated-wages)
+		- [Deflatori](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/other-prices-and-costs/deflators)
+	- PIL, produzione, domanda e reddito
+		- Conti nazionali - principali aggregati
+			- PIL e principali componenti di spesa
+				- [PIL totale](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/gdp-output-demand-and-income/national-accounts-main-aggregates/gdp-and-main-expenditure-components/total-gdp)
+				- [Domanda interna](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/gdp-output-demand-and-income/national-accounts-main-aggregates/gdp-and-main-expenditure-components/domestic-demand)
+				- [Spesa per consumi finali delle famiglie](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/gdp-output-demand-and-income/national-accounts-main-aggregates/gdp-and-main-expenditure-components/household-final-consumption-expenditure)
+				- [Spesa finale per consumi pubblici](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/gdp-output-demand-and-income/national-accounts-main-aggregates/gdp-and-main-expenditure-components/government-final-consumption-expenditure)
+				- [Formazione lorda di capitale fisso](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/gdp-output-demand-and-income/national-accounts-main-aggregates/gdp-and-main-expenditure-components/gross-fixed-capital-formation)
+				- [Variazioni delle scorte al netto delle cessioni di oggetti di valore](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/gdp-output-demand-and-income/national-accounts-main-aggregates/gdp-and-main-expenditure-components/changes-inventories-less-disposals-valuables)
+				- [Saldo esterno di beni e servizi](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/gdp-output-demand-and-income/national-accounts-main-aggregates/gdp-and-main-expenditure-components/external-balance-goods-and-services)
+				- [Esportazioni di beni e servizi](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/gdp-output-demand-and-income/national-accounts-main-aggregates/gdp-and-main-expenditure-components/exports-goods-and-services)
+				- [Importazioni di beni e servizi](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/gdp-output-demand-and-income/national-accounts-main-aggregates/gdp-and-main-expenditure-components/imports-goods-and-services)
+			- Valore aggiunto per attività principale
+				- [Valore aggiunto lordo ai prezzi base](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/gdp-output-demand-and-income/national-accounts-main-aggregates/value-added-main-activity/gross-value-added-basic-prices)
+				- [Tasse meno sussidi sui prodotti](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/gdp-output-demand-and-income/national-accounts-main-aggregates/value-added-main-activity/taxes-less-subsidies-products)
+			- Reddito, compenso, imposte sulla produzione e sulle importazioni, sussidi
+				- [Reddito](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/gdp-output-demand-and-income/national-accounts-main-aggregates/income-compensation-taxes-production-and-imports-subsidies/income)
+				- [Compensazione](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/gdp-output-demand-and-income/national-accounts-main-aggregates/income-compensation-taxes-production-and-imports-subsidies/compensation)
+				- [Imposte sulla produzione e sulle importazioni, sussidi](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/gdp-output-demand-and-income/national-accounts-main-aggregates/income-compensation-taxes-production-and-imports-subsidies/taxes-production-and-imports-subsidies)
+			- [Popolazione e occupazione](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/gdp-output-and-demand/national-accounts-main-aggregates/population-and-employment)
+			- [Deflatori](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/gdp-output-demand-and-income/national-accounts-main-aggregates/deflators)
+		- Indicatori aziendali a breve termine
+			- [Produzione industriale (inclusa l'edilizia)](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/gdp-output-and-demand/short-term-business-indicators/industrial-production-incl-construction)
+			- [Nuovi ordini industriali](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/gdp-output-and-demand/short-term-business-indicators/industrial-new-orders)
+			- [Fatturato industriale](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/gdp-output-and-demand/short-term-business-indicators/industrial-turnover)
+			- [Fatturato del commercio al dettaglio](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/gdp-output-and-demand/short-term-business-indicators/retail-trade-turnover)
+			- [Fatturato dei servizi](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/gdp-output-and-demand/short-term-business-indicators/services-turnover)
+			- [Permessi di costruzione](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/gdp-output-and-demand/short-term-business-indicators/building-permits)
+			- [Targhe automobilistiche](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/gdp-output-demand-and-income/short-term-business-indicators/car-registrations)
+		- sondaggi di opinione
+			- [Indagini sulle imprese e sui consumatori della Commissione UE](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/gdp-output-and-demand/opinion-surveys/eu-commission-business-and-consumer-surveys)
+		- Indicatori strutturali
+			- [Indicatori strutturali dell'edilizia abitativa](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/gdp-output-and-demand/structural-indicators/structural-housing-indicators)
+	- Conti di settore
+		- Conti finanziari
+			- Per settore
+				- [Tutte le serie](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/sector-accounts/financial-accounts/sector/all-series)
+				- [Economia totale](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/sector-accounts/financial-accounts/sector/total-economy)
+				- [Società non finanziarie](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/sector-accounts/financial-accounts/sector/non-financial-corporations)
+				- [società finanziarie](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/sector-accounts/financial-accounts/sector/financial-corporations)
+				- [Istituzioni finanziarie monetarie](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/sector-accounts/financial-accounts/sector/monetary-financial-institutions)
+				- [Altri istituti finanziari](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/sector-accounts/financial-accounts/sector/other-financial-institutions)
+				- [Compagnie di assicurazione e fondi pensione](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/sector-accounts/financial-accounts/sector/insurance-corporations-and-pension-funds)
+				- [Governo](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/sector-accounts/financial-accounts/sector/government)
+				- [Famiglie e istituzioni senza scopo di lucro al servizio delle famiglie](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/sector-accounts/financial-accounts/sector/households-and-non-profit-institutions-serving-households)
+				- [Resto del mondo](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/sector-accounts/financial-accounts/sector/rest-world)
+			- Per strumento
+				- [Tutte le serie](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/sector-accounts/financial-accounts/instrument/all-series)
+				- [Oro monetario e DSP](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/sector-accounts/financial-accounts/instrument/monetary-gold-and-sdrs)
+				- [Valuta e depositi](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/sector-accounts/financial-accounts/instrument/currency-and-deposits)
+				- [Titoli di debito](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/sector-accounts/financial-accounts/instrument/debt-securities)
+				- [Prestiti](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/sector-accounts/financial-accounts/instrument/loans)
+				- [Azioni e quote di fondi di investimento](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/sector-accounts/financial-accounts/instrument/equity-and-investment-fund-shares)
+				- [Assicurazioni, pensioni e garanzie standardizzate](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/sector-accounts/financial-accounts/instrument/insurance-pension-and-standardised-guarantees)
+				- [Derivati finanziari](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/sector-accounts/financial-accounts/instrument/financial-derivatives)
+				- [Altri conti da pagare/ricevere e crediti commerciali](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/sector-accounts/financial-accounts/instrument/other-accounts-payablereceivable-and-trade-credit)
+		- Conti non finanziari
+			- Per settore
+				- [Tutte le serie](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/sector-accounts/non-financial-accounts/sector/all-series)
+				- [Economia totale](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/sector-accounts/non-financial-accounts/sector/total-economy)
+				- [Società non finanziarie](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/sector-accounts/non-financial-accounts/sector/non-financial-corporations)
+				- [società finanziarie](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/sector-accounts/non-financial-accounts/sector/financial-corporations)
+				- [Governo](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/sector-accounts/non-financial-accounts/sector/government)
+				- [Famiglie e istituzioni senza scopo di lucro al servizio delle famiglie](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/sector-accounts/non-financial-accounts/sector/households-and-non-profit-institutions-serving-households)
+			- By sequence of accounts
+				- [All series](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/sector-accounts/non-financial-accounts/sequence-accounts/all-series)
+				- [Production](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/sector-accounts/non-financial-accounts/sequence-accounts/production)
+				- [Generation of income](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/sector-accounts/non-financial-accounts/sequence-accounts/generation-income)
+				- [Allocation of primary income](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/sector-accounts/non-financial-accounts/sequence-accounts/allocation-primary-income)
+				- [Secondary distribution of income](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/sector-accounts/non-financial-accounts/sequence-accounts/secondary-distribution-income)
+				- [Use of disposable income](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/sector-accounts/non-financial-accounts/sequence-accounts/use-disposable-income)
+				- [Saving and capital transfers](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/sector-accounts/non-financial-accounts/sequence-accounts/saving-and-capital-transfers)
+				- [Acquisitions of non-financial assets](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/sector-accounts/non-financial-accounts/sequence-accounts/acquisitions-non-financial-assets)
+				- [Balancing items](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/sector-accounts/non-financial-accounts/sequence-accounts/balancing-items)
+		- Non-financial assets
+			- By sector
+				- [All series](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/sector-accounts/non-financial-assets/sector/all-series)
+				- [Total economy](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/sector-accounts/non-financial-assets/sector/total-economy)
+				- [Households and non-profit institutions serving households](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/sector-accounts/non-financial-assets/sector/households-and-non-profit-institutions-serving-households)
+				- [Non-financial corporations](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/sector-accounts/non-financial-assets/sector/non-financial-corporations)
+				- [Financial corporations](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/sector-accounts/non-financial-assets/sector/financial-corporations)
+				- [Government](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/sector-accounts/non-financial-assets/sector/government)
+				- [Rest of the world](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/sector-accounts/non-financial-assets/sector/rest-world)
+			- By asset type
+				- [All series](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/sector-accounts/non-financial-assets/asset-type/all-series)
+				- [Fixed assets](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/sector-accounts/non-financial-assets/asset-type/fixed-assets)
+				- [Dwellings](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/sector-accounts/non-financial-assets/asset-type/dwellings)
+				- [Other buildings and structures](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/sector-accounts/non-financial-assets/asset-type/other-buildings-and-structures)
+				- [Machinery and equipment + weapon systems](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/sector-accounts/non-financial-assets/asset-type/machinery-and-equipment-weapon-systems)
+				- [Housing wealth](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/sector-accounts/non-financial-assets/asset-type/housing-wealth)
+		- [Distributional Wealth Accounts](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/sector-accounts/distributional-wealth-accounts)
+		- Analytical indicators
+			- [Financial accounts](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/sector-accounts/analytical-indicators/financial-accounts)
+			- [Non-financial accounts](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/sector-accounts/analytical-indicators/non-financial-accounts)
+	- Government finance
+		- Deficit/surplus
+			- [Total](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/government-finance/deficitsurplus/total)
+			- [Primary deficit/surplus](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/government-finance/deficitsurplus/primary-deficitsurplus)
+			- [Interest payable](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/government-finance/deficitsurplus/interest-payable)
+			- [Gross saving](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/government-finance/deficitsurplus/gross-saving)
+		- Revenue
+			- [Total revenue](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/government-finance/revenue/total-revenue)
+			- Current revenue
+				- [Total](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/government-finance/revenue/current-revenue/total)
+				- [By component](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/government-finance/revenue/current-revenue/component)
+			- Capital revenue
+				- [Total](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/government-finance/revenue/capital-revenue/total)
+				- [By component](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/government-finance/revenue/capital-revenue/component)
+			- [Fiscal burden](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/government-finance/revenue/fiscal-burden)
+		- Expenditure
+			- [Total expenditure](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/government-finance/expenditure/total-expenditure)
+			- Current expenditure
+				- [Total](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/government-finance/expenditure/current-expenditure/total)
+				- [By component](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/government-finance/expenditure/current-expenditure/component)
+			- Capital expenditure
+				- [Total](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/government-finance/expenditure/capital-expenditure/total)
+				- [By component](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/government-finance/expenditure/capital-expenditure/component)
+			- [Primary expenditure](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/government-finance/expenditure/primary-expenditure)
+			- Expenditure by function (COFOG)
+				- [Total](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/government-finance/expenditure/expenditure-function-cofog/total)
+				- [General public services](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/government-finance/expenditure/expenditure-function-cofog/general-public-services)
+				- [Defence](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/government-finance/expenditure/expenditure-function-cofog/defence)
+				- [Public order and safety](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/government-finance/expenditure/expenditure-function-cofog/public-order-and-safety)
+				- [Economic affairs](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/government-finance/expenditure/expenditure-function-cofog/economic-affairs)
+				- [Environmental protection](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/government-finance/expenditure/expenditure-function-cofog/environmental-protection)
+				- [Housing and community amenities](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/government-finance/expenditure/expenditure-function-cofog/housing-and-community-amenities)
+				- [Health](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/government-finance/expenditure/expenditure-function-cofog/health)
+				- [Recreation, culture and religion](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/government-finance/expenditure/expenditure-function-cofog/recreation-culture-and-religion)
+				- [Education](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/government-finance/expenditure/expenditure-function-cofog/education)
+		- Consumption
+			- [Final consumption](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/government-finance/consumption/final-consumption)
+			- [Individual consumption](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/government-finance/consumption/individual-consumption)
+			- [Collective consumption](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/government-finance/consumption/collective-consumption)
+			- [Consumption by component](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/government-finance/consumption/consumption-component)
+		- Transactions with EU institutions and bodies
+			- EU budget
+				- [Revenue](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/government-finance/transactions-eu-institutions-and-bodies/eu-budget/revenue)
+				- [Expenditure](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/government-finance/transactions-eu-institutions-and-bodies/eu-budget/expenditure)
+				- [Balance](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/government-finance/transactions-eu-institutions-and-bodies/eu-budget/balance)
+			- [Single Resolution Board/Single Resolution Fund (SRB/SRF)](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/government-finance/transactions-eu-institutions-and-bodies/single-resolution-boardsingle-resolution-fund-srbsrf)
+		- Government debt
+			- Gross government debt (consolidated)
+				- [Total](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/government-finance/government-debt/gross-government-debt-consolidated/total)
+				- [By financial instrument](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/government-finance/government-debt/gross-government-debt-consolidated/financial-instrument)
+				- [By holder](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/government-finance/government-debt/gross-government-debt-consolidated/holder)
+				- [By issuer](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/government-finance/government-debt/gross-government-debt-consolidated/issuer)
+				- [By original maturity](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/government-finance/government-debt/gross-government-debt-consolidated/original-maturity)
+				- [By residual maturity](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/government-finance/government-debt/gross-government-debt-consolidated/residual-maturity)
+				- [By currency](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/government-finance/government-debt/gross-government-debt-consolidated/currency)
+			- Non-consolidated debt
+				- [Total](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/government-finance/government-debt/non-consolidated-debt/total)
+				- [Debt holdings](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/government-finance/government-debt/non-consolidated-debt/debt-holdings)
+			- Consolidating elements
+				- [Total](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/government-finance/government-debt/consolidating-elements/total)
+				- [By financial instrument](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/government-finance/government-debt/consolidating-elements/financial-instrument)
+				- [By issuer](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/government-finance/government-debt/consolidating-elements/issuer)
+			- [Loans, currency and deposits (LCD)](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/government-finance/government-debt/loans-currency-and-deposits-lcd)
+		- Change in debt
+			- [Change in debt](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/government-finance/change-debt/change-debt)
+			- [Deficit-debt adjustment](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/government-finance/change-debt/deficit-debt-adjustment)
+			- Main transactions in financial assets
+				- [Total](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/government-finance/change-debt/main-transactions-financial-assets/total)
+				- [By financial instrument](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/government-finance/change-debt/main-transactions-financial-assets/financial-instrument)
+			- Valuations effects and other changes in volume
+				- [Total](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/government-finance/change-debt/valuations-effects-and-other-changes-volume/total)
+				- [Valuation effects on debt](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/government-finance/change-debt/valuations-effects-and-other-changes-volume/valuation-effects-debt)
+				- [Other changes in volume of debt](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/government-finance/change-debt/valuations-effects-and-other-changes-volume/other-changes-volume-debt)
+			- Other deficit-debt adjustments
+				- [Total](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/government-finance/change-debt/other-deficit-debt-adjustments/total)
+				- [Adjustment between financial and non-financial accounts](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/government-finance/change-debt/other-deficit-debt-adjustments/adjustment-between-financial-and-non-financial-accounts)
+			- Borrowing requirement
+				- [Total consolidated transactions](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/government-finance/change-debt/borrowing-requirement/total-consolidated-transactions)
+				- [Consolidated transactions by financial instrument](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/government-finance/change-debt/borrowing-requirement/consolidated-transactions-financial-instrument)
+				- [Consolidated transactions by currency](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/government-finance/change-debt/borrowing-requirement/consolidated-transactions-currency)
+				- [Consolidated transactions by original maturity](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/government-finance/change-debt/borrowing-requirement/consolidated-transactions-original-maturity)
+		- Financial accounts
+			- Transactions
+				- [Total assets](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/government-finance/financial-accounts/transactions/total-assets)
+				- [Assets by financial instrument](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/government-finance/financial-accounts/transactions/assets-financial-instrument)
+				- [Total liabilities](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/government-finance/financial-accounts/transactions/total-liabilities)
+				- [Liabilities by financial instrument](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/government-finance/financial-accounts/transactions/liabilities-financial-instrument)
+				- [Net transactions](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/government-finance/financial-accounts/transactions/net-transactions)
+			- Positions
+				- [Total assets](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/government-finance/financial-accounts/positions/total-assets)
+				- [Assets by financial instrument](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/government-finance/financial-accounts/positions/assets-financial-instrument)
+				- [Total liabilities](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/government-finance/financial-accounts/positions/total-liabilities)
+				- [Liabilities by financial instrument](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/government-finance/financial-accounts/positions/liabilities-financial-instrument)
+				- [Net positions](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/government-finance/financial-accounts/positions/net-positions)
+		- Government assistance to the financial sector (discontinued)
+			- [Impact on deficit/surplus](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/government-finance/assistance-financial-sector/impact-deficitsurplus)
+			- [Government financing needs](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/government-finance/assistance-financial-sector/government-financing-needs)
+			- [Contingent liabilities](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/government-finance/assistance-financial-sector/contingent-liabilities)
+	- Labour market
+		- Employment
+			- [By economic activity (source national accounts)](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/labour-market/employment/economic-activity-source-national-accounts)
+			- [Self employed and employees by economic activity (source national accounts)](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/labour-market/employment/self-employed-and-employees-economic-activity-source-national-accounts)
+		- Unemployment
+			- [Total](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/labour-market/unemployment/total)
+			- [By age group](https://data.ecb.europa.eu/data/data-categories/macroeconomic-and-sectoral-statistics/labour-market/unemployment/age-group)
+			- [By gender](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/labour-market/unemployment/gender)
+		- [Population](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/labour-market/population)
+		- Labour productivity and unit labour costs
+			- [Labour productivity](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/labour-market/labour-productivity-and-unit-labour-costs/labour-productivity)
+			- [Unit labour costs](https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/labour-market/labour-productivity-and-unit-labour-costs/unit-labour-costs)
+- Balance of payments and other external statistics
+	- Balance of payments and international investment position
+		- [Main accounts - summary](https://data.ecb.europa.eu/data/data-categories/balance-payments-and-other-external-statistics/balance-payments-and-international-investment-position/main-accounts-summary)
+		- Current account
+			- [Total current account and subaccounts](https://data.ecb.europa.eu/data/data-categories/balance-payments-and-other-external-statistics/balance-payments-and-international-investment-position/current-account/total-current-account-and-subaccounts)
+			- [Goods](https://data.ecb.europa.eu/data/data-categories/balance-payments-and-other-external-statistics/balance-payments-and-international-investment-position/current-account/goods)
+			- [Services](https://data.ecb.europa.eu/data/data-categories/balance-payments-and-other-external-statistics/balance-payments-and-international-investment-position/current-account/services)
+			- [Primary income](https://data.ecb.europa.eu/data/data-categories/balance-payments-and-other-external-statistics/balance-payments-and-international-investment-position/current-account/primary-income)
+			- [Secondary income](https://data.ecb.europa.eu/data/data-categories/balance-payments-and-other-external-statistics/balance-payments-and-international-investment-position/current-account/secondary-income)
+			- [Main geographical counterparts](https://data.ecb.europa.eu/data/data-categories/balance-payments-and-other-external-statistics/balance-payments-and-international-investment-position/current-account/main-geographical-counterparts)
+		- Capital account
+			- [Total capital account and components](https://data.ecb.europa.eu/data/data-categories/balance-payments-and-other-external-statistics/balance-payments-and-international-investment-position/capital-account/total-capital-account-and-components)
+			- [Gross acquisitions/disposals of non-produced non-financial assets](https://data.ecb.europa.eu/data/data-categories/balance-payments-and-other-external-statistics/balance-payments-and-international-investment-position/capital-account/gross-acquisitionsdisposals-non-produced-non-financial-assets)
+			- [Capital transfers](https://data.ecb.europa.eu/data/data-categories/balance-payments-and-other-external-statistics/balance-payments-and-international-investment-position/capital-account/capital-transfers)
+		- Financial account
+			- [Total financial account and subaccounts](https://data.ecb.europa.eu/data/data-categories/balance-payments-and-other-external-statistics/balance-payments-and-international-investment-position/financial-account/total-financial-account-and-subaccounts)
+			- [Direct investment](https://data.ecb.europa.eu/data/data-categories/balance-payments-and-other-external-statistics/balance-payments-and-international-investment-position/financial-account/direct-investment)
+			- [Portfolio investment](https://data.ecb.europa.eu/data/data-categories/balance-payments-and-other-external-statistics/balance-payments-and-international-investment-position/financial-account/portfolio-investment)
+			- [Financial derivatives and employee stock options](https://data.ecb.europa.eu/data/data-categories/balance-payments-and-other-external-statistics/balance-payments-and-international-investment-position/financial-account/financial-derivatives-and-employee-stock-options)
+			- [Other investment](https://data.ecb.europa.eu/data/data-categories/balance-payments-and-other-external-statistics/balance-payments-and-international-investment-position/financial-account/other-investment)
+			- [Reserve assets](https://data.ecb.europa.eu/data/data-categories/balance-payments-and-other-external-statistics/balance-payments-and-international-investment-position/financial-account/reserve-assets)
+	- International reserves
+		- Official reserve assets
+			- [Total](https://data.ecb.europa.eu/data/data-categories/balance-payments-and-other-external-statistics/international-reserves/official-reserve-assets/total)
+			- [Monetary gold](https://data.ecb.europa.eu/data/data-categories/balance-payments-and-other-external-statistics/international-reserves/official-reserve-assets/monetary-gold)
+			- [Reserve position in the IMF](https://data.ecb.europa.eu/data/data-categories/balance-payments-and-other-external-statistics/international-reserves/official-reserve-assets/reserve-position-imf)
+			- [Special drawing rights](https://data.ecb.europa.eu/data/data-categories/balance-payments-and-other-external-statistics/international-reserves/official-reserve-assets/special-drawing-rights)
+			- [Deposits](https://data.ecb.europa.eu/data/data-categories/balance-payments-and-other-external-statistics/international-reserves/official-reserve-assets/deposits)
+			- [Securities](https://data.ecb.europa.eu/data/data-categories/balance-payments-and-other-external-statistics/international-reserves/official-reserve-assets/securities)
+			- [Financial derivatives](https://data.ecb.europa.eu/data/data-categories/balance-payments-and-other-external-statistics/international-reserves/official-reserve-assets/financial-derivatives)
+			- [Other claims](https://data.ecb.europa.eu/data/data-categories/balance-payments-and-other-external-statistics/international-reserves/official-reserve-assets/other-claims)
+		- Other foreign currency assets
+			- [Total](https://data.ecb.europa.eu/data/data-categories/balance-payments-and-other-external-statistics/international-reserves/other-foreign-currency-assets/total)
+			- [Securities not included in official reserve assets](https://data.ecb.europa.eu/data/data-categories/balance-payments-and-other-external-statistics/international-reserves/other-foreign-currency-assets/securities-not-included-official-reserve-assets)
+			- [Deposits not included in official reserve assets](https://data.ecb.europa.eu/data/data-categories/balance-payments-and-other-external-statistics/international-reserves/other-foreign-currency-assets/deposits-not-included-official-reserve-assets)
+			- [Loans not included in official reserve assets](https://data.ecb.europa.eu/data/data-categories/balance-payments-and-other-external-statistics/international-reserves/other-foreign-currency-assets/loans-not-included-official-reserve-assets)
+			- [Financial derivatives not included in official reserve assets](https://data.ecb.europa.eu/data/data-categories/balance-payments-and-other-external-statistics/international-reserves/other-foreign-currency-assets/financial-derivatives-not-included-official-reserve-assets)
+			- [Other](https://data.ecb.europa.eu/data/data-categories/balance-payments-and-other-external-statistics/international-reserves/other-foreign-currency-assets/other)
+		- Foreign currency drains
+			- [Predetermined short-term net drains](https://data.ecb.europa.eu/data/data-categories/balance-payments-and-other-external-statistics/international-reserves/foreign-currency-drains/predetermined-short-term-net-drains)
+			- [Contingent short-term net drains](https://data.ecb.europa.eu/data/data-categories/balance-payments-and-other-external-statistics/international-reserves/foreign-currency-drains/contingent-short-term-net-drains)
+	- External trade in goods
+		- [Total trade](https://data.ecb.europa.eu/data/data-categories/balance-payments-and-other-external-statistics/external-trade-goods/total-trade)
+		- Standard International Trade Classifications (SITC)
+			- [Food, drink and tobacco](https://data.ecb.europa.eu/data/data-categories/balance-payments-and-other-external-statistics/external-trade-goods/standard-international-trade-classifications-sitc/food-drink-and-tobacco)
+			- [Raw materials](https://data.ecb.europa.eu/data/data-categories/balance-payments-and-other-external-statistics/external-trade-goods/standard-international-trade-classifications-sitc/raw-materials)
+			- [Energy](https://data.ecb.europa.eu/data/data-categories/balance-payments-and-other-external-statistics/external-trade-goods/standard-international-trade-classifications-sitc/energy)
+			- [Machinery and transport equipment](https://data.ecb.europa.eu/data/data-categories/balance-payments-and-other-external-statistics/external-trade-goods/standard-international-trade-classifications-sitc/machinery-and-transport-equipment)
+			- [Chemicals](https://data.ecb.europa.eu/data/data-categories/balance-payments-and-other-external-statistics/external-trade-goods/standard-international-trade-classifications-sitc/chemicals)
+			- [Manufactured goods](https://data.ecb.europa.eu/data/data-categories/balance-payments-and-other-external-statistics/external-trade-goods/standard-international-trade-classifications-sitc/manufactured-goods)
+			- [Other manufactured articles](https://data.ecb.europa.eu/data/data-categories/balance-payments-and-other-external-statistics/external-trade-goods/standard-international-trade-classifications-sitc/other-manufactured-articles)
+			- [Other goods](https://data.ecb.europa.eu/data/data-categories/balance-payments-and-other-external-statistics/external-trade-goods/standard-international-trade-classifications-sitc/other-goods)
+		- Broad Economic Categories (BEC)
+			- [Capital goods](https://data.ecb.europa.eu/data/data-categories/balance-payments-and-other-external-statistics/external-trade-goods/broad-economic-categories-bec/capital-goods)
+			- [Intermediate goods](https://data.ecb.europa.eu/data/data-categories/balance-payments-and-other-external-statistics/external-trade-goods/broad-economic-categories-bec/intermediate-goods)
+			- [Consumer goods](https://data.ecb.europa.eu/data/data-categories/balance-payments-and-other-external-statistics/external-trade-goods/broad-economic-categories-bec/consumer-goods)
+			- [Consumption goods](https://data.ecb.europa.eu/data/data-categories/balance-payments-and-other-external-statistics/external-trade-goods/broad-economic-categories-bec/consumption-goods)
+		- [Trade weights](https://data.ecb.europa.eu/data/data-categories/balance-payments-and-other-external-statistics/external-trade-goods/trade-weights)
+	- External debt
+		- [Gross external debt](https://data.ecb.europa.eu/data/data-categories/balance-payments-and-other-external-statistics/external-debt/gross-external-debt)
+		- [Net external debt](https://data.ecb.europa.eu/data/data-categories/balance-payments-and-other-external-statistics/external-debt/net-external-debt)
+		- [External assets in debt instruments](https://data.ecb.europa.eu/data/data-categories/balance-payments-and-other-external-statistics/external-debt/external-assets-debt-instruments)
+- Supervisory and prudential statistics
+	- Consolidated banking data
+		- [Consolidated banking data](https://data.ecb.europa.eu/data/data-categories/supervisory-and-prudential-statistics/consolidated-banking-data/consolidated-banking-data)
+		- [Consolidated banking data (discontinued)](https://data.ecb.europa.eu/data/data-categories/supervisory-and-prudential-statistics/consolidated-banking-data/consolidated-banking-data-discontinued)
+	- Banking supervision
+		- [Balance sheet composition and profitability](https://data.ecb.europa.eu/data/data-categories/supervisory-and-prudential-statistics/banking-supervision/balance-sheet-composition-and-profitability)
+		- [Capital adequacy and leverage](https://data.ecb.europa.eu/data/data-categories/supervisory-and-prudential-statistics/banking-supervision/capital-adequacy-and-leverage)
+		- [Asset quality](https://data.ecb.europa.eu/data/data-categories/supervisory-and-prudential-statistics/banking-supervision/asset-quality)
+		- [Funding](https://data.ecb.europa.eu/data/data-categories/supervisory-and-prudential-statistics/banking-supervision/funding)
+		- [Liquidity](https://data.ecb.europa.eu/data/data-categories/supervisory-and-prudential-statistics/banking-supervision/liquidity)
+- Payment statistics
+	- Payment services, large-value payment systems and retail payment systems
+		- [Transactions per type of payment service – key indicators](https://data.ecb.europa.eu/data/data-categories/payment-statistics/payment-services-large-value-payment-systems-and-retail-payment-systems/transactions-type-payment-service-key-indicators)
+		- [Settlement media used by non-MFIs](https://data.ecb.europa.eu/data/data-categories/payment-statistics/payment-services-large-value-payment-systems-and-retail-payment-systems/settlement-media-used-non-mfis-0)
+		- [Settlement media used by credit institutions](https://data.ecb.europa.eu/data/data-categories/payment-statistics/payment-services-large-value-payment-systems-and-retail-payment-systems/settlement-media-used-credit-institutions-0)
+		- [Banknotes](https://data.ecb.europa.eu/data/data-categories/payment-statistics/payment-services-large-value-payment-systems-and-retail-payment-systems/banknotes-0)
+		- [Institutions offering payment services to non-MFIs](https://data.ecb.europa.eu/data/data-categories/payment-statistics/payment-services-large-value-payment-systems-and-retail-payment-systems/institutions-offering-payment-services-non-mfis-0)
+		- [Payment card functions](https://data.ecb.europa.eu/data/data-categories/payment-statistics/payment-services-large-value-payment-systems-and-retail-payment-systems/payment-card-functions-0)
+		- [Payment card accepting devices](https://data.ecb.europa.eu/data/data-categories/payment-statistics/payment-services-large-value-payment-systems-and-retail-payment-systems/payment-card-accepting-devices-0)
+		- [Credit transfers](https://data.ecb.europa.eu/data/data-categories/payment-statistics/payment-services-large-value-payment-systems-and-retail-payment-systems-new/credit-transfers)
+		- [Direct debits](https://data.ecb.europa.eu/data/data-categories/payment-statistics/payment-services-large-value-payment-systems-and-retail-payment-systems-new/direct-debits)
+		- [E-money payment transactions](https://data.ecb.europa.eu/data/data-categories/payment-statistics/payment-services-large-value-payment-systems-and-retail-payment-systems-new/e-money-payment-transactions)
+		- [Card-based payment transactions (incl. cash withdrawals)](https://data.ecb.europa.eu/data/data-categories/payment-statistics/payment-services-large-value-payment-systems-and-retail-payment-systems-new/card-based-payment-transactions-incl-cash-withdrawals)
+		- [Payment initiation services](https://data.ecb.europa.eu/data/data-categories/payment-statistics/payment-services-large-value-payment-systems-and-retail-payment-systems-new/payment-initiation-services)
+		- [Transactions per type of payment service provider](https://data.ecb.europa.eu/data/data-categories/payment-statistics/payment-services-large-value-payment-systems-and-retail-payment-systems-new/transactions-type-payment-service-provider)
+		- [Transactions per type of terminal](https://data.ecb.europa.eu/data/data-categories/payment-statistics/payment-services-large-value-payment-systems-and-retail-payment-systems-new/transactions-type-terminal)
+		- [Participation in selected payment systems](https://data.ecb.europa.eu/data/data-categories/payment-statistics/payment-services-large-value-payment-systems-and-retail-payment-systems-new/participation-selected-payment-systems)
+		- [Payments processed by selected payment systems](https://data.ecb.europa.eu/data/data-categories/payment-statistics/payment-services-large-value-payment-systems-and-retail-payment-systems-new/payments-processed-selected-payment-systems)
+		- [Annual payments statistics (discontinued)](https://data.ecb.europa.eu/data/data-categories/payment-statistics/payment-services-large-value-payment-systems-and-retail-payment-systems-new/annual-payments-statistics-discontinued)
+	- Securities trading, clearing and settlements
+		- Securities trading
+			- [Number of participants](https://data.ecb.europa.eu/data/data-categories/payment-statistics/securities-trading-clearing-and-settlements/securities-trading/number-participants)
+			- [Number of listed securities](https://data.ecb.europa.eu/data/data-categories/payment-statistics/securities-trading-clearing-and-settlements/securities-trading/number-listed-securities)
+			- [Market capitalisation of listed companies](https://data.ecb.europa.eu/data/data-categories/payment-statistics/securities-trading-clearing-and-settlements/securities-trading/market-capitalisation-listed-companies)
+			- [Number of executed trades](https://data.ecb.europa.eu/data/data-categories/payment-statistics/securities-trading-clearing-and-settlements/securities-trading/number-executed-trades)
+			- [Value of executed trades](https://data.ecb.europa.eu/data/data-categories/payment-statistics/securities-trading-clearing-and-settlements/securities-trading/value-executed-trades)
+		- Securities clearing
+			- [Number of participants](https://data.ecb.europa.eu/data/data-categories/payment-statistics/securities-trading-clearing-and-settlements/securities-clearing/number-participants)
+			- [OTC derivatives transactions](https://data.ecb.europa.eu/data/data-categories/payment-statistics/securities-trading-clearing-and-settlements/securities-clearing/otc-derivatives-transactions)
+			- [Non-OTC derivatives contracts](https://data.ecb.europa.eu/data/data-categories/payment-statistics/securities-trading-clearing-and-settlements/securities-clearing/non-otc-derivatives-contracts)
+			- [Repo transactions](https://data.ecb.europa.eu/data/data-categories/payment-statistics/securities-trading-clearing-and-settlements/securities-clearing/repo-transactions)
+			- [Cash securities transactions](https://data.ecb.europa.eu/data/data-categories/payment-statistics/securities-trading-clearing-and-settlements/securities-clearing/cash-securities-transactions)
+			- [Contracts/transactions cleared through a clearing link](https://data.ecb.europa.eu/data/data-categories/payment-statistics/securities-trading-clearing-and-settlements/securities-clearing/contractstransactions-cleared-through-clearing-link)
+			- [Securities transfers for settlement of cleared transactions](https://data.ecb.europa.eu/data/data-categories/payment-statistics/securities-trading-clearing-and-settlements/securities-clearing/securities-transfers-settlement-cleared-transactions)
+		- Securities settlements
+			- [Direct participants](https://data.ecb.europa.eu/data/data-categories/payment-statistics/securities-trading-clearing-and-settlements/securities-settlements/direct-participants)
+			- [Securities held on CSD accounts](https://data.ecb.europa.eu/data/data-categories/payment-statistics/securities-trading-clearing-and-settlements/securities-settlements/securities-held-csd-accounts)
+			- [Delivery instructions](https://data.ecb.europa.eu/data/data-categories/payment-statistics/securities-trading-clearing-and-settlements/securities-settlements/delivery-instructions)
+			- [New issues and redemptions](https://data.ecb.europa.eu/data/data-categories/payment-statistics/securities-trading-clearing-and-settlements/securities-settlements/new-issues-and-redemptions)
+			- [Delivery instructions processed on an account of a CCP with a CSD](https://data.ecb.europa.eu/data/data-categories/payment-statistics/securities-trading-clearing-and-settlements/securities-settlements/delivery-instructions-processed-account-ccp-csd)
+- ECB surveys
+	- Bank Lending Survey (BLS)
+		- Supply
+			- [Enterprises](https://data.ecb.europa.eu/data/data-categories/ecb-surveys/bank-lending-survey-bls/supply/enterprises)
+			- [House purchase](https://data.ecb.europa.eu/data/data-categories/ecb-surveys/bank-lending-survey-bls/supply/house-purchase)
+			- [Consumer credit](https://data.ecb.europa.eu/data/data-categories/ecb-surveys/bank-lending-survey-bls/supply/consumer-credit)
+		- Demand
+			- [Enterprises](https://data.ecb.europa.eu/data/data-categories/ecb-surveys/bank-lending-survey-bls/demand/enterprises)
+			- [House purchase](https://data.ecb.europa.eu/data/data-categories/ecb-surveys/bank-lending-survey-bls/demand/house-purchase)
+			- [Consumer credit](https://data.ecb.europa.eu/data/data-categories/ecb-surveys/bank-lending-survey-bls/demand/consumer-credit)
+	- Indagine sui meteorologi professionisti (SPF)
+		- [Inflazione](https://data.ecb.europa.eu/data/data-categories/ecb-surveys/survey-professional-forecasters-spf/inflation)
+		- [PIL](https://data.ecb.europa.eu/data/data-categories/ecb-surveys/survey-professional-forecasters-spf/gdp)
+		- [Disoccupazione](https://data.ecb.europa.eu/data/data-categories/ecb-surveys/survey-professional-forecasters-spf/unemployment)
+		- [Ipotesi](https://data.ecb.europa.eu/data/data-categories/ecb-surveys/survey-professional-forecasters-spf/assumptions)
+	- Indagine sull'accesso ai finanziamenti delle imprese (SAFE)
+		- [Dati](https://data.ecb.europa.eu/data/data-categories/ecb-surveys/survey-access-finance-enterprises-safe/data)
+
+Niente nel confronto dei dati
+
+Testo originale
+
+Valuta questa traduzione
+
+Il tuo feedback verrà utilizzato per contribuire a migliorare Google Traduttore
