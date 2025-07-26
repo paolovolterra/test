@@ -13,8 +13,7 @@ keywords: [economia, PIL, Italia, NUTS2, Eurostat, nama_10r_2gdp]
 jupyter: python3
 format:
   html:
-    code-fold: true # Nasconde il codice ma lo rende espandibile/collassabile 
-    css: style1.css # MCC_ChatGPT.css
+    code-fold: false # Nasconde il codice ma lo rende espandibile/collassabile 
     theme: none
     toc: true
     number-sections: true
@@ -129,4 +128,37 @@ plt.show()
 ```{python}
 from IPython.display import display, HTML
 display(HTML(df_pivot.to_html(classes='dataframe styled-table')))
+```
+
+
+
+```{python}
+df = fetch_eurostat_data(
+    dataset='nama_10r_2gdp',
+    filters={
+        'unit': ["EUR_HAB"], # "MIO_EUR",
+    }
+)
+df.head()
+```
+
+```{python}
+df['geo_code'].unique()
+
+```
+
+```{python}
+df['valueK€'] = df['value']/1000
+italia = df[df['geo_code'].isin([
+    'IT', 'ITC', 'ITC1', 'ITC2', 'ITC3', 'ITC4',
+    'ITF', 'ITF1', 'ITF2', 'ITF3', 'ITF4', 'ITF5', 'ITF6',
+    'ITG', 'ITG1', 'ITG2',
+    'ITH', 'ITH1', 'ITH2', 'ITH3', 'ITH4', 'ITH5',
+    'ITI', 'ITI1', 'ITI2', 'ITI3', 'ITI4'
+])]
+
+italia_pivot = italia.pivot_table(index ='time_label', columns = 'geo_label', 
+values = 'valueK€')
+pd.set_option('display.max_columns', None)
+italia_pivot.T
 ```

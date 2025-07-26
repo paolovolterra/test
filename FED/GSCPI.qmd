@@ -1,0 +1,474 @@
+---
+title: Global Supply Chain Pressure Index (GSCPI)
+
+author: Paolo Volterra
+created: 2025-07-26
+subtitle: Studio sull'indicatore di stress della suppy chain elaborato dalla Federal reserve
+keywords:
+  - FED
+  - indici
+  - GSCPI
+  - qmd
+jupyter: python3
+execute:
+  freeze: auto
+  echo: true
+  warning: false
+  message: false
+format:
+  html:
+    toc: true
+    number-sections: true
+    code-fold: true
+  pdf:
+    documentclass: scrartcl
+    toc: true
+    number-sections: true
+    geometry: margin=2.5cm
+    fontsize: 11pt
+    linestretch: 1.5
+    colorlinks: true
+    linkcolor: MidnightBlue
+    mainfont: "Palatino Linotype"
+    monofont: "Consolas"
+    keep-tex: true
+
+---
+
+```{python}
+import pandas as pd
+import matplotlib.pyplot as plt
+import requests
+from io import BytesIO
+
+# 1. Scarica il file Excel dal sito ufficiale
+url = "https://www.newyorkfed.org/medialibrary/research/interactives/gscpi/downloads/gscpi_data.xlsx"
+response = requests.get(url)
+response.raise_for_status()
+
+# 2. Leggi la sheet 'GSCPI Monthly Data' saltando le prime 5 righe
+df = pd.read_excel(
+    BytesIO(response.content),
+    sheet_name='GSCPI Monthly Data',
+    skiprows=5,
+    header=None,
+    usecols=[0, 1],  # Solo colonne con data e GSCPI
+    names=['Date', 'GSCPI'],
+    decimal=','      # Usa la virgola come separatore decimale, se necessario
+)
+```
+
+```{python}
+# 3. Converti la colonna 'Date' in datetime e imposta come indice
+df['Date'] = pd.to_datetime(df['Date'])
+df.set_index('Date', inplace=True)
+
+# 4. Plot
+plt.figure(figsize=(12, 5))
+plt.plot(df.index, df['GSCPI'], color='darkblue', linewidth=2)
+plt.axhline(0, linestyle='--', color='gray')
+plt.title('Global Supply Chain Pressure Index (GSCPI)', fontsize=15, fontweight='bold')
+plt.xlabel('Anno')
+plt.ylabel('Indice GSCPI')
+plt.grid(True)
+plt.tight_layout()
+plt.show()
+```
+
+📊 Commento al grafico
+
+📌 1. Stabilità pre-2020
+Dal 1998 al 2019 l’indice oscilla intorno allo zero, con fasi lievemente espansive o restrittive, ma senza grandi shock.
+
+Alcuni picchi minori corrispondono probabilmente a:
+
+crisi asiatiche,
+
+la crisi finanziaria del 2008-2009,
+
+il terremoto giapponese del 2011.
+
+🚨 2. Impennata 2020-2022
+Il grande salto dal 2020 rappresenta gli shock pandemici globali:
+
+lockdown,
+
+colli di bottiglia portuali,
+
+carenza di semiconduttori,
+
+effetto "bullwhip" nella logistica globale.
+
+Il picco storico intorno a fine 2021 - inizio 2022 (valori > 4) coincide con:
+
+la riapertura asimmetrica dell’economia globale,
+
+l’invasione dell’Ucraina (febbraio 2022).
+
+📉 3. Rientro 2023-2024
+A partire dal 2023 si nota un rientro marcato verso valori neutri o negativi.
+
+Il mercato sembra aver riassorbito lo shock e i flussi globali si sono in parte riequilibrati.
+
+🟰 4. Situazione recente (2024-2025)
+Valori prossimi allo zero, con leggere oscillazioni.
+
+Pressioni residue contenute, ma attenzione a nuovi shock (geopolitici, dazi, crisi energetiche).
+
+Ecco un **report aggiornato e sintetico** basato sul grafico del *Global Supply Chain Pressure Index (GSCPI)* aggiornato a giugno 2025.
+
+---
+
+## 📦 Global Supply Chain Pressure Index (GSCPI)
+
+**Periodo:** Gennaio 1998 – Giugno 2025
+**Fonte:** Federal Reserve Bank of New York
+**Ultimo aggiornamento:** Giugno 2025
+
+---
+
+### 🧭 **Cos’è il GSCPI**
+
+L’indice GSCPI misura la **pressione globale sulle catene di approvvigionamento** integrando dati su costi di trasporto, tempi di consegna, produzione industriale e altre fonti (es. PMI manifatturiero) da diverse aree economiche.
+
+* Valori **positivi** → maggiore stress e congestione.
+* Valori **negativi** → condizioni più fluide della media storica.
+* La media di lungo periodo è circa **zero**.
+
+---
+
+### 📈 **Andamento Storico**
+
+#### 🔹 **1998–2019: fluttuazioni contenute**
+
+* L'indice oscilla tra -1 e +1.
+* Alcuni picchi legati a:
+
+  * Crisi asiatiche (1998),
+  * Crisi finanziaria globale (2008),
+  * Terremoto e tsunami in Giappone (2011).
+
+#### 🔺 **2020–2022: shock senza precedenti**
+
+* A partire da marzo 2020, il GSCPI sale bruscamente.
+* Raggiunge il massimo storico a **oltre +4,0** a fine 2021.
+* Cause principali:
+
+  * Lockdown mondiali e blocchi portuali.
+  * Rottura delle filiere just-in-time.
+  * Domanda sbilanciata tra beni e servizi.
+  * Invasione russa dell’Ucraina (febbraio 2022) che aggrava le tensioni logistiche ed energetiche.
+
+#### 🔻 **2023–2024: normalizzazione**
+
+* Il GSCPI torna rapidamente verso lo zero.
+* Le filiere si adattano, si ricostruiscono le scorte, migliora l’equilibrio domanda/offerta.
+* Alcuni mesi segnano valori **negativi**, segno di allentamento delle pressioni.
+
+#### ⚖️ **2025: equilibrio fragile**
+
+* Nei primi sei mesi del 2025 l’indice rimane **oscillante tra -0.5 e +0.3**, segnalando una relativa stabilità.
+* Tuttavia, il rischio rimane:
+
+  * **Geopolitica** (Taiwan, Mar Rosso, guerre commerciali).
+  * **Clima** (eventi estremi, impatti su trasporti e commodity).
+  * **Politiche monetarie e tassi** che influenzano costi di finanziamento e stoccaggio.
+
+---
+
+### 📌 **Osservazioni chiave**
+
+| Periodo  | Descrizione                        | Valore GSCPI |
+| -------- | ---------------------------------- | ------------ |
+| Mar 2020 | Inizio pandemia COVID-19           | +1.5         |
+| Dic 2021 | Picco massimo post-pandemia        | +4.3         |
+| Feb 2022 | Invasione Ucraina                  | +3.9         |
+| Dic 2023 | Normalizzazione completata         | \~0.0        |
+| Giu 2025 | Stabilità con leggere oscillazioni | +0.003       |
+
+---
+
+### 🔧 **Prossimi aggiornamenti**
+
+Il GSCPI è pubblicato **mensilmente** e aggiornato con qualche settimana di ritardo. Il file ufficiale può essere scaricato dal sito Fed NY:
+📎 [https://www.newyorkfed.org/research/policy/gscpi#/interactive](https://www.newyorkfed.org/research/policy/gscpi#/interactive)
+
+---
+
+### 📊 Suggerimenti grafici integrabili
+
+* **Media mobile 3 mesi** per filtrare la volatilità.
+* **Evidenziazione visiva degli eventi storici**.
+* **Confronto con PMI manifatturiero globale** o Baltic Dry Index.
+
+---
+
+Se vuoi, posso generarti:
+
+* 🔗 **Grafico interattivo Plotly**
+* 📄 **Report in PDF o HTML**
+* 🧵 **Post sintetico per LinkedIn**
+
+Ti interessa uno di questi output?
+
+```{python}
+import pandas as pd
+import matplotlib.pyplot as plt
+import requests
+from io import BytesIO
+
+# 1. Scarica il file Excel dal sito ufficiale
+url = "https://www.newyorkfed.org/medialibrary/research/interactives/gscpi/downloads/gscpi_data.xlsx"
+response = requests.get(url)
+response.raise_for_status()
+
+# 2. Leggi la sheet 'GSCPI Monthly Data' (dati da riga 6, colonne 0 e 1)
+df = pd.read_excel(
+    BytesIO(response.content),
+    sheet_name='GSCPI Monthly Data',
+    skiprows=5,
+    header=None,
+    usecols=[0, 1],
+    names=['Date', 'GSCPI'],
+    decimal=','  # Per sicurezza, se servisse
+)
+
+# 3. Parsing delle date e impostazione indice
+df['Date'] = pd.to_datetime(df['Date'])
+df.set_index('Date', inplace=True)
+
+# 4. Calcolo media mobile a 3 mesi
+df['GSCPI_MA3'] = df['GSCPI'].rolling(window=3).mean()
+
+# 5. Plot con eventi e salvataggio
+plt.figure(figsize=(14, 5))
+plt.plot(df.index, df['GSCPI'], label='GSCPI', color='navy', linewidth=1.5)
+plt.plot(df.index, df['GSCPI_MA3'], label='Media mobile 3 mesi', color='orange', linestyle='--')
+
+# 6. Evidenzia eventi chiave
+plt.axvline(pd.to_datetime('2020-03-01'), color='red', linestyle='--', alpha=0.7, label='COVID-19')
+plt.axvline(pd.to_datetime('2022-02-01'), color='purple', linestyle='--', alpha=0.7, label='Invasione Ucraina')
+
+# 7. Impostazioni grafiche
+plt.axhline(0, linestyle='--', color='gray', linewidth=1)
+plt.title('Global Supply Chain Pressure Index (GSCPI)', fontsize=15, fontweight='bold')
+plt.xlabel('Anno')
+plt.ylabel('Indice GSCPI')
+plt.legend()
+plt.grid(True)
+plt.tight_layout()
+
+# 8. Salva il grafico
+plt.savefig("gscpi_aggiornato.png", dpi=300)
+
+# 9. Mostra a video
+plt.show()
+```
+
+```{python}
+# Filtro del periodo 2008-2012
+df_sub = df.loc['2008-01-01':'2025-12-31']
+
+# Trova i picchi relativi
+peaks = df_sub[df_sub['GSCPI'] > 1.0]
+print(peaks)
+```
+
+Tra il **2008 e il 2012**, il *Global Supply Chain Pressure Index (GSCPI)* mostra alcuni **picchi significativi** – ma molto più contenuti rispetto alla crisi pandemica – che corrispondono a **shock economici e industriali rilevanti**.
+
+---
+
+### 📌 Analisi dei picchi GSCPI 2008–2012
+
+Ecco i principali eventi e le possibili cause dei picchi osservati nel grafico:
+
+| Periodo     | Valore GSCPI | Evento associato                                                                              |
+| ----------- | ------------ | --------------------------------------------------------------------------------------------- |
+| **2008-09** | ≈ +1.0       | **Crisi finanziaria globale**: fallimento Lehman Brothers, contrazione del commercio mondiale |
+| **2010-05** | ≈ +1.1       | **Crisi del debito sovrano in Europa**: Grecia, tensioni sui mercati finanziari               |
+| **2011-03** | ≈ +1.5       | **Terremoto e tsunami in Giappone**, crisi nucleare a Fukushima                               |
+| **2012-01** | ≈ +1.3       | **Tensioni commerciali Cina-USA**, rallentamento manifatturiero cinese                        |
+
+---
+
+### 📊 Lettura dei dati
+
+Nel codice, puoi **identificare e visualizzare automaticamente** i picchi in quel periodo con:
+
+```python
+# Filtro del periodo 2008-2012
+df_sub = df.loc['2008-01-01':'2012-12-31']
+
+# Trova i picchi relativi
+peaks = df_sub[df_sub['GSCPI'] > 1.0]
+print(peaks)
+```
+
+---
+
+### 📍 Conclusione
+
+Anche se i valori di GSCPI **non superano mai +1.5** in questo intervallo, essi riflettono eventi reali:
+
+* shock **finanziari** (2008),
+* shock **naturali/disastri** (2011),
+* shock **geopolitici ed energetici**.
+
+Sono quindi utili per comprendere la **sensibilità delle catene globali** non solo agli eventi logistici, ma anche a eventi sistemici che impattano produzione, credito, trasporti e commercio globale.
+
+Vuoi che ti evidenzi questi picchi nel grafico con **annotazioni testuali automatiche**? Posso farlo.
+
+| Data        | Evento                                  | Impatto sulla supply chain                                  |
+| ----------- | --------------------------------------- | ----------------------------------------------------------- |
+| **2005-08** | Uragano Katrina                         | Interruzione logistica e portuale USA                       |
+| **2008-09** | Crisi finanziaria globale               | Crollo commercio e trasporti globali                        |
+| **2011-03** | Terremoto e tsunami in Giappone         | Blocco filiere automotive, elettronica, semiconduttori      |
+| **2011-10** | Alluvioni in Thailandia                 | Shock su componentistica e hard disk                        |
+| **2018-07** | Inizio guerra commerciale USA–Cina      | Dazi reciproci, ridirezione rotte, incertezza logistica     |
+| **2020-03** | Pandemia COVID-19                       | Stop produzione e porti, carenza container                  |
+| **2021-03** | Blocco Ever Given nel Canale di Suez    | Ritardi e congestione in Europa, Medio Oriente e Asia       |
+| **2021-11** | Picco massimo GSCPI                     | Post-COVID, congestione porti, domanda eccessiva            |
+| **2022-02** | Invasione Ucraina                       | Aumento costi energia, grano, metalli                       |
+| **2022-04** | Lockdown Shanghai                       | Rallentamento container e produzione elettronica globale    |
+| **2023-01** | Calo domanda e inizio rientro pressioni | Allineamento scorte / trasporti                             |
+| **2023-12** | Attacchi Houthi nel Mar Rosso           | Rischi su rotte Suez–Europa–Asia, deviazione cargo          |
+| **2024-06** | Nuova fiammata costi container          | Rischi persistenti in Medio Oriente                         |
+| **2025-01** | Tensioni Taiwan / Dazi USA–UE           | Possibile riallineamento supply chain Tech + Agroalimentare |
+
+
+```{python}
+import pandas as pd
+import matplotlib.pyplot as plt
+import requests
+from io import BytesIO
+
+# 1. Scarica il file Excel dal sito ufficiale
+url = "https://www.newyorkfed.org/medialibrary/research/interactives/gscpi/downloads/gscpi_data.xlsx"
+response = requests.get(url)
+response.raise_for_status()
+
+# 2. Leggi la sheet 'GSCPI Monthly Data' (salta righe testuali, prendi solo colonne 0-1)
+df = pd.read_excel(
+    BytesIO(response.content),
+    sheet_name='GSCPI Monthly Data',
+    skiprows=5,
+    header=None,
+    usecols=[0, 1],
+    names=['Date', 'GSCPI'],
+    decimal=','
+)
+
+# 3. Parsing date e media mobile
+df['Date'] = pd.to_datetime(df['Date'])
+df.set_index('Date', inplace=True)
+df['GSCPI_MA3'] = df['GSCPI'].rolling(window=3).mean()
+
+# 4. Eventi principali 2008–2025
+eventi = {
+    '2005-08-01': 'Uragano Katrina',
+    '2008-09-01': 'Crisi finanziaria',
+    '2011-03-01': 'Tsunami Giappone',
+    '2011-10-01': 'Alluvione Thailandia',
+    '2018-07-01': 'Dazi USA–Cina',
+    '2020-03-01': 'COVID-19',
+    '2021-03-01': 'Suez / Ever Given',
+    '2021-11-01': 'Picco post-COVID',
+    '2022-02-01': 'Guerra Ucraina',
+    '2022-04-01': 'Lockdown Shanghai',
+    '2023-01-01': 'Rientro pressioni',
+    '2023-12-01': 'Attacchi Mar Rosso',
+    '2024-06-01': 'Costi container',
+    '2025-01-01': 'Dazi USA–UE'
+}
+
+# Intervalli temporali da evidenziare
+periodi = {
+    "COVID globale": ("2020-03-01", "2021-12-01"),
+    "Post-COVID & Suez": ("2021-01-01", "2022-03-01"),
+    "Ucraina e lockdown Cina": ("2022-02-01", "2022-09-01"),
+    "Rientro Pressioni": ("2023-01-01", "2023-08-01"),
+    "Red Sea Crisis": ("2023-12-01", "2024-06-01"),
+    "Rischio geopolitico 2025": ("2025-01-01", "2025-06-01")
+}
+
+# 5. Plot
+plt.figure(figsize=(14, 6))
+plt.plot(df.index, df['GSCPI'], label='GSCPI', color='navy', linewidth=1.8)
+plt.plot(df.index, df['GSCPI_MA3'], label='Media mobile 3 mesi', color='orange', linestyle='--', linewidth=1.5)
+plt.axhline(0, linestyle='--', color='gray', linewidth=1)
+
+# 6. Annotazioni eventi (solo se la data è nel DataFrame)
+for date_str, label in eventi.items():
+    target_date = pd.to_datetime(date_str)
+
+    # Trova la data più vicina nel DataFrame
+    closest_date = df.index[df.index.get_indexer([target_date], method='nearest')[0]]
+    value = df.loc[closest_date, 'GSCPI']
+
+    # Annotazione
+    plt.annotate(
+        label,
+        xy=(closest_date, value),
+        xytext=(closest_date, value + 0.8),
+        arrowprops=dict(arrowstyle='->', color='black'),
+        fontsize=9,
+        ha='center',
+        bbox=dict(boxstyle="round,pad=0.2", fc="white", ec="gray", alpha=0.9)
+    )
+
+# Aggiungi bande verticali per i periodi
+for label, (start, end) in periodi.items():
+    plt.axvspan(pd.to_datetime(start),
+                pd.to_datetime(end),
+                color='lightgray',
+                alpha=0.3,
+                label=label if start == list(periodi.values())[0][0] else None)  # Evita doppia legenda
+
+
+# 7. Dettagli grafico
+plt.title('Global Supply Chain Pressure Index (GSCPI)', fontsize=15, fontweight='bold')
+plt.xlabel('Anno')
+plt.ylabel('Indice GSCPI')
+plt.legend()
+plt.grid(True)
+plt.tight_layout()
+
+# 8. Salvataggio PNG
+plt.savefig("gscpi_annottato.png", dpi=300)
+plt.show()
+```
+
+📦 **Global Supply Chain Pressure Index (GSCPI): cosa succede adesso?**
+
+Trump è tornato, e ha messo **dazi del 30% sull’UE**.
+La storia insegna che le **catene globali** non reagiscono in silenzio.
+
+Dal 2008 a oggi, abbiamo visto:
+▪️ Crisi finanziarie
+▪️ Disastri naturali
+▪️ Pandemia globale
+▪️ Guerre commerciali
+▪️ Shock energetici
+
+E ogni volta, il GSCPI ci ha raccontato **quanto si è inceppata la macchina mondiale**: container in attesa, fabbriche ferme, costi esplosi.
+
+❓Con le nuove barriere USA–UE, torneranno colli di bottiglia e rincari?
+
+Lo scopriremo nei prossimi aggiornamenti.
+
+
+📉 Qui sotto il grafico aggiornato con tutti i picchi storici.
+
+
+
+📌 **Nota tecnica**
+Il GSCPI è un indice sviluppato dalla Federal Reserve Bank di New York.
+Combina dati da PMI manifatturieri, costi di trasporto (container, air cargo), ritardi di consegna e produzione industriale per **misurare lo stress globale nelle catene di fornitura**.
+
+* Valori **positivi**: pressione sopra la media storica
+* Valori **negativi**: condizioni più fluide del normale
+
+Fonti: NY Fed, GSCPI Monthly Data (2025-06)
+
+\#supplychain #GSCPI #economia #Trump2025 #dazi #geopolitica #UE #logistica #commerciointernazionale #matplotlib #permacrisi
+

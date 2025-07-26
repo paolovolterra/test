@@ -38,7 +38,7 @@ Un focus viene fatto sul credit crunch.
 
 ```{python}
 import pandas as pd, os
-os.chdir('D:/')
+os.chdir('D:/PKM/Git/Bankit/codici/')
 file_path = "Bankit_ratios_2025H1.tsv"
 df = pd.read_csv(file_path, sep="\t")
 df.columns = ["REGIONE", "RATIO", "ANNO", "VALORE"]

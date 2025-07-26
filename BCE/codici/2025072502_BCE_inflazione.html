@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Paolo Volterra">
-<meta name="keywords" content="BCE, inflazione">
+<meta name="keywords" content="BCE, inflazione, qmd">
 
 <title>Replica curva del tasso di inflazione secondo BCE</title>
 <style>
@@ -85,7 +85,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#tassi-di-inflazione-trimestrali-yoy" id="toc-tassi-di-inflazione-trimestrali-yoy" class="nav-link active" data-scroll-target="#tassi-di-inflazione-trimestrali-yoy"><span class="header-section-number">1</span> Tassi di inflazione trimestrali YoY</a></li>
   </ul>
-</nav>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="2025072502_BCE_inflazione.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
 </div>
 <main class="content" id="quarto-document-content">
 
@@ -114,7 +114,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div>
   <div class="keywords">
     <div class="block-title">Keywords</div>
-    <p>BCE, inflazione</p>
+    <p>BCE, inflazione, qmd</p>
   </div>
 </div>
 
@@ -129,8 +129,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Per BCE, questa è la series key: <strong>ICP.M.U2.N.000000.4.ANR</strong> <a href="https://data.ecb.europa.eu/data/datasets/ICP/ICP.M.U2.N.000000.4.ANR">HICP - Overall index, Euro area (changing composition), Monthly</a></li>
 </ul>
 <p><br> <br></p>
-<p><img src="./media/2025072502.png" class="img-fluid"></p>
-<div id="dcc08708" class="cell" data-execution_count="1">
+<p><img src="../Pasted%20image%2020250726085321.png" class="img-fluid"></p>
+<div id="2878a013" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> ecbdata <span class="im">import</span> ecbdata</span>
@@ -144,7 +144,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df.set_index(<span class="st">'TIME_PERIOD'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<div id="4758da57" class="cell" data-execution_count="2">
+<div id="ab59a08e" class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>

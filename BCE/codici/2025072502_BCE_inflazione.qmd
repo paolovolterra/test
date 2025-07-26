@@ -1,9 +1,12 @@
 ---
-title: "Replica curva del tasso di inflazione secondo BCE"
+title: Replica curva del tasso di inflazione secondo BCE
 author: Paolo Volterra
 created: 2025-07-25
-subtitle: "Studio sui dati BCE"
-keywords: [BCE, inflazione]
+subtitle: Studio sui dati BCE
+keywords:
+  - BCE
+  - inflazione
+  - qmd
 jupyter: python3
 execute:
   freeze: auto
@@ -15,6 +18,22 @@ format:
     toc: true
     number-sections: true
     code-fold: true
+  pdf:
+    documentclass: scrartcl
+    classoption:
+      - landscape
+      - DIV=11
+    papersize: a4
+    toc: true
+    number-sections: true
+    geometry: margin=2.5cm
+    fontsize: 11pt
+    linestretch: 1.4
+    colorlinks: true
+    linkcolor: MidnightBlue
+    mainfont: "Palatino Linotype"
+    monofont: "Consolas"
+    keep-tex: true
 ---
 
 # Tassi di inflazione trimestrali YoY
@@ -25,7 +44,7 @@ format:
 
 <br> </br>
 
-![](./media/2025072502.png)
+![](./media/Pasted%20image%2020250726085321.png)
 
 
 ```{python}
